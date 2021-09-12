@@ -4,6 +4,7 @@ namespace App\Controller\Admin;
 
 use App\Entity\Block;
 use App\Entity\Formation;
+use App\Entity\Contact;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
 use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractDashboardController;
@@ -40,6 +41,7 @@ class DashboardController extends AbstractDashboardController
                 MenuItem::linkToCrud('Ajouter une formation', 'fas fa-book-reader', Formation::class),
                 MenuItem::linkToCrud('Ajouter un bloc', 'fa fa-tags', Block::class), 
                 ]),
+            MenuItem::linkToCrud('Messages', 'fas fa-envelope', Contact::class),    
 
             ];
     }

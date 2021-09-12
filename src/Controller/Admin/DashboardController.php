@@ -41,6 +41,7 @@ class DashboardController extends AbstractDashboardController
                 MenuItem::linkToCrud('Ajouter une formation', 'fas fa-book-reader', Formation::class),
                 MenuItem::linkToCrud('Ajouter un bloc', 'fa fa-tags', Block::class), 
                 ]),
+              
             MenuItem::linkToCrud('Messages', 'fas fa-envelope', Contact::class),    
 
             ];

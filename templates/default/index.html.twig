@@ -3,18 +3,18 @@
 {% block title %}Hello DefaultController!{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+<main>
+  <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark">
+    <div class="col-md-6 px-0">
+      <h1 class="display-6 fst-italic">FORMABLOCS, ORGANISME<br>
+DE FORMATION ET DE CONSEIL</h1>
+      <p class="lead my-3">Spécialisé dans le domaine de la formation<br>
+professionnelle continue (distanciel).</p>
+      <p class="lead mb-0"><a href="#" class="text-white fw-bold">PLUS D'INFORMATIONS</a></p>
+    </div>
+  </div>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+  
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/wamp64/www/FormaBlocs/src/Controller/DefaultController.php'|file_link(0) }}">src/Controller/DefaultController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/wamp64/www/FormaBlocs/templates/default/index.html.twig'|file_link(0) }}">templates/default/index.html.twig</a></code></li>
-    </ul>
-</div>
+</main>
 {% endblock %}

@@ -17,7 +17,12 @@ class DashboardController extends AbstractDashboardController
      */
     public function index(): Response
     {
-        return parent::index();
+        //return parent::index();
+        $formations = $this->getDoctrine()->getRepository(formation::class)->findAll();
+
+    return $this->render('admin/dashboard.html.twig', [
+        'formations' => $formations
+    ]);
     }
 
     public function configureDashboard(): Dashboard

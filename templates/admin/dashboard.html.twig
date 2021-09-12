@@ -1,0 +1,14 @@
+{# @var ea \EasyCorp\Bundle\EasyAdminBundle\Context\AdminContext #}
+{% extends '@EasyAdmin/page/content.html.twig' %}
+
+{% block page_title 'Administration' %}
+
+{% block page_content %}
+    <div class="container">
+        <ul class="list-group">
+            {% for formation in formations %}
+            <li class="list-group-item">{{ formation.title }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}

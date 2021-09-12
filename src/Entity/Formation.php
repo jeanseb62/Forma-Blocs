@@ -2,6 +2,8 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use App\Repository\FormationRepository;
 use Doctrine\ORM\Mapping as ORM;
 
@@ -56,6 +58,11 @@ class Formation
      * @ORM\Column(type="boolean")
      */
     private $isPublished;
+
+    /**
+     * @ORM\ManyToOne(targetEntity=Block::class, cascade={"persist", "remove"})
+     */
+    private $blocks;
 
     public function getId(): ?int
     {
@@ -154,6 +161,17 @@ class Formation
     public function setIsPublished(bool $isPublished): self
     {
         $this->isPublished = $isPublished;
+
+        return $this;
+    }
+    public function getBlocks(): ?Block
+    {
+        return $this->blocks;
+    }
+
+    public function setBlocks(?Block $block): self
+    {
+        $this->blocks = $block;
 
         return $this;
     }

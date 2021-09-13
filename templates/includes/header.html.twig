@@ -1,4 +1,31 @@
 <header>
+         <div class="">
+        <!-- Information NavBar -->
+              <nav aria-label="contact" class="navbar navbar-expand-md navbar-eco bg-light">
+              
+                <div class="navbar-collapse collapse container" id="navbarCollapse1">
+                    <!-- Right Side Of Navbar -->
+                    <ul class="navbar-nav ml-auto">
+                        
+                        <li class="nav-item px-3 d-flex align-items-center">
+                          <i class="fas fa-phone-volume"></i>
+                           <a class="nav-link" href="tel:0164859726" alt="Télphone Forma Blocs">01.64.85.97.26</a>  
+                        </li>
+                        <li class="nav-item pl-3 ">
+                        <i class="far fa-envelope"></i>
+                          <a href="{{ path('contact')}}">Nous contacter</a>
+                        </li><br>
+                        <li class="nav-item pl-3 ">
+                        <i class="fas fa-user-alt"></i>
+                            <a  href="{{ path('app_login')}}">Espace client</a>
+                        </li> 
+                    </ul>
+                </div>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".collapse" aria-controls="collapse" aria-expanded="true" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                </button>
+            </nav>
+          </div>
   <nav class="navbar navbar-expand-md navbar-light bg-light">
     <div class="container">
       <a class="navbar-brand" href="{{ path('default')}}"><img src="{{ asset('assets/images/Logo-formablocs.png')}}"  height="40"  alt="Logo"></a>

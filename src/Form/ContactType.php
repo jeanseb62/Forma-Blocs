@@ -25,7 +25,7 @@ class ContactType extends AbstractType
                 ]
             ])
             ->add('lastName', TextType::class, [
-                'label' => 'Prénom',
+                'label' => 'Nom',
                 'attr' => [
                     'class' => 'form-control'
                 ]

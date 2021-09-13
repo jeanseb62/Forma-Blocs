@@ -38,9 +38,14 @@ class Quotation
     private $street;
 
     /**
-     * @ORM\Column(type="string", length=45)
+     * @ORM\Column(type="string", length=5)
      */
     private $zip;
+
+    /**
+     * @ORM\Column(type="string", length=45)
+     */
+    private $city;
 
     /**
      * @ORM\Column(type="string", length=50)
@@ -239,6 +244,18 @@ class Quotation
     public function setCreatedAt(\DateTimeInterface $createdAt): self
     {
         $this->createdAt = $createdAt;
+
+        return $this;
+    }
+
+    public function getCity(): ?string
+    {
+        return $this->city;
+    }
+
+    public function setCity(string $city): self
+    {
+        $this->city = $city;
 
         return $this;
     }

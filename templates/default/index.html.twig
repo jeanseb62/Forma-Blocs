@@ -3,80 +3,122 @@
 {% block title %}FORMA BLOCS{% endblock %}
 
 {% block body %}
-<main>
-  <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark">
-    <div class="col-md-6 px-0">
-      <h1 class="display-6">FORMABLOCS, ORGANISME<br>
-DE FORMATION ET DE CONSEIL</h1>
-      <p class="lead my-3">Spécialisé dans le domaine de la formation<br>
-professionnelle continue (distanciel).</p>
-      <p class="lead mb-0"><a href="#" class="text-white fw-bold">PLUS D'INFORMATIONS</a></p>
-    </div>
-  </div>
+<img src={{asset('assets/images/banner-homepage.jpg')}} alt="Bannier homepage" class="img-fluid banner">
+<main class="container">
 
-<div class="container">
-  <div class="row featurette">
-      <div class="col-md-7">
-        <h2 class="featurette-heading">Qui suis-je ?</h2>
-        <p class="lead">Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p>
-     <a href="{{ path('contact')}}" class="btn btn-primary">ME CONTACTER</a>
-      </div>
-      <div class="col-md-5">
-        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+	<div class="text-banner">
+		<h1 class="col-8">Organisme de formation et de conseil</h1>
+		<h2 class="description col-8">Spécialisé dans le domaine de la formation professionnelle continue (distanciel).
+		</h2>
+		<button class="btnYellow col-3">Plus d'information</button>
+	</div>
 
-      </div>
-    </div>
-    </div>
+	<div>
+		<h2 >Qui suis-je ?</h2>
+		<div class="row">
+			<div class="col-7">
+				<p class="textBig">Je suis Héloîse ZITOUNI, fondatrice de centre de formation <span
+						class="text-highlight">FormaBLOCS</span>.
+					Diplômée d’un Master en
+					Ingénierie de formation, avec une expérience de 7 ans dans le domaine de la formation
+					professionnelle, je
+					souhaite
+					mettre à votre disposition mes compétences et mon expérience.
+					La formation professionnelle est une belle opportunité qui vous permet de redonner et ou de trouver
+					un sens à
+					votre vie professionnelle et aussi personnelle.</p>
+				<p class="textSmall"><span class="text-highlight">Mes valeurs :</span> Entraide, Humanité, Respect,
+					Professionnalisme et
+					Expertise. </p>
+			</div>
+			<img src={{asset('assets/images/photo-heloise-zitouni.png')}} alt="Photo Héloîse ZITOUNI"
+				class="img-fluid col-5">
+				<button class="btnGrey col-3" id="btnContact">Nous contacter</button>
+		</div>
 
-<div class="p-4 p-md-5 mb-4 rounded">
-<h2 class="text-center">Types de prestations proposées</h2>
+		<div>
+			<h2 class="text-center">Types de prestations proposées</h2>
+			<div class="row">
 
-{% for formation in formations %}
+				{# Boucle for sur formations #}
+				{% for formation in formations %}
 
-<div class="">
-<div class="card" style="width: 18rem;">
-  <svg class="card-img-top" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="30%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-<img src="{{ formation.image }}" alt="">
-  <div class="card-body">
-    <h5 class="card-title"><a href="{{ path('formation_index')}}">{{ formation.title }}</a></h5>
-    <p class="card-text">{{ formation.type }}</p>
-    <p class="card-text">{{ formation.details }}</p>
-    <p class="card-text">{{ formation.price }}</p>
-  </div>
-</div>
-</div>
-<a href="{{ path('quotation')}}" class="btn btn-primary">DEMANDE DE DEVIS</a>
- </div> 
-    {% endfor %}
+				<div class="card col-4">
+					<img src={{asset('assets/images/imgFormation/')}}{{ formation.image }} alt="{{ formation.title }}"
+						class="card-img-top">
+					<div class="card-body cardFormation">
+						<img src={{asset('assets/icons/graduation-cap.png')}} alt="icone chapeau diplome" class="icone">
+						<h6 class="card-title">{{ formation.title }}</h6>
 
-<div class="container">
+						<img src={{asset('assets/icons/television.png')}} alt="icone formation à distance"
+							class="icone">
+						<p class="card-text">{{ formation.type }}</p>
 
-<center><h2>Financements</h2></center>
-<div class="row">
-<div class="col"><svg class="card-img" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100px" height="100px" fill="#55595c"/></svg></div>
-<div class="col"><svg class="card-img" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100px" height="100px" fill="#55595c"/></svg></div>
-<div class="col"><svg class="card-img" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100px" height="100px" fill="#55595c"/></svg></div>
-<div class="col"><svg class="card-img" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100px" height="100px" fill="#55595c"/></svg></div>
-<div class="col"><svg class="card-img" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100px" height="100px" fill="#55595c"/></svg></div>
-</div>
+						<img src={{asset('assets/icons/cube.png')}} alt="icone block" class="icone">
+						<p class="card-text">{{ formation.nbBlocs }} vendus séparement</p>
 
-</div>
+						<img src={{asset('assets/icons/cart-arrow-down.png')}} alt="icone prix" class="icone">
+						<p class="card-text">De {{ formation.priceMin }} a {{formation.priceMax }} &euro;</p>
+					</div>
+				</div>
 
-</div>
+				{% endfor %}
 
+				<div class="card col-4">
+					<img src={{asset('assets/images/imgFormation/conseil.jpg')}} alt="conseils pour professionnels"
+						class="card-img-top">
+					<div class="card-body cardFormation">
+						<img src={{asset('assets/icons/graduation-cap.png')}} alt="icone chapeau diplome" class="icone img-fluid">
+						<h6 class="card-title">Prestations de conseil pour les professionnels de la formation</h6>
 
-  <div class="">
-      <div class="">
-        <h2 class="text-center">Pourquoi se former avec nous ?</h2>
-        
-      </div>
-      <div class="">
-      <center>
-        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
-      </center>
-      </div>
-    </div>
-   
+						<img src={{asset('assets/icons/television.png')}} alt="icone formation à distance"
+							class="icone img-fluid">
+						<p class="card-text">A distance</p>
+
+						<img src={{asset('assets/icons/cube.png')}} alt="icone block" class="icone img-fluid">
+						<p class="card-text">Liste des prestations dispoibles</p>
+
+						<img src={{asset('assets/icons/cart-arrow-down.png')}} alt="icone prix" class="icone img-fluid">
+						<p class="card-text">Nous contacter</p>
+					</div>
+				</div>
+			</div>
+			<p>A NOTER : Les deux formations certifiantes sont également accessibles par la VAE (Validation des Acquis
+				d’expérience)
+				Pour plus d’information sur la VAE, rendez-vous sur notre page Prestations</p>
+		</div>
+
+		<div>
+			<h2>Comment financer sa formation ?</h2>
+			<p class="textBig">La formation professionnelle est un outil majeur à la disposition de tous les actifs :
+				salariés,
+				indépendants,
+				chefs d’entreprise ou demandeurs d’emploi. Elle permet de se former tout au long de son parcours
+				professionnel,
+				pour développer ses compétences et accéder à l’emploi, se maintenir dans l’emploi ou encore changer
+				d’emploi.
+				De nombreux financements sont disponibles afin de faciliter l’accès à la formation comme le Conseil
+				Régional, Pôle
+				Emploi, les Entreprises avec OPCO et l’état.
+				Pour obtenir une qualification ou une certification reconnue, vous pouvez mobiliser votre CPF (Compte
+				personnel de
+				formation), le CIF (Congé individuel de formation), la VAE (Validation des acquis de l’expérience) et le
+				FIA
+				(Formation individuel ADEFIPH).</p>
+			<div class="d-flex flex-row justify-content-around align-items-center">
+				<img src={{ asset('assets/images/desk-logo-CPF.png') }} alt="logo Mon Compte Formation"
+					class="img-fluid">
+				<img src={{ asset('assets/images/desk-logo-opco.png') }} alt="logo OPCO" class="img-fluid">
+				<img src={{ asset('assets/images/desk-logo-pe.png') }} alt="logo Pôle emploi" class="img-fluid">
+			</div>
+		</div>
+
+		<div>
+			<h2>Pourquoi se former avec nous ?</h2>
+			<video width="720" height="440" controls>
+				Your browser does not support the video tag.
+			</video>
+		</div>
 
 </main>
 {% endblock %}

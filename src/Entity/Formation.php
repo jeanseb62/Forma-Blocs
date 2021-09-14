@@ -28,11 +28,21 @@ class Formation
      * @ORM\Column(type="string", length=150)
      */
     private $type;
+    
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $NbBlocs;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="integer")
      */
-    private $price;
+    private $PriceMin;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $PriceMax;
 
     /**
      * @ORM\Column(type="string", length=255)
@@ -54,15 +64,7 @@ class Formation
      */
     private $blocks;
 
-    /**
-     * @ORM\Column(type="text")
-     */
-    private $content;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $details;
 
     public function getId(): ?int
     {
@@ -93,14 +95,38 @@ class Formation
         return $this;
     }
 
-    public function getPrice(): ?int
+    public function getNbBlocs(): ?int
     {
-        return $this->price;
+        return $this->NbBlocs;
     }
 
-    public function setPrice(int $price): self
+    public function setNbBlocs(int $NbBlocs): self
     {
-        $this->price = $price;
+        $this->NbBlocs = $NbBlocs;
+
+        return $this;
+    }
+    
+    public function getPriceMin(): ?int
+    {
+        return $this->PriceMin;
+    }
+
+    public function setPriceMin(int $PriceMin): self
+    {
+        $this->PriceMin = $PriceMin;
+
+        return $this;
+    }
+
+    public function getPriceMax(): ?int
+    {
+        return $this->PriceMax;
+    }
+
+    public function setPriceMax(int $PriceMax): self
+    {
+        $this->PriceMax = $PriceMax;
 
         return $this;
     }
@@ -152,27 +178,7 @@ class Formation
         return $this;
     }
 
-    public function getContent(): ?string
-    {
-        return $this->content;
-    }
+    
 
-    public function setContent(string $content): self
-    {
-        $this->content = $content;
-
-        return $this;
-    }
-
-    public function getDetails(): ?string
-    {
-        return $this->details;
-    }
-
-    public function setDetails(string $details): self
-    {
-        $this->details = $details;
-
-        return $this;
-    }
+    
 }

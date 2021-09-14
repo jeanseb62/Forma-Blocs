@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&display=swap');
+
+/* Tag */
+body {
+    font-family: 'Open Sans';
+}
+
+
+/* Titre */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Montserrat';
+    font-weight: bold;
+    color: #454548;
+}
+
+h1,
+h2 {
+    font-size: 3.125em;
+}
+
+
+
+/* Class */
+
+.description {
+    font-weight: 500;
+    font-size: 2.25em;
+}
+
+.text-banner {
+    padding-top: 106px;
+}
+
+.banner {
+    position: absolute;
+    z-index: -1;
+}
+
+
+.text-highlight {
+    color: #F2CB02;
+    font-weight: bold;
+}
+
+.textBig {
+    font-size: 1.5em;
+}
+
+.textSmall {
+    font-size: 1.125em;
+    font-weight: 600;
+}
+
+/* Card */
+.cardFormation {
+    display: grid;
+    grid-template-columns: 35px 1fr;
+
+}
+
+.icone {
+    margin-bottom: 40px;
+}
+
+.card {
+   padding: 0px; 
+   border: none;
+   padding: 0 32px;
+}
+
+.card-text, .card-title {
+    text-transform: uppercase;
+    padding-left: 20px;
+    font-weight: 600;
+}
+
+
+/* Button */
+
+[class*="btn"] {
+    border: none;
+    border-radius: 30px;
+    padding: 12px 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.5em;
+    
+}
+
+/* Yellow */
+.btnYellow {
+    margin-top: 63px;
+    margin-bottom: 139px;
+    background-color: #FED812;
+}
+
+.btnYellow:hover {
+    background-color: #FFEE99;
+}
+
+.btnYellow:active {
+    background-color: #D9B600;
+}
+
+/* Grey */
+.btnGrey {
+    background-color: #CDD1DB;
+}
+
+.btnGrey:hover {
+    background-color: #F5F6F8;
+}
+
+.btnGrey:active {
+    background-color: #A0A1A7;
+}
+
+#btnContact {
+    margin-bottom: 102px;
+}

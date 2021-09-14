@@ -39,15 +39,15 @@ class FormationCrudController extends AbstractCrudController
             IdField::new('id') -> onlyOnIndex(),
             TextField::new('title','Titre'),
             TextField::new('type','Type'),
-            TextField::new('details','Détails'),
-            IntegerField::new('price', 'Prix'),
+            IntegerField::new('NbBlocs','nombre de blocs'),
+            IntegerField::new('PriceMin', 'Prix minimum'),
+            IntegerField::new('PriceMax', 'Prix maximum'),
             TextField::new('documentPDF','Fiche en PDF'),
             ImageField::new('image','Image à la une')->setUploadDir('public/uploads/images')
             ->setBasePath('uploads/images')
             ->setSortable(false)
             ->setUploadedFileNamePattern('[randomhash].[extension]')
             ->setFormTypeOption('required' ,false),
-            CKEditorField::new('content','Contenu')->hideOnIndex(),
             AssociationField::new('blocks'),
             BooleanField::new('isPublished', 'Publié'),
          

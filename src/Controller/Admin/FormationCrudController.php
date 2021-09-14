@@ -12,12 +12,23 @@ use EasyCorp\Bundle\EasyAdminBundle\Field\CollectionField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\AssociationField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\BooleanField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\IntegerField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\TextEditorField;
+use EasyCorp\Bundle\EasyAdminBundle\Config\Crud;
+use App\Controller\Admin\Field\CKEditorField;
 
 class FormationCrudController extends AbstractCrudController
 {
     public static function getEntityFqcn(): string
     {
         return Formation::class;
+    }
+
+    public function configureCrud(Crud $crud): Crud
+    {
+        return $crud
+           
+            ->addFormTheme('@FOSCKEditor/Form/ckeditor_widget.html.twig')
+        ;
     }
 
     
@@ -40,6 +51,7 @@ class FormationCrudController extends AbstractCrudController
             ->setSortable(false)
             ->setUploadedFileNamePattern('[randomhash].[extension]')
             ->setFormTypeOption('required' ,false),
+            CKEditorField::new('content','Contenu')->hideOnIndex(),
             AssociationField::new('blocks'),
          
 

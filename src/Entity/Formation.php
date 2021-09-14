@@ -64,6 +64,11 @@ class Formation
      */
     private $blocks;
 
+    /**
+     * @ORM\Column(type="text")
+     */
+    private $content;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -172,6 +177,18 @@ class Formation
     public function setBlocks(?Block $block): self
     {
         $this->blocks = $block;
+
+        return $this;
+    }
+
+    public function getContent(): ?string
+    {
+        return $this->content;
+    }
+
+    public function setContent(string $content): self
+    {
+        $this->content = $content;
 
         return $this;
     }

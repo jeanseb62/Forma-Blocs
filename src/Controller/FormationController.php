@@ -25,28 +25,7 @@ class FormationController extends AbstractController
         ]);
     }
 
-    /**
-     * @Route("/new", name="formation_new", methods={"GET","POST"})
-     */
-    public function new(Request $request): Response
-    {
-        $formation = new Formation();
-        $form = $this->createForm(FormationType::class, $formation);
-        $form->handleRequest($request);
-
-        if ($form->isSubmitted() && $form->isValid()) {
-            $entityManager = $this->getDoctrine()->getManager();
-            $entityManager->persist($formation);
-            $entityManager->flush();
-
-            return $this->redirectToRoute('formation_index', [], Response::HTTP_SEE_OTHER);
-        }
-
-        return $this->renderForm('formation/new.html.twig', [
-            'formation' => $formation,
-            'form' => $form,
-        ]);
-    }
+    
 
     /**
      * @Route("/{id}", name="formation_show", methods={"GET"})
@@ -58,37 +37,4 @@ class FormationController extends AbstractController
         ]);
     }
 
-    /**
-     * @Route("/{id}/edit", name="formation_edit", methods={"GET","POST"})
-     */
-    public function edit(Request $request, Formation $formation): Response
-    {
-        $form = $this->createForm(FormationType::class, $formation);
-        $form->handleRequest($request);
-
-        if ($form->isSubmitted() && $form->isValid()) {
-            $this->getDoctrine()->getManager()->flush();
-
-            return $this->redirectToRoute('formation_index', [], Response::HTTP_SEE_OTHER);
-        }
-
-        return $this->renderForm('formation/edit.html.twig', [
-            'formation' => $formation,
-            'form' => $form,
-        ]);
-    }
-
-    /**
-     * @Route("/{id}", name="formation_delete", methods={"POST"})
-     */
-    public function delete(Request $request, Formation $formation): Response
-    {
-        if ($this->isCsrfTokenValid('delete'.$formation->getId(), $request->request->get('_token'))) {
-            $entityManager = $this->getDoctrine()->getManager();
-            $entityManager->remove($formation);
-            $entityManager->flush();
-        }
-
-        return $this->redirectToRoute('formation_index', [], Response::HTTP_SEE_OTHER);
-    }
 }

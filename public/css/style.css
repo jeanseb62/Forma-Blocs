@@ -123,3 +123,16 @@ h2 {
 #btnContact {
     margin-bottom: 102px;
 }
+
+/* Footer */
+footer{background-image:url('../assets/images/desk-footer.jpg');
+
+    background-repeat:no-repeat;
+    background-size:cover;
+    font-size:12px;}
+    
+    footer div{text-decoration:none;color:#FFF;}
+    footer a{text-decoration:none;color:#FFF;}
+    footer a:hover{color:#F2CB02;}
+    footer p{text-decoration:none;color:#FFF;}
+    footer i{color:#F2CB02;font-size:20px;}

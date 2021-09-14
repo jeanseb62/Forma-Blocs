@@ -36,11 +36,11 @@ professionnelle continue (distanciel).</p>
 <div class="">
 <div class="card" style="width: 18rem;">
   <svg class="card-img-top" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="30%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-
+<img src="{{ formation.image }}" alt="">
   <div class="card-body">
     <h5 class="card-title"><a href="{{ path('formation_index')}}">{{ formation.title }}</a></h5>
     <p class="card-text">{{ formation.type }}</p>
-    <p class="card-text">{{ formation.listing }}</p>
+    <p class="card-text">{{ formation.details }}</p>
     <p class="card-text">{{ formation.price }}</p>
   </div>
 </div>

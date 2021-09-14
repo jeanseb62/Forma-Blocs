@@ -30,17 +30,7 @@ class Formation
     private $type;
 
     /**
-     * @ORM\Column(type="integer")
-     */
-    private $numberBlocks;
-
-    /**
      * @ORM\Column(type="string", length=255)
-     */
-    private $listing;
-
-    /**
-     * @ORM\Column(type="integer")
      */
     private $price;
 
@@ -50,7 +40,7 @@ class Formation
     private $documentPDF;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $image;
 
@@ -68,6 +58,11 @@ class Formation
      * @ORM\Column(type="text")
      */
     private $content;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $details;
 
     public function getId(): ?int
     {
@@ -94,30 +89,6 @@ class Formation
     public function setType(string $type): self
     {
         $this->type = $type;
-
-        return $this;
-    }
-
-    public function getNumberBlocks(): ?int
-    {
-        return $this->numberBlocks;
-    }
-
-    public function setNumberBlocks(int $numberBlocks): self
-    {
-        $this->numberBlocks = $numberBlocks;
-
-        return $this;
-    }
-
-    public function getListing(): ?string
-    {
-        return $this->listing;
-    }
-
-    public function setListing(string $listing): self
-    {
-        $this->listing = $listing;
 
         return $this;
     }
@@ -189,6 +160,18 @@ class Formation
     public function setContent(string $content): self
     {
         $this->content = $content;
+
+        return $this;
+    }
+
+    public function getDetails(): ?string
+    {
+        return $this->details;
+    }
+
+    public function setDetails(string $details): self
+    {
+        $this->details = $details;
 
         return $this;
     }

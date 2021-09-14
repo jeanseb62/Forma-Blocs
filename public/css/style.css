@@ -124,6 +124,14 @@ h2 {
     margin-bottom: 102px;
 }
 
+/* Header */
+.header{background-color:#88898C;}
+.icone_Header{width:20px;padding-right:5px;}
+.header a{text-decoration:none;color:#FFF;}
+.header li{text-decoration:none;color:#FFF; padding-right: 50px;}
+.header .icone_sociaux{width:40px;padding-right:15px;}
+.header .icone_sociaux:first-child{padding-left: 10px;width:50px;} 
+
 /* Footer */
 footer{background-image:url('../assets/images/desk-footer.jpg');
     background-repeat:no-repeat;

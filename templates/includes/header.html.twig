@@ -1,23 +1,28 @@
 <header>
-         <div class="">
+         <div class="header">
         <!-- Information NavBar -->
-              <nav aria-label="contact" class="navbar navbar-expand-md navbar-eco bg-light">
+              <nav class="navbar navbar-expand-md ">
               
                 <div class="navbar-collapse collapse container" id="navbarCollapse1">
                     <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto">
+                    <ul class="navbar-nav d-flex align-items-center">
                         
-                        <li class="nav-item px-3 d-flex align-items-center">
-                          <i class="fas fa-phone-volume"></i>
+                        <li class="nav-item d-flex align-items-center">
+                          <img src="{{asset('assets/icons/desk-phone.svg')}}" alt="Téléphone" class="icone_Header">
                            <a class="nav-link" href="tel:0164859726" alt="Télphone Forma Blocs">01.64.85.97.26</a>  
                         </li>
-                        <li class="nav-item pl-3 ">
-                        <i class="far fa-envelope"></i>
+                        <li class="nav-item d-flex align-items-center">
+                        <img src="{{asset('assets/icons/desk-mail.svg')}}" alt="Mail" class="icone_Header">
                           <a href="{{ path('contact')}}">Nous contacter</a>
-                        </li><br>
-                        <li class="nav-item pl-3 ">
-                        <i class="fas fa-user-alt"></i>
-                            <a  href="{{ path('app_login')}}">Espace client</a>
+                        </li>
+                        <li class="nav-item d-flex align-items-center">
+                        Suivez-nous sur
+       
+          <img src="{{asset('assets/icons/desk-facebook.svg')}}" alt="Facebook" class="icone_sociaux">
+          <img src="{{asset('assets/icons/desk-instagram.svg')}}" alt="Intagram" class="icone_sociaux">
+          <img src="{{asset('assets/icons/desk-linkedin.svg')}}" alt="Linkedin" class="icone_sociaux">
+          <img src="{{asset('assets/icons/desk-youtube.svg')}}" alt="Youtube" class="icone_sociaux">
+          
                         </li> 
                     </ul>
                 </div>
@@ -36,24 +41,24 @@
         <ul class="navbar-nav">
           
           <li class="nav-item">
-            <a class="nav-link" href="#">Solutions</a>
+            <a class="nav-link" href="/">Accueil</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="#">Prestations</a>
+            <a class="nav-link" href="#">Nos prestations</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="#">Vous êtes ?</a>
+            <a class="nav-link" href="#">Qui suis-je ?</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="#">Financement</a>
+            <a class="nav-link" href="{{ path('contact')}}">Contact</a>
           </li>
 
 
            <li class="nav-item">
-            <a class="nav-link" href="#">LearningHub</a>
+            <a class="nav-link" href="{{ path('app_login')}}">Mon compte</a>
           </li>
           
         </ul>

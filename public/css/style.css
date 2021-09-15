@@ -23,25 +23,23 @@ h2 {
     font-size: 3.125em;
 }
 
-
-
-/* Class */
+/* banner */
 
 .description {
     font-weight: 500;
     font-size: 2.25em;
 }
 
-.text-banner {
-    padding-top: 106px;
-}
-
 .banner {
-    position: absolute;
-    z-index: -1;
+    background: url('../assets/images/background/banner-homepage.jpg') center no-repeat;
+    height: 530px;
 }
 
+.banner h1 {
+    padding-top: 100px;
+}
 
+/* Text */
 .text-highlight {
     color: #F2CB02;
     font-weight: bold;
@@ -49,6 +47,7 @@ h2 {
 
 .textBig {
     font-size: 1.5em;
+    text-align: justify;
 }
 
 .textSmall {
@@ -56,26 +55,73 @@ h2 {
     font-weight: 600;
 }
 
+/* Block */
+
+.prestation {
+    background: url('../assets/images/background/bg-home-prestations.jpg') center / contain no-repeat;
+    padding: 100px 0;
+    margin-top: 102px;
+}
+
+.financer {
+    padding-top: 60px;
+}
+
+.pourquoi {
+    background: url('../assets/images/background/desk-bandeau-home-pourquoi.jpg') bottom / contain no-repeat;
+    width: 100%;
+    height: 775px;
+}
+
+.pourquoi h2 {
+    padding-top: 100px;
+}
+
+.pourquoi video {
+    background: url('../assets/images/background/desk-1-petale-jaune.png') no-repeat;
+    margin-top: 80px;
+    padding-top: 35px;
+    padding-left: 35px;
+    height: 475px;
+    width: 785px;
+}
+
 /* Card */
-.cardFormation {
+.card-container {
+    display: grid;
+    padding: 0 150px;
+    grid-template-columns: auto auto auto;
+    gap: 65px;
+}
+
+.card-img-top {
+    border-radius: 23px 23px 0 0;
+}
+
+.card-item {
+    border: none;
+    padding: 0;
+    border-radius: 23px;
+}
+
+.card-text,
+.card-title {
+    text-transform: uppercase;
+    padding-left: 20px;
+    font-weight: 600;
+}
+
+.card-body {
     display: grid;
     grid-template-columns: 35px 1fr;
-
 }
 
 .icone {
     margin-bottom: 40px;
 }
 
-.card {
-   padding: 0px; 
-   border: none;
-   padding: 0 32px;
-}
-
-.card-text, .card-title {
-    text-transform: uppercase;
-    padding-left: 20px;
+.text-note {
+    padding-top: 55px;
     font-weight: 600;
 }
 
@@ -89,7 +135,6 @@ h2 {
     text-transform: uppercase;
     font-weight: bold;
     font-size: 1.5em;
-    
 }
 
 /* Yellow */
@@ -120,30 +165,78 @@ h2 {
     background-color: #A0A1A7;
 }
 
-#btnContact {
-    margin-bottom: 102px;
+/* Header */
+.header {
+    background-color: #88898C;
 }
 
-/* Header */
-.header{background-color:#88898C;}
-.icone_Header{width:20px;padding-right:5px;}
-.header a{text-decoration:none;color:#FFF;}
-.header li{text-decoration:none;color:#FFF; padding-right: 50px;}
-.header .icone_sociaux{width:40px;padding-right:15px;}
-.header .icone_sociaux:first-child{padding-left: 10px;width:50px;} 
+.icone_Header {
+    width: 20px;
+    padding-right: 5px;
+}
+
+.header a {
+    text-decoration: none;
+    color: #FFF;
+}
+
+.header li {
+    text-decoration: none;
+    color: #FFF;
+    padding-right: 50px;
+}
+
+.header .icone_sociaux {
+    width: 40px;
+    padding-right: 15px;
+}
+
+.header .icone_sociaux:first-child {
+    padding-left: 10px;
+    width: 50px;
+}
 
 /* Footer */
-footer{background-image:url('../assets/images/desk-footer.jpg');
-    background-repeat:no-repeat;
-    background-size:cover;
-    font-size:12px;
-padding-top:10px;}
-    
-footer div{text-decoration:none;color:#FFF;}
-footer a{text-decoration:none;color:#FFF;}
-footer a:hover{color:#F2CB02;}
-footer p{text-decoration:none;color:#FFF;line-height: normal;}
-footer i{color:#F2CB02;font-size:20px;}
+footer {
+    background-image: url('../assets/images/background/desk-footer.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 0.75em;
+    padding-top: 10px;
+}
 
-.icone_Footer{width:15px;padding-right:5px;}
-footer .icone_sociaux{width:25px;padding-right:5px;}
+footer div {
+    text-decoration: none;
+    color: #FFF;
+}
+
+footer a {
+    text-decoration: none;
+    color: #FFF;
+}
+
+footer a:hover {
+    color: #F2CB02;
+}
+
+footer p {
+    text-decoration: none;
+    color: #FFF;
+    line-height: normal;
+}
+
+footer i {
+    color: #F2CB02;
+    font-size: 1.25em;
+}
+
+.icone_Footer {
+    width: 15px;
+    padding-right: 5px;
+}
+
+footer .icone_sociaux {
+    width: 25px;
+    padding-right: 5px;
+}
+

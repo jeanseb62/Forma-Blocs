@@ -1,20 +1,26 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}FORMA BLOCS{% endblock %}
+{% block title %}FormaBLOCS - Homepage{% endblock %}
 
 {% block body %}
-<img src={{asset('assets/images/banner-homepage.jpg')}} alt="Bannier homepage" class="img-fluid banner">
-<main class="container">
+{# Banner #}
 
-	<div class="text-banner">
-		<h1 class="col-8">Organisme de formation et de conseil</h1>
-		<h2 class="description col-8">Spécialisé dans le domaine de la formation professionnelle continue (distanciel).
-		</h2>
-		<button class="btnYellow col-3">Plus d'information</button>
+<main>
+
+	{# Banner #}
+	<div class="banner">
+		<div class="container">
+			<h1 class="col-8">Organisme de formation et de conseil</h1>
+			<h2 class="description col-8">Spécialisé dans le domaine de la formation professionnelle continue
+				(distanciel).
+			</h2>
+			<button class="btnYellow col-3">Plus d'information</button>
+		</div>
 	</div>
 
-	<div>
-		<h2 >Qui suis-je ?</h2>
+	{# Qui suis-je ? #}
+	<div class="container">
+		<h2>Qui suis-je ?</h2>
 		<div class="row">
 			<div class="col-7">
 				<p class="textBig">Je suis Héloîse ZITOUNI, fondatrice de centre de formation <span
@@ -24,7 +30,8 @@
 					professionnelle, je
 					souhaite
 					mettre à votre disposition mes compétences et mon expérience.
-					La formation professionnelle est une belle opportunité qui vous permet de redonner et ou de trouver
+					La formation professionnelle est une belle opportunité qui vous permet de redonner et ou de
+					trouver
 					un sens à
 					votre vie professionnelle et aussi personnelle.</p>
 				<p class="textSmall"><span class="text-highlight">Mes valeurs :</span> Entraide, Humanité, Respect,
@@ -32,93 +39,100 @@
 					Expertise. </p>
 			</div>
 			<img src={{asset('assets/images/photo-heloise-zitouni.png')}} alt="Photo Héloîse ZITOUNI"
-				class="img-fluid col-5">
-				<button class="btnGrey col-3" id="btnContact">Nous contacter</button>
+				class="img-fluid align-self-start col-5">
+			<button class="btnGrey col-3" id="btnContact">Nous contacter</button>
 		</div>
+	</div>
 
-		<div>
-			<h2 class="text-center">Types de prestations proposées</h2>
-			<div class="row">
+	{# Types de prestations #}
+	<div class="prestation">
+		<h2 class="text-center">Types de prestations proposées</h2>
+		<div class="card-container">
 
-				{# Boucle for sur formations #}
-				{% for formation in formations %}
+			{# Boucle for sur formations #}
+			{% for formation in formations %}
 
-				<div class="card col-4">
-					<img src={{asset('assets/images/imgFormation/')}}{{ formation.image }} alt="{{ formation.title }}"
-						class="card-img-top">
-					<div class="card-body cardFormation">
-						<img src={{asset('assets/icons/graduation-cap.png')}} alt="icone chapeau diplome" class="icone">
-						<h6 class="card-title">{{ formation.title }}</h6>
+			<div class="card card-item">
+				<img src={{asset('assets/images/imgFormation/')}}{{ formation.image }} alt="{{ formation.title }}"
+					class="card-img-top">
+				<div class="card-body cardFormation">
+					<img src={{asset('assets/icons/graduation-cap.png')}} alt="icone chapeau diplome" class="icone">
+					<h6 class="card-title">{{ formation.title }}</h6>
 
-						<img src={{asset('assets/icons/television.png')}} alt="icone formation à distance"
-							class="icone">
-						<p class="card-text">{{ formation.type }}</p>
+					<img src={{asset('assets/icons/television.png')}} alt="icone formation à distance" class="icone">
+					<p class="card-text">{{ formation.type }}</p>
 
-						<img src={{asset('assets/icons/cube.png')}} alt="icone block" class="icone">
-						<p class="card-text">{{ formation.nbBlocs }} vendus séparement</p>
+					<img src={{asset('assets/icons/cube.png')}} alt="icone block" class="icone">
+					<p class="card-text">{{ formation.nbBlocs }} vendus séparement</p>
 
-						<img src={{asset('assets/icons/cart-arrow-down.png')}} alt="icone prix" class="icone">
-						<p class="card-text">De {{ formation.priceMin }} a {{formation.priceMax }} &euro;</p>
-					</div>
-				</div>
-
-				{% endfor %}
-
-				<div class="card col-4">
-					<img src={{asset('assets/images/imgFormation/conseil.jpg')}} alt="conseils pour professionnels"
-						class="card-img-top">
-					<div class="card-body cardFormation">
-						<img src={{asset('assets/icons/graduation-cap.png')}} alt="icone chapeau diplome" class="icone img-fluid">
-						<h6 class="card-title">Prestations de conseil pour les professionnels de la formation</h6>
-
-						<img src={{asset('assets/icons/television.png')}} alt="icone formation à distance"
-							class="icone img-fluid">
-						<p class="card-text">A distance</p>
-
-						<img src={{asset('assets/icons/cube.png')}} alt="icone block" class="icone img-fluid">
-						<p class="card-text">Liste des prestations dispoibles</p>
-
-						<img src={{asset('assets/icons/cart-arrow-down.png')}} alt="icone prix" class="icone img-fluid">
-						<p class="card-text">Nous contacter</p>
-					</div>
+					<img src={{asset('assets/icons/cart-arrow-down.png')}} alt="icone prix" class="icone">
+					<p class="card-text">De {{ formation.priceMin }} a {{formation.priceMax }} &euro;</p>
 				</div>
 			</div>
-			<p>A NOTER : Les deux formations certifiantes sont également accessibles par la VAE (Validation des Acquis
-				d’expérience)
-				Pour plus d’information sur la VAE, rendez-vous sur notre page Prestations</p>
-		</div>
 
-		<div>
-			<h2>Comment financer sa formation ?</h2>
-			<p class="textBig">La formation professionnelle est un outil majeur à la disposition de tous les actifs :
-				salariés,
-				indépendants,
-				chefs d’entreprise ou demandeurs d’emploi. Elle permet de se former tout au long de son parcours
-				professionnel,
-				pour développer ses compétences et accéder à l’emploi, se maintenir dans l’emploi ou encore changer
-				d’emploi.
-				De nombreux financements sont disponibles afin de faciliter l’accès à la formation comme le Conseil
-				Régional, Pôle
-				Emploi, les Entreprises avec OPCO et l’état.
-				Pour obtenir une qualification ou une certification reconnue, vous pouvez mobiliser votre CPF (Compte
-				personnel de
-				formation), le CIF (Congé individuel de formation), la VAE (Validation des acquis de l’expérience) et le
-				FIA
-				(Formation individuel ADEFIPH).</p>
-			<div class="d-flex flex-row justify-content-around align-items-center">
-				<img src={{ asset('assets/images/desk-logo-CPF.png') }} alt="logo Mon Compte Formation"
-					class="img-fluid">
-				<img src={{ asset('assets/images/desk-logo-opco.png') }} alt="logo OPCO" class="img-fluid">
-				<img src={{ asset('assets/images/desk-logo-pe.png') }} alt="logo Pôle emploi" class="img-fluid">
+			{% endfor %}
+			<div class="card card-item">
+				<img src={{asset('assets/images/imgFormation/conseil.jpg')}} alt="conseils pour professionnels"
+					class="card-img-top">
+				<div class="card-body">
+					<img src={{asset('assets/icons/graduation-cap.png')}} alt="icone chapeau diplome"
+						class="icone img-fluid">
+					<h6 class="card-title">Prestations de conseil pour les professionnels de la formation</h6>
+
+					<img src={{asset('assets/icons/television.png')}} alt="icone formation à distance"
+						class="icone img-fluid">
+					<p class="card-text">A distance</p>
+
+					<img src={{asset('assets/icons/cube.png')}} alt="icone block" class="icone img-fluid">
+					<p class="card-text">Liste des prestations dispoibles</p>
+
+					<img src={{asset('assets/icons/cart-arrow-down.png')}} alt="icone prix" class="icone img-fluid">
+					<p class="card-text">Nous contacter</p>
+				</div>
 			</div>
 		</div>
+		<div class="container"> 	
+			<p class="text-note">A NOTER : Les deux formations certifiantes sont également accessibles par la VAE (Validation des Acquis
+			d’expérience)
+			Pour plus d’information sur la VAE, rendez-vous sur notre page Prestations</p>
+		</div>
+	</div>
 
-		<div>
-			<h2>Pourquoi se former avec nous ?</h2>
-			<video width="720" height="440" controls>
+	{# Comment financer sa formation ? #}
+	<div class="container financer">
+		<h2 class="text-center">Comment financer sa formation ?</h2>
+		<p class="textBig">La formation professionnelle est un outil majeur à la disposition de tous les actifs :
+			salariés,
+			indépendants,
+			chefs d’entreprise ou demandeurs d’emploi. Elle permet de se former tout au long de son parcours
+			professionnel,
+			pour développer ses compétences et accéder à l’emploi, se maintenir dans l’emploi ou encore changer
+			d’emploi.
+			De nombreux financements sont disponibles afin de faciliter l’accès à la formation comme le Conseil
+			Régional, Pôle
+			Emploi, les Entreprises avec OPCO et l’état.<br>
+			Pour obtenir une qualification ou une certification reconnue, vous pouvez mobiliser votre CPF (Compte
+			personnel de
+			formation), le CIF (Congé individuel de formation), la VAE (Validation des acquis de l’expérience) et le
+			FIA
+			(Formation individuel ADEFIPH).</p>
+		<div class="d-flex flex-row justify-content-around align-items-center">
+			<img src={{ asset('assets/images/logo/desk-logo-CPF.png') }} alt="logo Mon Compte Formation" class="img-fluid">
+			<img src={{ asset('assets/images/logo/desk-logo-pe.png') }} alt="logo Pôle emploi" class="img-fluid">
+			<img src={{ asset('assets/images/logo/desk-logo-opco.png') }} alt="logo OPCO" class="img-fluid">
+		</div>
+			<button class="btnGrey col-4 offset-4 mt-5">Plus d'informations</button>
+	</div>
+
+	{# Pourquoi se former avec nous ? #}
+	<div class="pourquoi">
+		<div class="container text-center">
+			<h2 >Pourquoi se former avec nous ?</h2>
+			<video controls>
 				Your browser does not support the video tag.
 			</video>
 		</div>
+	</div>
 
 </main>
 {% endblock %}

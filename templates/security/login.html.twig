@@ -1,9 +1,10 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Log in!{% endblock %}
+{% block title %}Mon compte{% endblock %}
 
 {% block body %}
-<div class="container">
+<main >
+<div class="container form-signin">
 <form method="post">
     {% if error %}
         <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
@@ -15,12 +16,20 @@
         </div>
     {% endif %}
 
-    <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
-    <label for="inputEmail">Email</label>
-    <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" autocomplete="email" required autofocus>
-    <label for="inputPassword">Password</label>
-    <input type="password" name="password" id="inputPassword" class="form-control" autocomplete="current-password" required>
+    <h1 class="h3 mb-3 font-weight-normal text-center">Accédez à votre compte</h1>
+     <p class="text-center">Pour accéder à votre compte, merci de renseigner votre identifiant et votre mot de passe</p>
+    <div class="form-floating">
+    <label for="inputEmail"></label>
+          <input type="email" class="form-control" id="floatingInput" requied name="_username" placeholder="IDENTIFIANT" value ="{{ last_username }}">
 
+    <!--<input type="email" placeholder="IDENTIFIANT" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" autocomplete="email" required autofocus>-->
+     </div>
+    
+    <div class="form-floating">
+    <label for="inputPassword"></label>
+     <input type="password" class="form-control" id="floatingPassword" requied name="_password" placeholder="MOT DE PASSE">
+    <!--<input type="password" placeholder="MOT DE PASSE" name="password" id="inputPassword" class="form-control" autocomplete="current-password" required>-->
+ </div>
     <input type="hidden" name="_csrf_token"
            value="{{ csrf_token('authenticate') }}"
     >
@@ -37,8 +46,14 @@
     #}
 
     <button class="btn btn-lg btn-primary" type="submit">
-        Sign in
+        Se connecter
     </button>
 </form>
+<div class="form-floating">
+      <label>
+        <a href="#">Mot de passe oublié ?</a>
+      </label>
+    </div>
 </div>
+</main>
 {% endblock %}

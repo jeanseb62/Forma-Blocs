@@ -178,22 +178,43 @@ h2 {
 .header a {
     text-decoration: none;
     color: #FFF;
+    font-size: 1em;
+    font-weight: bold;
+    justify-content: space-between;
+}
+nav{
+    text-decoration: none;
+    color: #FFF;
+    font-weight: bold;
+    justify-content: space-between;
+}
+.header a:hover {
+    color: #FFF;
 }
 
 .header li {
     text-decoration: none;
     color: #FFF;
     padding-right: 50px;
+    font-size: 1em;
+    font-weight: bold;
+    justify-content: space-between;
 }
 
-.header .icone_sociaux {
-    width: 40px;
-    padding-right: 15px;
-}
-
-.header .icone_sociaux:first-child {
+.header .icone_sociaux{
     padding-left: 10px;
-    width: 50px;
+    width: 35px;
+}
+.btn-orange{
+    background-color: #ff8103;
+    text-decoration: none;
+    color: #FFF;
+    font-size: 0.75em;
+    border-radius: 0px!important;
+    padding: 10px 20px 10px 20px;
+}
+.btn-orange:hover {
+    color: #FFF;
 }
 
 /* Footer */

@@ -3,7 +3,7 @@
     <!-- Information NavBar -->
     <nav class="navbar navbar-expand-md ">
 
-      <div class="navbar-collapse collapse container" id="navbarCollapse1">
+      <div class="navbar-collapse justify-content-center" id="navbarCenteredExample">
         <!-- Right Side Of Navbar -->
         <ul class="navbar-nav d-flex align-items-center">
 
@@ -18,30 +18,26 @@
           <li class="nav-item d-flex align-items-center">
             Suivez-nous sur
 
-            <img src="{{asset('assets/icons/desk-facebook.svg')}}" alt="Facebook" class="icone_sociaux">
-            <img src="{{asset('assets/icons/desk-instagram.svg')}}" alt="Intagram" class="icone_sociaux">
-            <img src="{{asset('assets/icons/desk-linkedin.svg')}}" alt="Linkedin" class="icone_sociaux">
-            <img src="{{asset('assets/icons/desk-youtube.svg')}}" alt="Youtube" class="icone_sociaux">
+            <a href="#"><img src="{{asset('assets/icons/desk-facebook.svg')}}" alt="Facebook" class="icone_sociaux"></a>
+            <a href="#"><img src="{{asset('assets/icons/desk-instagram.svg')}}" alt="Intagram" class="icone_sociaux"></a>
+            <a href="#"><img src="{{asset('assets/icons/desk-linkedin.svg')}}" alt="Linkedin" class="icone_sociaux"></a>
+            <a href="#"><img src="{{asset('assets/icons/desk-youtube.svg')}}" alt="Youtube" class="icone_sociaux"></a>
 
           </li>
         </ul>
       </div>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".collapse"
-        aria-controls="collapse" aria-expanded="true" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
     </nav>
   </div>
-  <nav class="navbar navbar-expand-md navbar-light bg-light">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
       <a class="navbar-brand" href="{{ path('default')}}"><img src="{{ asset('assets/images/logo/Logo-formablocs.png')}}"
-          height="40" alt="Logo"></a>
+          height="50" alt="Logo"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
         aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse justify-content-center" id="navbarCollapse" style="text-align:right;">
-        <ul class="navbar-nav">
+        <ul class="navbar-nav mb-2 mb-lg-0">
 
           <li class="nav-item">
             <a class="nav-link" href="/">Accueil</a>
@@ -59,15 +55,15 @@
             <a class="nav-link" href="{{ path('contact')}}">Contact</a>
           </li>
 
-
-          <li class="nav-item">
-            <a class="nav-link" href="{{ path('app_login')}}">Mon compte</a>
-          </li>
-
+         <li class="nav-item">
+          <div class="d-flex align-items-center">
+            <a class="btn-orange" class="nav-link" href="{{ path('app_login')}}">Mon compte</a>
+          </div>
+         </li>
         </ul>
       </div>
 
   </nav>
 
-
+  
 </header>

@@ -1,0 +1,33 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Formablocs - Qui sommes nous ? {% endblock %}
+
+{% block body %}
+<main class="quisommes">
+    <img src={{ asset('assets/images/background/desk-bandeau-qui.jpg') }} alt="bandeau qui sommes nous">
+
+    <div class="container">
+        <h1 class="text-center py-5">Qui suis-je ? Et pourquoi <span class="text-highlight">FormaBLOCS</span> ?</h1>
+        <p class="pt-5">Je suis <span class="nom">Héloîse ZITOUNI</span>, diplômée d’un Master en Ingénierie de formation avec une expérience professionnelle
+            de 7 ans dans le domaine de la formation. J’attache une grande importance à mon métier.</p><br>
+        <p>La formation professionnelle est une belle opportunité pour permettre à chacun de redonner ou de trouver un
+            sens à sa vie professionnelle, mais aussi personnelle.</p><br>
+        <p>C’est pour tous ces éléments que j’ai décidé de créer <span class="text-highlight">FormaBLOCS</span>, qui est un organisme de formation en
+            distanciel et de conseil qui est spécialisé dans le domaine de la formation continue. </p><br>
+        <p>Les formations et les prestations de conseil bénéficient d’un accompagnement pédagogique complet de manière
+            synchrone (conférences) ou asynchrone (outils de messagerie, forum, email).</p><br>
+        <p>Chez <span class="text-highlight">FormaBLOCS</span> nous vous proposons des formations certifiantes ainsi que des conseils pour les
+            professionnels de la formation. Les heures d’accompagnement dépendront de chaque individu, de leur
+            expérience et de leur parcours professionnel (de 8h à 35h).</p><br>
+        <p>Les apprenants de <span class="text-highlight">FormaBLOCS</span> auront accès au cours de leurs formations via une interface, appelée MOODLE. Des
+            Rendez-vous en distanciel seront planifiés avec le formateur afin d’assurer le suivi pédagogique.</p><br>
+        <p class="pb-5">
+            Avec <span class="text-highlight">FormaBLOCS</span>, vous serez accompagné à chaque étape.
+            Pour plus d’information, n’hésitez pas à me contacter.</p>
+        <p class="pt-5"><span class="text-highlight">Mes valeurs</span> : Entraide, Humanité, Respect, Professionnalisme et Expertise.</p>
+        <div class="text-center">
+            <a class="btnGrey" href={{ path('contact')}}>Contact</a>
+        </div>
+    </div>
+</main>
+{% endblock %}

@@ -26,9 +26,10 @@ h2 {
     font-size: 2.25em;
 }
 
-p, li {
-   font-size: 1.125em;
-   font-weight: 600; 
+p,
+li {
+    font-size: 1.125em;
+    font-weight: 600;
 }
 
 
@@ -120,25 +121,27 @@ p, li {
 
 /* Formation */
 .formation {
-    background-color: #E5E5E5;;
+    background-color: #E5E5E5;
+    ;
 }
 
-.formation .card-title{
+.formation .card-title {
     font-size: 2.25em;
 }
 
-.formation p, .formation li{
+.formation p,
+.formation li {
     font-weight: 600;
 }
 
-.formation ul li span{
+.formation ul li span {
     font-weight: bold;
 }
 
 .quote {
     background-color: #FEFAE5;
     font-weight: 600;
-    padding:0 15%;
+    padding: 0 15%;
 }
 
 .quoteText {
@@ -152,17 +155,34 @@ p, li {
 
 
 /* Conseil */
-.conseil, .accompagnement {
+.conseil,
+.accompagnement {
     background-color: #F5F6F8;
 }
 
-.accompagnement h3, .accompagnement h4 {
+.accompagnement h3,
+.accompagnement h4 {
     font-size: 1.5625em;
     font-weight: bold;
 }
 
 .accompagnement h3 {
     color: #E5C210;
+}
+
+/* Qui sommes nous */
+.quisommes {
+    background: url('../assets/images/background/desk-2silhouettes.png') bottom right no-repeat;
+}
+
+.quisommes > div > div {
+    padding-top: 100px;
+    padding-bottom: 350px;
+}
+
+.quisommes .nom {
+    font-size: 2.25em;
+    font-weight: 600;
 }
 
 /* Card */
@@ -213,8 +233,12 @@ p, li {
     text-transform: uppercase;
     font-weight: bold;
     font-size: 1.5em;
+    color: #000;
 }
 
+[class*="btn"]:hover {
+    color: #000;
+}
 
 /* Yellow */
 .btnYellow {
@@ -265,12 +289,14 @@ p, li {
     font-weight: bold;
     justify-content: space-between;
 }
-nav{
+
+nav {
     text-decoration: none;
     color: #FFF;
     font-weight: bold;
     justify-content: space-between;
 }
+
 .header a:hover {
     color: #FFF;
 }
@@ -284,18 +310,20 @@ nav{
     justify-content: space-between;
 }
 
-.header .icone_sociaux{
+.header .icone_sociaux {
     padding-left: 10px;
     width: 35px;
 }
-.btn-orange{
+
+.btn-orange {
     background-color: #ff8103;
     text-decoration: none;
     color: #FFF;
     font-size: 0.75em;
-    border-radius: 0px!important;
+    border-radius: 0px !important;
     padding: 10px 20px 10px 20px;
 }
+
 .btn-orange:hover {
     color: #FFF;
 }
@@ -353,11 +381,11 @@ footer .icone_sociaux {
 
 
 /* Login */
-.jumbotron{ 
+.jumbotron {
     background-color: #deadee;
     border-bottom: 5px solid #fed812;
     margin-bottom: 50px;
-    height:20rem;
+    height: 20rem;
 }
 
 .form-signin {
@@ -368,7 +396,7 @@ footer .icone_sociaux {
     margin: auto;
     background-color: #f5f6f8;
     border-radius: 20px;
-    font-weight:bold;
+    font-weight: bold;
     filter: drop-shadow(10px 10px 4px #dedede);
 }
 
@@ -377,37 +405,46 @@ footer .icone_sociaux {
 }
 
 .form-outline {
-    color:#000;
+    color: #000;
     background-color: #FFF;
 
 }
 
 .form-outline {
     border-radius: 40px;
-    color:#000;
+    color: #000;
     background-color: #FFF;
     filter: drop-shadow(5px 5px 4px #dedede);
 }
 
 .form-signin input[type="email"] {
-  margin-bottom: 40px;
+    margin-bottom: 40px;
 }
-  
+
 .form-signin input[type="password"] {
- margin-bottom: 40px;
+    margin-bottom: 40px;
 }
 
-.form-signin .btn-primary{ border-radius: 0px!important;
- padding: 10px 50px 10px 50px;font-size:1em; 
+.form-signin .btn-primary {
+    border-radius: 0px !important;
+    padding: 10px 50px 10px 50px;
+    font-size: 1em;
 }
 
-.form-signin h1{
-font-weight: bold;
+.form-signin h1 {
+    font-weight: bold;
 }
-.MotDePasseOublie{
-    color:#000;
-    margin:10px auto 50px auto;
+
+.MotDePasseOublie {
+    color: #000;
+    margin: 10px auto 50px auto;
     max-width: 450px;
 }
-.MotDePasseOublie a{color:#000;}
-.MotDePasseOublie a:hover{color:#000;}
+
+.MotDePasseOublie a {
+    color: #000;
+}
+
+.MotDePasseOublie a:hover {
+    color: #000;
+}

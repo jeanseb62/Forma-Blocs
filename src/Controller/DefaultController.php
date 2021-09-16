@@ -25,4 +25,12 @@ class DefaultController extends AbstractController
         ]);
     }
 
+    /**
+     * @Route("/qui-sommes-nous", name="qui-sommes-nous")
+     */
+    public function quiSommesNous()
+    {
+        return $this->render('default/quiSommesNous.html.twig');
+    }
+
 }

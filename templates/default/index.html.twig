@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}FormaBLOCS - Homepage{% endblock %}
+{% block title %}Formablocs - Homepage{% endblock %}
 
 {% block body %}
 {# Banner #}
@@ -14,7 +14,9 @@
 			<h2 class="description col-8">Spécialisé dans le domaine de la formation professionnelle continue
 				(distanciel).
 			</h2>
-			<button class="btnYellow mt-5 col-3">Plus d'information</button>
+			<div class="mt-5 pt-5">
+				<a class="btnYellow col-3" href={{ path('formation')}}>Plus d'informations</a>
+			</div>
 		</div>
 	</div>
 
@@ -40,7 +42,7 @@
 			</div>
 			<img src={{asset('assets/images/photo-heloise-zitouni.png')}} alt="Photo Héloîse ZITOUNI"
 				class="img-fluid align-self-start col-5">
-			<button class="btnGrey col-3" id="btnContact">Nous contacter</button>
+			<a class="btnGrey col-3 text-center" id="btnContact" href={{ path('qui-sommes-nous')}}>Nous contacter</a>
 		</div>
 	</div>
 
@@ -119,7 +121,9 @@
 			<img src={{ asset('assets/images/logo/desk-logo-pe.png') }} alt="logo Pôle emploi" class="img-fluid">
 			<img src={{ asset('assets/images/logo/desk-logo-opco.png') }} alt="logo OPCO" class="img-fluid">
 		</div>
-			<button class="btnGrey col-4 offset-4 mt-5">Plus d'informations</button>
+		<div class="text-center mt-3">
+			<a class="btnGrey" href={{ path('contact')}}>Plus d'informations</a>
+		</div>
 	</div>
 
 	{# Pourquoi se former avec nous ? #}

@@ -10,7 +10,7 @@
     <div class="formation mb-5">
         <div  class="container">
             {% for formation in formations %}
-            <img src={{ asset('assets/icons/desk-cercle-chapeau-noir.png') }} alt="icon card" class="iconCard">
+            <img src={{ asset('assets/icons/desk-cercle-chapeau-noir.svg') }} alt="icon card" class="iconCard">
             <div class="card">
                 <h2 class="card-title text-uppercase col-11 pt-3 px-5">{{ formation.title }}</h2>
                 <p class="px-5">Chacun des deux blocs de ce titre peut être vendu individuellement.</p>
@@ -43,11 +43,11 @@
                         Pour plus d’information et d’aide au financement, nous contacter. </p>
             </div>
             <div class="d-flex flex-row justify-content-around py-5">
-                <button class="btnGrey">Demande de devis</button>
-                <button class="btnYellow">
+                <a class="btnGrey" href={{ path('quotation')}}>Demande de devis</a>
+                <a class="btnYellow" href="#">
                     <img src={{ asset('assets/icons/telecharger.svg')}} alt="télécharger">
                     Plaquette en pdf
-                </button>
+                </a>
             </div>
             {% endfor %}
         </div>

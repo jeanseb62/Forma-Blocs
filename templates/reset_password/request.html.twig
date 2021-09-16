@@ -1,22 +1,39 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Reset your password{% endblock %}
+{% block title %}Identifiants oubliés{% endblock %}
 
 {% block body %}
     {% for flashError in app.flashes('reset_password_error') %}
         <div class="alert alert-danger" role="alert">{{ flashError }}</div>
     {% endfor %}
-    <h1>Reset your password</h1>
+    <main class="h-100 resetPassword">
 
-    {{ form_start(requestForm) }}
-        {{ form_row(requestForm.email) }}
-        <div>
-            <small>
-                Enter your email address and we we will send you a
-                link to reset your password.
-            </small>
-        </div>
+<img src={{ asset('assets/images/background/desk-badeau-espace.jpg') }} alt="bandeau espace" width="100%">
 
-        <button class="btn btn-primary">Send password reset email</button>
+<h1 class="mb-3 font-weight-bold text-center">Identifiants oubliés</h1>
+
+     <p class="text-center">Vous avez oublié vos identifiants de connexion ?</p>
+     <p class="text-center">ça arrive à tout le monde !</p>
+     <p class="text-center mb-3">Renseignez votre adresse email et <b>nous vous enverrons un lien pour récupérer vos idtentifiants.</b></p>
+   
+<div class="container">
+<form method="post" class="form-signin mb-8">
+
+    <h2 class="h3 mb-3 font-weight-bold text-center">Identifiants oubliés</h2>
+ {{ form_start(requestForm) }}
+
+<p class="form-outline">
+ {{ form_row(requestForm.email, { 'attr': {'placeholder':'VOTRE ADRESSE EMAIL' } }) }}
+
+ 
+</p>
+
+    <button class="btn btn-primary" type="submit">
+        Envoyer
+    </button>
     {{ form_end(requestForm) }}
+</form>
+
+</div>
+</main>  
 {% endblock %}

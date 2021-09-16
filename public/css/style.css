@@ -463,3 +463,6 @@ font-weight: bold;
     background-color:#fed812;
     padding: 10px 50px 10px 50px;font-size:1em; 
    }
+
+/* Isentifiant oublié */
+.resetPassword p{font-weight: normal;}

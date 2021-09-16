@@ -5,9 +5,7 @@
 {% block body %}
 <main class="h-100">
 
-<div class="jumbotron">
-  <br><br>
-</div>
+<img src={{ asset('assets/images/background/desk-badeau-espace.jpg') }} alt="bandeau espace" width="100%">
 
 <h1 class="h3 mb-3 font-weight-bold text-center">Accédez à votre compte</h1>
      <p class="text-center">Pour accéder à votre compte, merci de renseigner votre identifiant et votre mot de passe</p>
@@ -55,7 +53,7 @@
 </form>
    <div class="MotDePasseOublie">
 
-        <a href="#">Mot de passe oublié ?</a>
+        <a href="{{ path('app_forgot_password_request')}}">Mot de passe oublié ?</a>
    
     </div>
 </div>

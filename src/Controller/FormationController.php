@@ -16,7 +16,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class FormationController extends AbstractController
 {
     /**
-     * @Route("/", name="formation_index", methods={"GET"})
+     * @Route("/", name="formation", methods={"GET"})
      */
     public function index(FormationRepository $formationRepository): Response
     {

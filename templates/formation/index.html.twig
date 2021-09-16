@@ -5,17 +5,16 @@
 {% block body %}
 
 <main>
-    <img src={{ asset('assets/images/desk-bandeau-formations.jpg')}} alt="formation" class="img-fluid">
-
-    <h1 class="text-center">Nos formations certifiantes</h2>
-    <div class="formation">
-        <div class="container pt-5">
+    <img src={{ asset('assets/images/background/desk-bandeau-formations.jpg')}} alt="bandeau formations" class="img-fluid">
+    <h1 class="text-center py-5">Nos formations certifiantes</h1>
+    <div class="formation mb-5">
+        <div  class="container">
             {% for formation in formations %}
-            <img src="{{ asset('assets/icons/desk-cercle-chapeau-noir.png') }}" alt="icon card" class="iconCard">
+            <img src={{ asset('assets/icons/desk-cercle-chapeau-noir.png') }} alt="icon card" class="iconCard">
             <div class="card">
-                <h2 class="card-title col-10 text-uppercase offset-1 pt-3">{{ formation.title }}</h3>
-                <p class="offset-1">Chacun des deux blocs de ce titre peut être vendu individuellement.</p>
-                <div class="card-body col-10 offset-1 cardFormation">
+                <h2 class="card-title text-uppercase col-11 pt-3 px-5">{{ formation.title }}</h2>
+                <p class="px-5">Chacun des deux blocs de ce titre peut être vendu individuellement.</p>
+                <div class="card-body px-5 cardFormation">
 
                     <img src={{asset('assets/icons/desk-picto-cube.svg')}} alt="icone block">
                     <ul class="list-unstyled">
@@ -38,21 +37,24 @@
 
                     
                 </div>
-                <p class="offset-1 col-10 pt-3">Ces formations peuvent être financée par le biais du financement de la formation professionnelle
+                <p class="px-5 pt-3">Ces formations peuvent être financée par le biais du financement de la formation professionnelle
                         continue : CPF / Pôle Emploi / OPCO /
                         Compte formation entreprises / Transition professionnelle.
                         Pour plus d’information et d’aide au financement, nous contacter. </p>
             </div>
-            <div>
-                <button class="btnGrey col-3 offset-2">Demande de devis</button>
-                <button class="btnYellow col-3 offset-2">Plaquette en pdf</button>
+            <div class="d-flex flex-row justify-content-around py-5">
+                <button class="btnGrey">Demande de devis</button>
+                <button class="btnYellow">
+                    <img src={{ asset('assets/icons/telecharger.svg')}} alt="télécharger">
+                    Plaquette en pdf
+                </button>
             </div>
             {% endfor %}
         </div>
     </div>
 
     <div class="quote d-flex flex-row">
-        <img src="{{ asset('assets/images/background/desk-quote-left.svg')}}" alt="quote left">
+        <img src={{ asset('assets/images/background/desk-quote-left.svg')}} alt="quote left">
         <div class="container">
             <p class="text-center col-10 offset-1 textBig quoteText">Nous passons 15
                 ans à l’école et pas
@@ -61,7 +63,7 @@
             </p>
             <p class="text-center textBig">Albert Einstein</p>
         </div>
-        <img src="{{ asset('assets/images/background/desk-quote-right.svg')}}" alt="quote right">
+        <img src={{ asset('assets/images/background/desk-quote-right.svg')}} alt="quote right">
     </div>
 </main>
 

@@ -18,11 +18,18 @@ h6 {
     color: #454548;
 }
 
-h1,
-h2 {
+h1 {
     font-size: 3.125em;
 }
 
+h2 {
+    font-size: 2.25em;
+}
+
+p, li {
+   font-size: 1.125em;
+   font-weight: 600; 
+}
 
 
 
@@ -43,9 +50,6 @@ h2 {
     padding-top: 100px;
 }
 
-
-
-
 /* Text */
 .text-highlight {
     color: #F2CB02;
@@ -63,6 +67,14 @@ h2 {
 }
 
 
+
+
+.iconCard {
+    position: relative;
+    top: 50px;
+    right: 50px;
+    z-index: 2;
+}
 
 
 /* Block */
@@ -111,13 +123,6 @@ h2 {
     background-color: #E5E5E5;;
 }
 
-.formation .iconCard {
-    position: relative;
-    top: 50px;
-    right: 50px;
-    z-index: 2;
-}
-
 .formation .card-title{
     font-size: 2.25em;
 }
@@ -146,7 +151,19 @@ h2 {
 }
 
 
+/* Conseil */
+.conseil, .accompagnement {
+    background-color: #F5F6F8;
+}
 
+.accompagnement h3, .accompagnement h4 {
+    font-size: 1.5625em;
+    font-weight: bold;
+}
+
+.accompagnement h3 {
+    color: #E5C210;
+}
 
 /* Card */
 .prestation .card-container {
@@ -201,8 +218,6 @@ h2 {
 
 /* Yellow */
 .btnYellow {
-    margin-top: 63px;
-    margin-bottom: 139px;
     background-color: #FED812;
 }
 

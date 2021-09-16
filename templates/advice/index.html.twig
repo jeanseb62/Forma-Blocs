@@ -1,20 +1,113 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello AdviceController!{% endblock %}
+{% block title %}Formablocs - Nos conseils{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+<main>
+    <img src={{ asset('assets/images/background/desk-bandeau-conseils.jpg') }} alt="bandeau conseils">
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+    <div class="container">
+        <h1 class="text-center py-5">Prestations de conseil / d’accompagnement pour les professionnels de la formation</h1>
+    </div>
+    <div class="conseil px-3">
+        <div class="container">
+            <img class="iconCard" src={{ asset('assets/icons/desk-cercle-chapeau-noir.png') }} alt="icon conseils">
+            <div class="card px-5">
+                <h2 class="text-center card-title">Conseils pour les professionnels de la formation</h2>
+                <p class="px-3"><span class="text-highlight">FormaBLOCS</span> vous propose de vous accompagner en
+                    distanciel : </p>
+                <ul class="list-unstyled">
+                    {% for advice in advices %}
+                    <li class="my-3">
+                        <img class="px-3" src={{ asset('assets/icons/desk-picto-cube.svg') }} alt="icone block">
+                        {{ advice.name }}
+                    </li>
+                    {% endfor %}
+                </ul>
+                <p class="px-3">Liste non exhaustive. Nhésitez pas à contacter <span
+                        class="text-highlight">FormaBLOCS</span> pour avoir des formations sur-mesures. </p>
+                <div class="d-flex flex-row align-items-center px-5">
+                    <img src={{ asset('assets/icons/desk-picto-television.svg')}} alt="icone formation à distance">
+                    <p class="px-4 mb-0">Cette formation sera en distanciel avec un accompagnement pédagogique complet
+                        de manière synchrone (Conférences) ou asynchrone (outils de messagerie, forum, email)</p>
+                </div>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/Icademie/Exam/Projet-4/Forma-Blocs/src/Controller/AdviceController.php'|file_link(0) }}">src/Controller/AdviceController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/Icademie/Exam/Projet-4/Forma-Blocs/templates/advice/index.html.twig'|file_link(0) }}">templates/advice/index.html.twig</a></code></li>
-    </ul>
-</div>
+                <div class="d-flex flex-row align-items-center px-5 pt-5 pb-5">
+                    <img src={{ asset('assets/icons/desk-cart-arrow-down.svg')}} alt="icone prix">
+                    <p class="px-4 mb-0">Nous contacter</p>
+                </div>
+
+
+
+            </div>
+
+            <div class="text-center py-5">
+                <button class="btnGrey">Demande de devis</button>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="accompagnement mt-5">
+
+        <div class="container">
+            <h2 class="text-center pt-3">Accompagnement V.A.E <br>
+                (Validation d’acquis d’expérience)</h2>
+            <img class="iconCard" src={{ asset('assets/icons/desk-cercle-puzzle.svg') }} alt="icon conseils">
+
+            <div class="card">
+                <div class="col-10 offset-1 mt-5">
+                    <h3>Objectifs de la formation</h3>
+                    <p>La Validation des acquis de l'expérience (VAE) est une nouvelle voie d'accès aux diplômes. Elle
+                        permet à toute personne engagée dans la vie active depuis au moins 1 an, de voir reconnaître
+                        officiellement ses compétences professionnelles, par un titre, un diplôme professionnel ou un
+                        certificat de qualification enregistré préalablement au RNCP.</p>
+                </div>
+                <div class="col-10 offset-1  mt-5">
+                    <h3>Objectifs de sortie</h3>
+                    <p>L’accompagnement à la Validation des acquis de l'expérience (VAE) vise à développer la capacité à formaliser par écrit et à présenter à l’oral les compétences acquises au
+                        travers de son expérience professionnelle et/ou personnelle par rapport au
+                        référentiel d’un titre, d’un diplôme professionnel ou d’un certificat de qualification
+                        enregistré préalablement au RNCP
+                        </p>
+                </div>
+                <div class="col-10 offset-1  mt-5">
+                    <h3>Contenu</h3>
+                    <p>L’accompagnement à la Validation des acquis de l'expérience (VAE) est réalisé par un consultant en évolution professionnelle. Il est individualisé. Les séances se déroulent sous la forme d’entretiens. Durant ces entretiens, le consultant apporte son expertise technique, sa capacité à formaliser et à analyser. Concernant la préparation de la présentation orale devant le jury d’examen, le consultant peut être amené à proposer un training pour familiariser le candidat à cet exercice de communication.</p>
+                </div>
+                <div class="col-10 offset-1  mt-5">
+                    <h3>Les méthodes utilisées peuvent être :</h3>
+                    <ul class="list-unstyled">
+                        <li>- Entretiens en face à face. </li>
+                        <li>- Rédaction de compte-rendu d’expériences.</li>
+                        <li>- Recherche de témoignages et de preuves.</li>
+                        <li>- Établissement d’un plan de formations complémentaires si nécessaire.</li>
+                        <li>- Analyse du référentiel de compétences.</li>
+                    </ul>
+                </div>
+                <div class="col-10 offset-1  mt-5">
+                    <h3>Sessions</h3>
+                    <p>En distanciel du 01/01/2021 au 31/07/2022</p>
+                </div>
+                <div class="col-10 offset-1  mt-5">
+                    <h3>Formations concernées</h3>
+                    <div>
+                        <h4>Titre professionnel Formateur professionnel pour adultes (Bac+2)</h4>
+                        <p>En distanciel du 01/01/2021 au 31/07/2022</p>
+                    </div>
+                    <div>
+                        <h4>Titre de conseiller en insertion professionnel (Bac+2)</h4>
+                        <p>En distanciel du 01/01/2021 au 31/07/2022</p>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="text-center py-5">
+                <button class="btnGrey mb-5">Demande de devis</button>
+            </div>
+        </div>
+    </div>
+
+</main>
+
 {% endblock %}

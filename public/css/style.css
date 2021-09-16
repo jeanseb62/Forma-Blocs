@@ -338,30 +338,61 @@ footer .icone_sociaux {
 
 
 /* Login */
+.jumbotron{ 
+    background-color: #deadee;
+    border-bottom: 5px solid #fed812;
+    margin-bottom: 50px;
+    height:20rem;
+}
+
 .form-signin {
     width: 100%;
-    max-width: 330px;
-    padding: 15px;
+    height: 100%;
+    max-width: 450px;
+    padding: 50px 50px 50px 50px;
     margin: auto;
-  }
-  
-  .form-signin .checkbox {
+    background-color: #f5f6f8;
+    border-radius: 20px;
+    font-weight:bold;
+    filter: drop-shadow(10px 10px 4px #dedede);
+}
+
+.form-signin .checkbox {
     font-weight: 400;
-  }
+}
+
+.form-outline {
+    color:#000;
+    background-color: #FFF;
+
+}
+
+.form-outline {
+    border-radius: 40px;
+    color:#000;
+    background-color: #FFF;
+    filter: drop-shadow(5px 5px 4px #dedede);
+}
+
+.form-signin input[type="email"] {
+  margin-bottom: 40px;
+}
   
-  .form-signin .form-floating:focus-within {
-    z-index: 2;
-  }
-  
-  .form-signin input[type="email"] {
-    margin-bottom: -1px;
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
-  }
-  
-  .form-signin input[type="password"] {
-    margin-bottom: 10px;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-  }
-  
+.form-signin input[type="password"] {
+ margin-bottom: 40px;
+}
+
+.form-signin .btn-primary{ border-radius: 0px!important;
+ padding: 10px 50px 10px 50px;font-size:1em; 
+}
+
+.form-signin h1{
+font-weight: bold;
+}
+.MotDePasseOublie{
+    color:#000;
+    margin:10px auto 50px auto;
+    max-width: 450px;
+}
+.MotDePasseOublie a{color:#000;}
+.MotDePasseOublie a:hover{color:#000;}

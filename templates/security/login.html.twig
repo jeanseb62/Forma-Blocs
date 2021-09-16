@@ -3,9 +3,17 @@
 {% block title %}Mon compte{% endblock %}
 
 {% block body %}
-<main >
-<div class="container form-signin">
-<form method="post">
+<main class="h-100">
+
+<div class="jumbotron">
+  <br><br>
+</div>
+
+<h1 class="h3 mb-3 font-weight-bold text-center">Accédez à votre compte</h1>
+     <p class="text-center">Pour accéder à votre compte, merci de renseigner votre identifiant et votre mot de passe</p>
+   
+<div class="container">
+<form method="post" class="form-signin">
     {% if error %}
         <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
     {% endif %}
@@ -16,20 +24,16 @@
         </div>
     {% endif %}
 
-    <h1 class="h3 mb-3 font-weight-normal text-center">Accédez à votre compte</h1>
-     <p class="text-center">Pour accéder à votre compte, merci de renseigner votre identifiant et votre mot de passe</p>
-    <div class="form-floating">
-    <label for="inputEmail"></label>
-          <input type="email" class="form-control" id="floatingInput" requied name="_username" placeholder="IDENTIFIANT" value ="{{ last_username }}">
-
-    <!--<input type="email" placeholder="IDENTIFIANT" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" autocomplete="email" required autofocus>-->
-     </div>
-    
-    <div class="form-floating">
-    <label for="inputPassword"></label>
-     <input type="password" class="form-control" id="floatingPassword" requied name="_password" placeholder="MOT DE PASSE">
-    <!--<input type="password" placeholder="MOT DE PASSE" name="password" id="inputPassword" class="form-control" autocomplete="current-password" required>-->
- </div>
+<h2 class="h3 mb-3 font-weight-bold text-center">Accédez à votre compte</h2>
+ 
+ <div class="form-outline">
+  <input type="email" id="inputEmail" class="form-control" placeholder="email@email.com" requied/>
+  <label class="form-label" for="email">IDENTIFIANT</label>
+</div>
+ <div class="form-outline">
+  <input type="password" id="inputPassword" name="password" class="form-control" requied/>
+  <label class="form-label" for="password">MOT DE PASSE</label>
+</div>
     <input type="hidden" name="_csrf_token"
            value="{{ csrf_token('authenticate') }}"
     >
@@ -45,14 +49,14 @@
         </div>
     #}
 
-    <button class="btn btn-lg btn-primary" type="submit">
+    <button class="btn btn-primary" type="submit">
         Se connecter
     </button>
 </form>
-<div class="form-floating">
-      <label>
+   <div class="MotDePasseOublie">
+
         <a href="#">Mot de passe oublié ?</a>
-      </label>
+   
     </div>
 </div>
 </main>

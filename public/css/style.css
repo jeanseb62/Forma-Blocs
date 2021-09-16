@@ -23,6 +23,9 @@ h2 {
     font-size: 3.125em;
 }
 
+
+
+
 /* banner */
 
 .description {
@@ -33,11 +36,15 @@ h2 {
 .banner {
     background: url('../assets/images/background/banner-homepage.jpg') center no-repeat;
     height: 530px;
+    margin-bottom: 60px;
 }
 
 .banner h1 {
     padding-top: 100px;
 }
+
+
+
 
 /* Text */
 .text-highlight {
@@ -55,12 +62,22 @@ h2 {
     font-weight: 600;
 }
 
+
+
+
 /* Block */
 
+
+/* Home */
 .prestation {
-    background: url('../assets/images/background/bg-home-prestations.jpg') center / contain no-repeat;
-    padding: 100px 0;
+    background: url('../assets/images/background/bg-home-prestations.jpg') center left / contain no-repeat;
+    background-color: #F5F6F8;
     margin-top: 102px;
+    padding-bottom: 100px;
+}
+
+.prestation h2 {
+    padding: 60px 0;
 }
 
 .financer {
@@ -69,12 +86,14 @@ h2 {
 
 .pourquoi {
     background: url('../assets/images/background/desk-bandeau-home-pourquoi.jpg') bottom / contain no-repeat;
+    background-color: #FEFAE5;
     width: 100%;
     height: 775px;
+    margin-top: 80px;
 }
 
 .pourquoi h2 {
-    padding-top: 100px;
+    padding-top: 20px;
 }
 
 .pourquoi video {
@@ -86,26 +105,69 @@ h2 {
     width: 785px;
 }
 
+
+/* Formation */
+.formation {
+    background-color: #E5E5E5;;
+}
+
+.formation .iconCard {
+    position: relative;
+    top: 50px;
+    right: 50px;
+    z-index: 2;
+}
+
+.formation .card-title{
+    font-size: 2.25em;
+}
+
+.formation p, .formation li{
+    font-weight: 600;
+}
+
+.formation ul li span{
+    font-weight: bold;
+}
+
+.quote {
+    background-color: #FEFAE5;
+    font-weight: 600;
+    padding:0 15%;
+}
+
+.quoteText {
+    font-style: italic;
+}
+
+.cardFormation {
+    gap: 25px 20px;
+    padding: 0;
+}
+
+
+
+
 /* Card */
-.card-container {
+.prestation .card-container {
     display: grid;
     padding: 0 150px;
     grid-template-columns: auto auto auto;
     gap: 65px;
 }
 
-.card-img-top {
+.prestation .card-img-top {
     border-radius: 23px 23px 0 0;
 }
 
-.card-item {
+.prestation .card-item {
     border: none;
     padding: 0;
     border-radius: 23px;
 }
 
-.card-text,
-.card-title {
+.prestation .card-text,
+.prestation .card-title {
     text-transform: uppercase;
     padding-left: 20px;
     font-weight: 600;
@@ -116,14 +178,13 @@ h2 {
     grid-template-columns: 35px 1fr;
 }
 
-.icone {
-    margin-bottom: 40px;
-}
-
 .text-note {
     padding-top: 55px;
     font-weight: 600;
 }
+
+
+
 
 
 /* Button */
@@ -136,6 +197,7 @@ h2 {
     font-weight: bold;
     font-size: 1.5em;
 }
+
 
 /* Yellow */
 .btnYellow {
@@ -152,6 +214,7 @@ h2 {
     background-color: #D9B600;
 }
 
+
 /* Grey */
 .btnGrey {
     background-color: #CDD1DB;
@@ -164,6 +227,11 @@ h2 {
 .btnGrey:active {
     background-color: #A0A1A7;
 }
+
+
+
+
+
 
 /* Header */
 .header {
@@ -217,6 +285,11 @@ nav{
     color: #FFF;
 }
 
+
+
+
+
+
 /* Footer */
 footer {
     background-image: url('../assets/images/background/desk-footer.jpg');
@@ -260,6 +333,9 @@ footer .icone_sociaux {
     width: 25px;
     padding-right: 5px;
 }
+
+
+
 
 /* Login */
 .form-signin {

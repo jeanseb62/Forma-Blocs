@@ -43,17 +43,38 @@
             <a class="nav-link" href="/">Accueil</a>
           </li>
 
-          <li class="nav-item">
+          {# <li class="nav-item">
             <a class="nav-link" href="#">Nos prestations</a>
+          </li> #}
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPrestation" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Nos prestations
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownPrestation">
+              <li><a class="dropdown-item" href="{{ path('formation_index') }}">Nos formations</a></li>
+              <li><a class="dropdown-item" href="#">Nos conseils en formation</a></li>
+            </ul>
           </li>
 
           <li class="nav-item">
             <a class="nav-link" href="#">Qui suis-je ?</a>
           </li>
 
-          <li class="nav-item">
+          {# <li class="nav-item">
             <a class="nav-link" href="{{ path('contact')}}">Contact</a>
-          </li>
+          </li> #}
+
+          <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownContact" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Contact
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownContact">
+            <li><a class="dropdown-item" href="{{ path('contact')}}">Contactez FormaBLOCS</a></li>
+            <li><a class="dropdown-item" href="#">Demande de devis</a></li>
+          </ul>
+        </li>
+        
 
          <li class="nav-item">
           <div class="d-flex align-items-center">

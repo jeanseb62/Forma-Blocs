@@ -24,6 +24,12 @@ class Block
      */
     private $name;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=formation::class, inversedBy="blocks")
+     */
+    private $formation;
+
+   
     public function getId(): ?int
     {
         return $this->id;
@@ -37,6 +43,18 @@ class Block
     public function setName(string $name): self
     {
         $this->name = $name;
+
+        return $this;
+    }
+
+    public function getFormation(): ?formation
+    {
+        return $this->formation;
+    }
+
+    public function setFormation(?formation $formation): self
+    {
+        $this->formation = $formation;
 
         return $this;
     }

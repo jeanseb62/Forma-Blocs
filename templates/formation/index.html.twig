@@ -1,20 +1,68 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}FORMA BLOCS{% endblock %}
+{% block title %}Formablocs - Nos formations{% endblock %}
 
 {% block body %}
 
-    <section class="vh-100 container" style="margin-top:50px;">
+<main>
+    <img src={{ asset('assets/images/desk-bandeau-formations.jpg')}} alt="formation" class="img-fluid">
 
-        {% for formation in formations %}
-        <div class="card-body">
-            <h1>{{ formation.title }}</h1>
-            <div class="content">
-                <p>{{ formation.content | raw }}</p>
-               
+    <h1 class="text-center">Nos formations certifiantes</h2>
+    <div class="formation">
+        <div class="container pt-5">
+            {% for formation in formations %}
+            <img src="{{ asset('assets/icons/desk-cercle-chapeau-noir.png') }}" alt="icon card" class="iconCard">
+            <div class="card">
+                <h2 class="card-title col-10 text-uppercase offset-1 pt-3">{{ formation.title }}</h3>
+                <p class="offset-1">Chacun des deux blocs de ce titre peut être vendu individuellement.</p>
+                <div class="card-body col-10 offset-1 cardFormation">
+
+                    <img src={{asset('assets/icons/desk-picto-cube.svg')}} alt="icone block">
+                    <ul class="list-unstyled">
+                        {% for blocks in formation.blocks %}
+                        <li><span>Bloc {{ loop.index }} : </span> {{ blocks.name }}</li>
+                        {% endfor %}
+                    </ul>
+
+
+                    <img src={{asset('assets/icons/desk-picto-television.svg')}} alt="icone formation à distance">
+                    <p>Cette formation sera en distanciel avec un accompagnement pédagogique complet de manière
+                        synchrone
+                        (Conférences) ou asynchrone (outils de messagerie, forum, email) </p>
+
+                    <img src={{asset('assets/icons/desk-chapeau-gris.svg')}} alt="icone chapeau diplome">
+                    <p>Cette formation est accessible par la voie de la VAE (Validation des Acquis de l’Expérience)</p>
+
+                    <img src={{asset('assets/icons/desk-cart-arrow-down.svg')}} alt="icone prix">
+                    <p>Le prix : de {{ formation.priceMin }} à {{ formation.priceMax }} &euro;</p>
+
+                    
+                </div>
+                <p class="offset-1 col-10 pt-3">Ces formations peuvent être financée par le biais du financement de la formation professionnelle
+                        continue : CPF / Pôle Emploi / OPCO /
+                        Compte formation entreprises / Transition professionnelle.
+                        Pour plus d’information et d’aide au financement, nous contacter. </p>
+            </div>
+            <div>
+                <button class="btnGrey col-3 offset-2">Demande de devis</button>
+                <button class="btnYellow col-3 offset-2">Plaquette en pdf</button>
+            </div>
+            {% endfor %}
         </div>
-        {% endfor %}
+    </div>
 
-    </section>
+    <div class="quote d-flex flex-row">
+        <img src="{{ asset('assets/images/background/desk-quote-left.svg')}}" alt="quote left">
+        <div class="container">
+            <p class="text-center col-10 offset-1 textBig quoteText">Nous passons 15
+                ans à l’école et pas
+                une fois on nous apprend la confiance en soi, la passion et l’amour qui sont les fondements de la
+                vie.
+            </p>
+            <p class="text-center textBig">Albert Einstein</p>
+        </div>
+        <img src="{{ asset('assets/images/background/desk-quote-right.svg')}}" alt="quote right">
+    </div>
+</main>
 
 {% endblock %}

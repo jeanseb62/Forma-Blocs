@@ -33,4 +33,11 @@ class DefaultController extends AbstractController
         return $this->render('default/quiSommesNous.html.twig');
     }
 
+    /**
+     * @Route("/CGU", name="CGU")
+     */
+    public function cgu()
+    {
+        return $this->render('default/cgu.html.twig');
+    }
 }

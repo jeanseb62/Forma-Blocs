@@ -40,4 +40,12 @@ class DefaultController extends AbstractController
     {
         return $this->render('default/cgu.html.twig');
     }
+
+    /**
+     * @Route("/mentions-légales", name="mentions")
+     */
+    public function mentions()
+    {
+        return $this->render('default/mentions.html.twig');
+    }
 }

@@ -187,18 +187,22 @@ li {
     font-weight: 600;
 }
 
-/* CGU */
-.cgu {
+/* CGU / Mentions légales*/
+.reglement {
     background: url('../assets/images/background/desk-2silhouettes.png') bottom right no-repeat;
 }
 
-.cgu div p {
+.reglement div p {
     margin-bottom: 0;
 }
 
-.cgu div:last-child {
+.reglement div:last-child {
     padding-bottom: 500px;
-} 
+}
+
+.reglement ul li {
+    font-weight: normal;
+}
 
 /* Card */
 .prestation .card-container {

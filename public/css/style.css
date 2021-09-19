@@ -43,7 +43,7 @@ li {
 
 .banner {
     background: url('../assets/images/background/banner-homepage.jpg') center no-repeat;
-    min-height: 530px;
+    height: 530px;
     background-color: #F5F6F8;
     margin-bottom: 60px;
 }
@@ -116,7 +116,7 @@ li {
     padding-top: 20px;
 }
 
-.pourquoi video {
+video {
     background: url('../assets/images/background/desk-1-petale-jaune.png') no-repeat;
     margin-top: 80px;
     padding-top: 35px;
@@ -213,7 +213,6 @@ li {
 }
 
 .prestation .card-img-top {
-    height: 200px;
     border-radius: 23px 23px 0 0;
 }
 
@@ -237,12 +236,13 @@ li {
     gap: 10px;
 }
 
-.lien-card img.card-img-top{
+.lien-card img.card-img-top {
     opacity: 1;
     -webkit-transition: .3s ease-in-out;
     transition: .3s ease-in-out;
 }
-.lien-card:hover img.card-img-top{
+
+.lien-card:hover img.card-img-top {
     opacity: .8;
 
 }
@@ -250,6 +250,7 @@ li {
 .lien-card p {
     color: #454548;
 }
+
 .text-note {
     padding-top: 55px;
     font-weight: 600;
@@ -518,17 +519,37 @@ font-weight: bold;
 }
 
 @media screen and (max-width: 768px) {
+
+    h1,
+    h2,
+    h6,
+    p {
+        color: #000;
+    }
+
+    h2 {
+        font-size: 1.25em !important;
+        font-weight: 700;
+    }
+
+    h2.description {
+        font-weight: 500;
+        padding-bottom: 20px;
+    }
+ 
     .banner {
-        background: url('../assets/images/background/mobile/mobile-bandeau-home-haut.jpg') center / contain no-repeat;
+        background: url('../assets/images/background/mobile/mobile-bandeau-home-haut.jpg') top right / contain no-repeat;
         background-color: #F5F6F8;
         width: 100%;
+        height: auto;
         margin-bottom: 0;
     }
 
     .banner h1 {
-        padding-top: 70px;
-        font-size: 3em;
+        padding-top: 10px;
+        font-size: 1.875em;
     }
+
     .banner a {
         display: none;
     }
@@ -549,6 +570,8 @@ font-weight: bold;
     .quote-mob p {
         font-weight: 500;
         margin-bottom: 0;
+        font-size: 0.9375em;
+        line-height: 1.125em;
     }
 
     .quote-mob p:first-child {
@@ -558,16 +581,17 @@ font-weight: bold;
     .presentation {
         display: none;
     }
+
     .prestation {
-        margin-top: 0 ;
+        margin-top: 0;
         padding: 20px 0;
         background-image: none;
     }
-    
+
     .prestation h2 {
-        padding:10px 0;
+        padding: 10px 0;
     }
-    
+
     .prestation .card-container {
         display: block;
     }
@@ -589,9 +613,10 @@ font-weight: bold;
     }
 
     .prestation .card-body {
-        grid-template-columns: 70px 1fr;
+        grid-template-columns: 50px 1fr;
         align-items: center;
     }
+
     .prestation .card-img-top,
     .prestation .card-body * {
         display: none;
@@ -635,11 +660,13 @@ font-weight: bold;
         margin-top: 30px;
         height: auto;
     }
+
     video {
         background: url('../assets/images/background/mobile/mobile-petale-jaune.png') left top no-repeat !important;
         padding-top: 15px !important;
         padding-left: 15px !important;
-        margin-bottom: 40px;
+        margin: 20px 0;
+        
     }
     .FooterMobile{display:block;}
     .FooterDesktop{display:none;}

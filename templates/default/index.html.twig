@@ -10,18 +10,29 @@
 	{# Banner #}
 	<div class="banner">
 		<div class="container">
-			<h1 class="col-8">Organisme de formation et de conseil</h1>
-			<h2 class="description col-8">Spécialisé dans le domaine de la formation professionnelle continue
+			<h1 class="col-md-7 text-uppercase">Organisme de formation et de conseil</h1>
+			<h2 class="description col-sm-12 col-md-8">Spécialisé dans le domaine de la formation professionnelle continue
 				(distanciel).
 			</h2>
-			<div class="mt-5 pt-5">
+			<div class="pt-lg-5">
 				<a class="btnYellow col-3" href={{ path('formation')}}>Plus d'informations</a>
 			</div>
 		</div>
 	</div>
 
+	{# Citation mobile #}
+	<div class="quote-mob mx-5">
+		<div class="container">
+			<div class="text-center">
+				<p>La connaissance s'acquiert
+					par l'expérience, tout le reste n'est que de l'information.</p>
+				<p>Albert Einstein</p>
+			</div>
+		</div>
+	</div>
+
 	{# Qui suis-je ? #}
-	<div class="container">
+	<div class="container presentation">
 		<h2>Qui suis-je ?</h2>
 		<div class="row">
 			<div class="col-7">
@@ -42,7 +53,9 @@
 			</div>
 			<img src={{asset('assets/images/photo-heloise-zitouni.png')}} alt="Photo Héloîse ZITOUNI"
 				class="img-fluid align-self-start col-5">
-			<a class="btnGrey col-3 text-center" id="btnContact" href={{ path('qui-sommes-nous')}}>Nous contacter</a>
+			<div>
+				<a class="btnGrey col-3" id="btnContact" href={{ path('qui-sommes-nous')}}>Nous contacter</a>
+			</div>
 		</div>
 	</div>
 
@@ -57,14 +70,14 @@
 			<div class="card card-item">
 				<img src={{asset('assets/images/imgFormation/')}}{{ formation.image }} alt="{{ formation.title }}"
 					class="card-img-top">
-				<div class="card-body cardFormation px-3 py-5">
+				<div class="card-body px-lg-3 py-lg-5 p-3">
 					<img src={{asset('assets/icons/desk-chapeau-gris.svg')}} alt="icone chapeau gris">
 					<h6 class="card-title">{{ formation.title }}</h6>
 
-					<img src={{asset('assets/icons/desk-picto-television.svg')}} alt="icone formation à distance" >
+					<img src={{asset('assets/icons/desk-picto-television.svg')}} alt="icone formation à distance">
 					<p class="card-text">{{ formation.type }}</p>
 
-					<img src={{asset('assets/icons/desk-picto-cube.svg')}} alt="icone block" >
+					<img src={{asset('assets/icons/desk-picto-cube.svg')}} alt="icone block">
 					<p class="card-text">{{ formation.nbBlocs }} vendus séparement</p>
 
 					<img src={{asset('assets/icons/desk-cart-arrow-down.svg')}} alt="icone prix">
@@ -73,10 +86,10 @@
 			</div>
 
 			{% endfor %}
-			<div class="card card-item">
+			<div class="card card-item card-conseil">
 				<img src={{asset('assets/images/imgFormation/conseil.jpg')}} alt="conseils pour professionnels"
 					class="card-img-top">
-				<div class="card-body cardFormation px-3 py-5">
+				<div class="card-body px-lg-3 py-lg-5 p-3">
 					<img src={{asset('assets/icons/desk-chapeau-gris.svg')}} alt="icone chapeau diplome">
 					<h6 class="card-title">Prestations de conseil pour les professionnels de la formation</h6>
 
@@ -91,10 +104,11 @@
 				</div>
 			</div>
 		</div>
-		<div class="container"> 	
-			<p class="text-note">A NOTER : Les deux formations certifiantes sont également accessibles par la VAE (Validation des Acquis
-			d’expérience)
-			Pour plus d’information sur la VAE, rendez-vous sur notre page Prestations</p>
+		<div class="container">
+			<p class="text-note">A NOTER : Les deux formations certifiantes sont également accessibles par la VAE
+				(Validation des Acquis
+				d’expérience)
+				Pour plus d’information sur la VAE, rendez-vous sur notre page Prestations</p>
 		</div>
 	</div>
 
@@ -117,7 +131,8 @@
 			FIA
 			(Formation individuel ADEFIPH).</p>
 		<div class="d-flex flex-row justify-content-around align-items-center">
-			<img src={{ asset('assets/images/logo/desk-logo-CPF.png') }} alt="logo Mon Compte Formation" class="img-fluid">
+			<img src={{ asset('assets/images/logo/desk-logo-CPF.png') }} alt="logo Mon Compte Formation"
+				class="img-fluid">
 			<img src={{ asset('assets/images/logo/desk-logo-pe.png') }} alt="logo Pôle emploi" class="img-fluid">
 			<img src={{ asset('assets/images/logo/desk-logo-opco.png') }} alt="logo OPCO" class="img-fluid">
 		</div>
@@ -129,10 +144,21 @@
 	{# Pourquoi se former avec nous ? #}
 	<div class="pourquoi">
 		<div class="container text-center">
-			<h2 >Pourquoi se former avec nous ?</h2>
-			<video controls>
+			<h2>Pourquoi se former avec nous ?</h2>
+			<video class="col-lg-8 col-sm-12 img-fluid" controls>
 				Your browser does not support the video tag.
 			</video>
+		</div>
+	</div>
+
+	{# Comment financer sa formation ? Version mobile #}
+	<div class="container financer-mob">
+		<h2 class="text-center">Comment financer sa formation ?</h2>
+		<div class="d-flex flex-row justify-content-around align-items-center">
+			<img src={{ asset('assets/images/logo/mobile/mobile-logo-CPF.png') }} alt="logo Mon Compte Formation"
+				class="img-fluid">
+			<img src={{ asset('assets/images/logo/mobile/mobile-logo-pe.png') }} alt="logo Pôle emploi" class="img-fluid">
+			<img src={{ asset('assets/images/logo/mobile/mobile-logo-opco.png') }} alt="logo OPCO" class="img-fluid">
 		</div>
 	</div>
 

@@ -43,7 +43,8 @@ li {
 
 .banner {
     background: url('../assets/images/background/banner-homepage.jpg') center no-repeat;
-    height: 530px;
+    min-height: 530px;
+    background-color: #F5F6F8;
     margin-bottom: 60px;
 }
 
@@ -116,15 +117,12 @@ li {
     margin-top: 80px;
     padding-top: 35px;
     padding-left: 35px;
-    height: 475px;
-    width: 785px;
 }
 
 
 /* Formation */
 .formation {
     background-color: #E5E5E5;
-    ;
 }
 
 .formation .card-title {
@@ -150,11 +148,9 @@ li {
     font-style: italic;
 }
 
-.cardFormation {
-    gap: 25px 20px;
-    padding: 0;
+.quote-mob {
+    display: none;
 }
-
 
 /* Conseil */
 .conseil,
@@ -177,7 +173,7 @@ li {
     background: url('../assets/images/background/desk-2silhouettes.png') bottom right no-repeat;
 }
 
-.quisommes > div > div {
+.quisommes>div>div {
     padding-top: 100px;
     padding-bottom: 350px;
 }
@@ -207,7 +203,7 @@ li {
 /* Card */
 .prestation .card-container {
     display: grid;
-    padding: 0 150px;
+    padding: 0 100px;
     grid-template-columns: auto auto auto;
     gap: 65px;
 }
@@ -224,6 +220,7 @@ li {
 
 .prestation .card-text,
 .prestation .card-title {
+    font-size: 1em;
     text-transform: uppercase;
     padding-left: 20px;
     font-weight: 600;
@@ -400,11 +397,11 @@ footer .icone_sociaux {
 
 
 /* Login */
-.jumbotron{ 
+.jumbotron {
     background-color: #deadee;
     border-bottom: 5px solid #fed812;
     margin-bottom: 50px;
-    height:20rem;
+    height: 20rem;
 }
 
 .form-signin {
@@ -415,7 +412,7 @@ footer .icone_sociaux {
     margin: auto;
     background-color: #f5f6f8;
     border-radius: 20px;
-    font-weight:bold;
+    font-weight: bold;
     filter: drop-shadow(10px 10px 4px #dedede);
 }
 
@@ -424,44 +421,53 @@ footer .icone_sociaux {
 }
 
 .form-outline {
-    color:#000;
+    color: #000;
     background-color: #FFF;
 
 }
 
 .form-outline {
     border-radius: 40px;
-    color:#000;
+    color: #000;
     background-color: #FFF;
     filter: drop-shadow(5px 5px 4px #dedede);
 }
 
 .form-signin input[type="email"] {
-  margin-bottom: 40px;
+    margin-bottom: 40px;
 }
-  
+
 .form-signin input[type="password"] {
- margin-bottom: 40px;
+    margin-bottom: 40px;
 }
 
-.form-signin .btn-primary{ border-radius: 0px!important;
- padding: 10px 50px 10px 50px;font-size:1em; 
+.form-signin .btn-primary {
+    border-radius: 0px !important;
+    padding: 10px 50px 10px 50px;
+    font-size: 1em;
 }
 
-.form-signin h1{
-font-weight: bold;
+.form-signin h1 {
+    font-weight: bold;
 }
-.MotDePasseOublie{
-    color:#000;
-    margin:10px auto 50px auto;
+
+.MotDePasseOublie {
+    color: #000;
+    margin: 10px auto 50px auto;
     max-width: 450px;
 }
-.MotDePasseOublie a{color:#000;}
-.MotDePasseOublie a:hover{color:#000;}
+
+.MotDePasseOublie a {
+    color: #000;
+}
+
+.MotDePasseOublie a:hover {
+    color: #000;
+}
 
 /* Contact */
-.form-contact{
-    font-size:10px;
+.form-contact {
+    font-size: 10px;
     width: 100%;
     height: 100%;
     max-width: 700px;
@@ -469,19 +475,160 @@ font-weight: bold;
     margin: auto;
     background-color: #f5f6f8;
     border-radius: 20px;
-    font-weight:bold;
+    font-weight: bold;
     filter: drop-shadow(10px 10px 4px #dedede);
 }
 
-.form-contact span{padding-right:50px;
+.form-contact span {
+    padding-right: 50px;
     color: #454548;
 }
-.yellow{color:#fed812;}
 
-.form-contact .btn-yellow{ border-radius: 20px;
-    background-color:#fed812;
-    padding: 10px 50px 10px 50px;font-size:1em; 
-   }
+.yellow {
+    color: #fed812;
+}
+
+.form-contact .btn-yellow {
+    border-radius: 20px;
+    background-color: #fed812;
+    padding: 10px 50px 10px 50px;
+    font-size: 1em;
+}
 
 /* Isentifiant oublié */
-.resetPassword p{font-weight: normal;}
+.resetPassword p {
+    font-weight: normal;
+}
+
+@media screen and (max-width: 1024px) {
+    .prestation .card-container {
+        padding: 0 35px;
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .banner {
+        background: url('../assets/images/background/mobile/mobile-bandeau-home-haut.jpg') center / contain no-repeat;
+        background-color: #F5F6F8;
+        width: 100%;
+        margin-bottom: 0;
+    }
+
+    .banner h1 {
+        padding-top: 70px;
+        font-size: 3em;
+    }
+    .banner a {
+        display: none;
+    }
+
+    .description~div {
+        padding-top: 0 !important;
+        margin-top: 0 !important;
+    }
+
+    .quote-mob {
+        display: block;
+        background: url('../assets/icons/mobile/mobile-quote-left-grey.svg'), url('../assets/icons/mobile/mobile-quote-right-grey.svg');
+        background-position: left top, right bottom;
+        background-repeat: no-repeat;
+        margin: 20px 0;
+    }
+
+    .quote-mob p {
+        font-weight: 500;
+        margin-bottom: 0;
+    }
+
+    .quote-mob p:first-child {
+        font-style: italic;
+    }
+
+    .presentation {
+        display: none;
+    }
+    .prestation {
+        margin-top: 0 ;
+        padding: 20px 0;
+        background-image: none;
+    }
+    
+    .prestation h2 {
+        padding:10px 0;
+    }
+    
+    .prestation .card-container {
+        display: block;
+    }
+
+    .prestation .card-item:nth-child(odd) {
+        background: #FCE47E;
+    }
+
+    .prestation .card-item:nth-child(even) {
+        background: #FED812;
+    }
+
+    .prestation .card-item:last-child {
+        background: #CDD1DB;
+    }
+
+    .prestation .card-item {
+        margin-bottom: 20px;
+    }
+
+    .prestation .card-body {
+        grid-template-columns: 70px 1fr;
+        align-items: center;
+    }
+    .prestation .card-img-top,
+    .prestation .card-body * {
+        display: none;
+    }
+
+    .prestation .card-body img:first-of-type {
+        display: block;
+        width: 100%;
+    }
+
+
+    .prestation .card-title {
+        display: block;
+    }
+
+    .card-conseil .card-body img:first-of-type {
+        content: url('../assets/icons/mobile/mobile-bulle.svg');
+    }
+
+    .text-note {
+        display: none;
+    }
+
+    .financer {
+        display: none;
+    }
+
+    .financer-mob {
+        display: block;
+        padding: 20px 0;
+    }
+
+    .financer-mob div {
+        padding-top: 20px;
+        background-color: #F5F6F8;
+    }
+
+    .pourquoi {
+        background-image: none;
+        background-color: #FEFAE5;
+        margin-top: 30px;
+        height: auto;
+    }
+    video {
+        background: url('../assets/images/background/mobile/mobile-petale-jaune.png') left top no-repeat !important;
+        padding-top: 15px !important;
+        padding-left: 15px !important;
+        margin-bottom: 40px;
+    }
+}

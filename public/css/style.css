@@ -100,6 +100,10 @@ li {
     padding-top: 60px;
 }
 
+.financer-mob {
+    display: none;
+}
+
 .pourquoi {
     background: url('../assets/images/background/desk-bandeau-home-pourquoi.jpg') bottom / contain no-repeat;
     background-color: #FEFAE5;
@@ -407,18 +411,12 @@ footer .icone_sociaux {
     width: 25px;
     padding-right: 5px;
 }
-
-
-
-
+.FooterMobile{display:none;}
+.FooterDesktop{display:block;}
 /* Login */
-.jumbotron {
-    background-color: #deadee;
-    border-bottom: 5px solid #fed812;
-    margin-bottom: 50px;
-    height: 20rem;
+.login {
+    background: url('../assets/images/background/desk-2silhouettes.png') bottom right no-repeat;
 }
-
 .form-signin {
     width: 100%;
     height: 100%;
@@ -427,7 +425,7 @@ footer .icone_sociaux {
     margin: auto;
     background-color: #f5f6f8;
     border-radius: 20px;
-    font-weight: bold;
+    font-weight:bold;
     filter: drop-shadow(10px 10px 4px #dedede);
 }
 
@@ -436,53 +434,47 @@ footer .icone_sociaux {
 }
 
 .form-outline {
-    color: #000;
+    color:#000;
     background-color: #FFF;
 
 }
 
 .form-outline {
     border-radius: 40px;
-    color: #000;
+    color:#000;
     background-color: #FFF;
     filter: drop-shadow(5px 5px 4px #dedede);
 }
 
 .form-signin input[type="email"] {
-    margin-bottom: 40px;
+  margin-bottom: 40px;
 }
-
+  
 .form-signin input[type="password"] {
-    margin-bottom: 40px;
+ margin-bottom: 40px;
 }
 
-.form-signin .btn-primary {
-    border-radius: 0px !important;
-    padding: 10px 50px 10px 50px;
-    font-size: 1em;
+.form-signin .btn-primary{ border-radius: 0px!important;
+ padding: 10px 50px 10px 50px;font-size:1em; 
 }
 
-.form-signin h1 {
-    font-weight: bold;
+.form-signin h1{
+font-weight: bold;
 }
-
-.MotDePasseOublie {
-    color: #000;
-    margin: 10px auto 50px auto;
+.MotDePasseOublie{
+    color:#000;
+    margin:10px auto 50px auto;
     max-width: 450px;
 }
-
-.MotDePasseOublie a {
-    color: #000;
-}
-
-.MotDePasseOublie a:hover {
-    color: #000;
-}
+.MotDePasseOublie a{color:#000;}
+.MotDePasseOublie a:hover{color:#000;}
 
 /* Contact */
-.form-contact {
-    font-size: 10px;
+.contact {
+    background: url('../assets/images/background/desk-2silhouettes.png') bottom right no-repeat;
+}
+.form-contact{
+    font-size:10px;
     width: 100%;
     height: 100%;
     max-width: 700px;
@@ -490,29 +482,29 @@ footer .icone_sociaux {
     margin: auto;
     background-color: #f5f6f8;
     border-radius: 20px;
-    font-weight: bold;
+    font-weight:bold;
     filter: drop-shadow(10px 10px 4px #dedede);
 }
 
-.form-contact span {
-    padding-right: 50px;
+.form-contact span{padding-right:50px;
     color: #454548;
 }
+.yellow{color:#fed812;}
 
-.yellow {
-    color: #fed812;
-}
-
-.form-contact .btn-yellow {
-    border-radius: 20px;
-    background-color: #fed812;
-    padding: 10px 50px 10px 50px;
-    font-size: 1em;
-}
+.form-contact .btn-yellow{ border-radius: 20px;
+    background-color:#fed812;
+    padding: 10px 50px 10px 50px;font-size:1em; 
+   }
 
 /* Isentifiant oublié */
-.resetPassword p {
-    font-weight: normal;
+.resetPassword p{font-weight: normal;}
+.resetPassword {
+    background: url('../assets/images/background/desk-2silhouettes.png') bottom right no-repeat;
+}
+
+/* devis */
+.devis {
+    background: url('../assets/images/background/desk-2silhouettes.png') bottom right no-repeat;
 }
 
 @media screen and (max-width: 1024px) {
@@ -520,6 +512,9 @@ footer .icone_sociaux {
         padding: 0 35px;
         gap: 20px;
     }
+    .FooterMobile{display:none;}
+    .FooterDesktop{display:block;}
+
 }
 
 @media screen and (max-width: 768px) {
@@ -646,4 +641,6 @@ footer .icone_sociaux {
         padding-left: 15px !important;
         margin-bottom: 40px;
     }
+    .FooterMobile{display:block;}
+    .FooterDesktop{display:none;}
 }

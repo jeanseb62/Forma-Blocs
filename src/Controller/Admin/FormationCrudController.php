@@ -3,6 +3,14 @@
 namespace App\Controller\Admin;
 
 use App\Entity\Formation;
+use App\Entity\Block;
+use App\Repository\BlockRepository;
+use Doctrine\ORM\EntityManagerInterface;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\DBAL\Types\IntegerType;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
+use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\FormBuilderInterface;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 use EasyCorp\Bundle\EasyAdminBundle\Field\IdField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\ImageField;
@@ -26,7 +34,7 @@ class FormationCrudController extends AbstractCrudController
     public function configureCrud(Crud $crud): Crud
     {
         return $crud
-           
+            ->setPageTitle(Crud::PAGE_INDEX, 'Liste de formations')
             ->addFormTheme('@FOSCKEditor/Form/ckeditor_widget.html.twig')
         ;
     }
@@ -42,9 +50,13 @@ class FormationCrudController extends AbstractCrudController
             IntegerField::new('NbBlocs','nombre de blocs'),
             IntegerField::new('PriceMin', 'Prix minimum'),
             IntegerField::new('PriceMax', 'Prix maximum'),
-            TextField::new('documentPDF','Fiche en PDF'),
-            ImageField::new('image','Image à la une')->setUploadDir('public/uploads/images')
-            ->setBasePath('uploads/images')
+            ImageField::new('documentPDF', 'Document PDF')->setUploadDir('public/assets/pdf')
+            ->setBasePath('assets/pdf')
+            ->setSortable(false)
+            ->setUploadedFileNamePattern('[randomhash].[extension]')
+            ->setFormTypeOption('required' ,false),
+            ImageField::new('image','Image à la une')->setUploadDir('public/assets/images/imgFormation')
+            ->setBasePath('images/imgFormation/')
             ->setSortable(false)
             ->setUploadedFileNamePattern('[randomhash].[extension]')
             ->setFormTypeOption('required' ,false),

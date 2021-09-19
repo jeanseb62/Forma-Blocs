@@ -670,4 +670,5 @@ font-weight: bold;
     }
     .FooterMobile{display:block;}
     .FooterDesktop{display:none;}
+    .FooterMobile ul li a{color: #FFF;}
 }

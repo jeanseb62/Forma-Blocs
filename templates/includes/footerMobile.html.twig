@@ -13,23 +13,23 @@
         <div class="col-md-3">
           <!-- Links -->
           <center>
-          <ul class="navbar-nav d-flex">
+          <ul class="navbar-nav d-flex flex-wrap">
 
-          <li class="nav-item align-items-center">
+          <li class="nav-item">
             <img src="{{asset('assets/icons/mobile/mobile-picto-search.svg')}}"><br>
-            <a class="nav-link" href="" alt="">Recherche</a>
+            <a class="nav-link" href="" alt="Recherche">Recherche</a>
           </li>
-          <li class="nav-item align-items-center">
+          <li class="nav-item">
             <img src="{{asset('assets/icons/mobile/mobile-picto-2bulles.svg')}}"><br>
-            <a class="nav-link" href="" alt="">Contact</a>
+            <a class="nav-link" href="{{ path('contact')}}" alt="Contact">Contact</a>
           </li>
-          <li class="nav-item align-items-center">
+          <li class="nav-item">
             <img src="{{asset('assets/icons/mobile/mobile-picto-dossier.svg')}}"><br>
-            <a class="nav-link" href="" alt="">Mon dossier</a>
+            <a class="nav-link" href="" alt="Mon dossier">Mon dossier</a>
           </li>
-          <li class="nav-item align-items-center">
+          <li class="nav-item">
             <img src="{{asset('assets/icons/mobile/mobile-picto-user.svg')}}"><br>
-            <a class="nav-link" href="" alt="">Mon compte</a>
+            <a class="nav-link" href="{{ path('app_login')}}" alt="Mon compte">Mon compte</a>
           </li>
         </ul>  
         </center>

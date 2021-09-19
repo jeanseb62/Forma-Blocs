@@ -209,6 +209,7 @@ li {
 }
 
 .prestation .card-img-top {
+    height: 200px;
     border-radius: 23px 23px 0 0;
 }
 
@@ -229,8 +230,22 @@ li {
 .card-body {
     display: grid;
     grid-template-columns: 35px 1fr;
+    gap: 10px;
 }
 
+.lien-card img.card-img-top{
+    opacity: 1;
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+.lien-card:hover img.card-img-top{
+    opacity: .8;
+
+}
+
+.lien-card p {
+    color: #454548;
+}
 .text-note {
     padding-top: 55px;
     font-weight: 600;

@@ -11,7 +11,8 @@
 	<div class="banner">
 		<div class="container">
 			<h1 class="col-md-7 text-uppercase">Organisme de formation et de conseil</h1>
-			<h2 class="description col-sm-12 col-md-8">Spécialisé dans le domaine de la formation professionnelle continue
+			<h2 class="description col-sm-12 col-md-8">Spécialisé dans le domaine de la formation professionnelle
+				continue
 				(distanciel).
 			</h2>
 			<div class="pt-lg-5">
@@ -66,43 +67,47 @@
 
 			{# Boucle for sur formations #}
 			{% for formation in formations %}
-
+			
 			<div class="card card-item">
-				<img src={{asset('assets/images/imgFormation/')}}{{ formation.image }} alt="{{ formation.title }}"
-					class="card-img-top">
-				<div class="card-body px-lg-3 py-lg-5 p-3">
-					<img src={{asset('assets/icons/desk-chapeau-gris.svg')}} alt="icone chapeau gris">
-					<h6 class="card-title">{{ formation.title }}</h6>
+					<a href={{path('formation')}} class="lien-card">
+					<img src={{asset('assets/images/imgFormation/')}}{{ formation.image }} alt="{{ formation.title }}"
+						class="card-img-top">
+					<div class="card-body p-3">
+						<img src={{asset('assets/icons/desk-chapeau-gris.svg')}} alt="icone chapeau gris">
+						<h6 class="card-title">{{ formation.title }}</h6>
 
-					<img src={{asset('assets/icons/desk-picto-television.svg')}} alt="icone formation à distance">
-					<p class="card-text">{{ formation.type }}</p>
+						<img src={{asset('assets/icons/desk-picto-television.svg')}} alt="icone formation à distance">
+						<p class="card-text">{{ formation.type }}</p>
 
-					<img src={{asset('assets/icons/desk-picto-cube.svg')}} alt="icone block">
-					<p class="card-text">{{ formation.nbBlocs }} vendus séparement</p>
+						<img src={{asset('assets/icons/desk-picto-cube.svg')}} alt="icone block">
+						<p class="card-text">{{ formation.nbBlocs }} vendus séparement</p>
 
-					<img src={{asset('assets/icons/desk-cart-arrow-down.svg')}} alt="icone prix">
-					<p class="card-text">De {{ formation.priceMin }} a {{formation.priceMax }} &euro;</p>
+						<img src={{asset('assets/icons/desk-cart-arrow-down.svg')}} alt="icone prix">
+						<p class="card-text">De {{ formation.priceMin }} a {{formation.priceMax }} &euro;</p>
+					</div>
+					</a>
 				</div>
-			</div>
 
 			{% endfor %}
 			<div class="card card-item card-conseil">
-				<img src={{asset('assets/images/imgFormation/conseil.jpg')}} alt="conseils pour professionnels"
-					class="card-img-top">
-				<div class="card-body px-lg-3 py-lg-5 p-3">
-					<img src={{asset('assets/icons/desk-chapeau-gris.svg')}} alt="icone chapeau diplome">
-					<h6 class="card-title">Prestations de conseil pour les professionnels de la formation</h6>
+					<a href={{path('conseil')}} class="lien-card">
+					<img src={{asset('assets/images/imgFormation/conseil.jpg')}} alt="conseils pour professionnels"
+						class="card-img-top">
+					<div class="card-body p-3">
+						<img src={{asset('assets/icons/desk-chapeau-gris.svg')}} alt="icone chapeau diplome">
+						<h6 class="card-title">Prestations de conseil pour les professionnels de la formation</h6>
 
-					<img src={{asset('assets/icons/desk-picto-television.svg')}} alt="icone formation à distance">
-					<p class="card-text">A distance</p>
+						<img src={{asset('assets/icons/desk-picto-television.svg')}} alt="icone formation à distance">
+						<p class="card-text">A distance</p>
 
-					<img src={{asset('assets/icons/desk-picto-cube.svg')}} alt="icone block" class="py-3">
-					<p class="card-text">Liste des prestations dispoibles</p>
+						<img src={{asset('assets/icons/desk-picto-cube.svg')}} alt="icone block" class="py-3">
+						<p class="card-text">Liste des prestations disponibles</p>
 
-					<img src={{asset('assets/icons/desk-cart-arrow-down.svg')}} alt="icone prix">
-					<p class="card-text">Nous contacter</p>
+						<img src={{asset('assets/icons/desk-cart-arrow-down.svg')}} alt="icone prix">
+						<p class="card-text">Nous contacter</p>
+					</div>
+					</a>
 				</div>
-			</div>
 		</div>
 		<div class="container">
 			<p class="text-note">A NOTER : Les deux formations certifiantes sont également accessibles par la VAE
@@ -157,7 +162,8 @@
 		<div class="d-flex flex-row justify-content-around align-items-center">
 			<img src={{ asset('assets/images/logo/mobile/mobile-logo-CPF.png') }} alt="logo Mon Compte Formation"
 				class="img-fluid">
-			<img src={{ asset('assets/images/logo/mobile/mobile-logo-pe.png') }} alt="logo Pôle emploi" class="img-fluid">
+			<img src={{ asset('assets/images/logo/mobile/mobile-logo-pe.png') }} alt="logo Pôle emploi"
+				class="img-fluid">
 			<img src={{ asset('assets/images/logo/mobile/mobile-logo-opco.png') }} alt="logo OPCO" class="img-fluid">
 		</div>
 	</div>

@@ -42,10 +42,10 @@ class DefaultController extends AbstractController
     }
 
     /**
-     * @Route("/mentions-légales", name="mentions")
+     * @Route("/protection-des-données", name="protection")
      */
     public function mentions()
     {
-        return $this->render('default/mentions.html.twig');
+        return $this->render('default/protection.html.twig');
     }
 }

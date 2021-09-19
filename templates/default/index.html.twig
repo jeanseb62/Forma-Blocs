@@ -6,7 +6,6 @@
 {# Banner #}
 
 <main>
-
 	{# Banner #}
 	<div class="banner">
 		<div class="container">
@@ -67,27 +66,26 @@
 
 			{# Boucle for sur formations #}
 			{% for formation in formations %}
-			
-			<div class="card card-item">
-					<a href={{path('formation')}} class="lien-card">
-					<img src={{asset('assets/images/imgFormation/')}}{{ formation.image }} alt="{{ formation.title }}"
-						class="card-img-top">
-					<div class="card-body p-3">
-						<img src={{asset('assets/icons/desk-chapeau-gris.svg')}} alt="icone chapeau gris">
-						<h6 class="card-title">{{ formation.title }}</h6>
+{% if formation.isPublished %}
+			<div class="card card-item"><a href="{{ path('formation')}}">
+				<img src={{asset('assets/images/imgFormation/')}}{{ formation.image }} alt="{{ formation.title }}"
+					class="card-img-top">
+				<div class="card-body cardFormation px-3 py-5">
+					<img src={{asset('assets/icons/desk-chapeau-gris.svg')}} alt="icone chapeau gris">
+					<h6 class="card-title">{{ formation.title }}</h6>
 
-						<img src={{asset('assets/icons/desk-picto-television.svg')}} alt="icone formation à distance">
-						<p class="card-text">{{ formation.type }}</p>
+					<img src={{asset('assets/icons/desk-picto-television.svg')}} alt="icone formation à distance" >
+					<p class="card-text">{{ formation.type }}</p>
 
-						<img src={{asset('assets/icons/desk-picto-cube.svg')}} alt="icone block">
-						<p class="card-text">{{ formation.nbBlocs }} vendus séparement</p>
+					<img src={{asset('assets/icons/desk-picto-cube.svg')}} alt="icone block" >
+					<p class="card-text">{{ formation.nbBlocs }} vendus séparement</p>
 
-						<img src={{asset('assets/icons/desk-cart-arrow-down.svg')}} alt="icone prix">
-						<p class="card-text">De {{ formation.priceMin }} a {{formation.priceMax }} &euro;</p>
-					</div>
-					</a>
+					<img src={{asset('assets/icons/desk-cart-arrow-down.svg')}} alt="icone prix">
+					<p class="card-text">De {{ formation.priceMin }} a {{formation.priceMax }} &euro;</p>
 				</div>
-
+				</a>
+			</div>
+{% endif %}
 			{% endfor %}
 			<div class="card card-item card-conseil">
 					<a href={{path('conseil')}} class="lien-card">

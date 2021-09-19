@@ -6,7 +6,7 @@
 
 
 {% block body %}
-
+<main class="devis">
 <img src={{ asset('assets/images/background/desk-bandeau-devis.jpg') }} alt="bandeau devis" width="100%">
 <section class="container">
 
@@ -152,33 +152,15 @@ Merci de remplir le formulaire ci-dessous.
        <div class="form-group">
                      <div class="form-check d-flex align-items-center">
                        <input class="form-check-input" type="checkbox" value="" id="cgu" required>
-                       <label class="form-check-label" for="cgu">Conformément à notre politique de confidentialité, nous nous engageons à respecter vos données personnelles.</label>
+                      <label class="form-check-label" for="cgu">Conformément à notre politique de confidentialité, nous nous engageons à respecter vos données personnelles.</label>
                        <div class="invalid-feedback">Vous devez accepter les CGU pour continuer</div>
                      </div>
                  </div>
+                 <p class="text-center">L’équipe de <span class="yellow">FormaBLOCS</span> reprendra contact avec vous dans les 24/48h.</p>
+
+<p class="text-center">*Pour les blocs individuels de formation, notez dans le message le bloc que vous souhaitez valider. </p>
     </div>
    
 </section>
-{% endblock %}
-
-{% block javascripts %}
-<script>
-           /*La fonction principale de ce script est d'empêcher l'envoi du formulaire si un champ a été mal rempli
-            *et d'appliquer les styles de validation aux différents éléments de formulaire*/
-           (function() {
-             'use strict';
-             window.addEventListener('load', function() {
-               let forms = document.getElementsByClassName('needs-validation');
-               let validation = Array.prototype.filter.call(forms, function(form) {
-                 form.addEventListener('submit', function(event) {
-                   if (form.checkValidity() === false) {
-                     event.preventDefault();
-                     event.stopPropagation();
-                   }
-                   form.classList.add('was-validated');
-                 }, false);
-               });
-             }, false);
-           })();
-         </script>
+</main>
 {% endblock %}

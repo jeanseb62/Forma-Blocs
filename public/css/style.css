@@ -670,5 +670,7 @@ font-weight: bold;
     }
     .FooterMobile{display:block;}
     .FooterDesktop{display:none;}
-    .FooterMobile ul li a{color: #FFF;}
+    .alignementFooter div a{color: #FFF;font-size:0.7em;}
+    .alignementFooter div{display:inline-block;}
+    .alignementFooter hr{height:5px; width:50%;color:#FED812;}
 }

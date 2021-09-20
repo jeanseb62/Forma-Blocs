@@ -527,6 +527,19 @@ font-weight: bold;
     padding-bottom: 400px;
 }
 
+/* Tableau de bord */
+
+  .text-success{
+    color:#1cc88a !important;
+  }
+
+  .text-warning{
+    color:#f6c23e !important;
+  }
+
+  .text-success{
+    color:#4e73df !important;
+  }
 
 @media screen and (max-width: 1024px) {
     .prestation .card-container {

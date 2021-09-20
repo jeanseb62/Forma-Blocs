@@ -60,7 +60,7 @@ class Formation
     private $isPublished;
 
     /**
-     * @ORM\ManyToMany(targetEntity=Block::class, cascade={"persist"})
+     * @ORM\OneToMany(targetEntity=Block::class, mappedBy="formation")
      */
     private $blocks;
 

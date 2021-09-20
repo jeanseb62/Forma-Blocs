@@ -5,16 +5,17 @@
 {% block body %}
 
 <main>
-    <img src={{ asset('assets/images/background/desk-bandeau-formations.jpg')}} alt="bandeau formations" class="img-fluid">
-    <h1 class="text-center py-5">Nos formations certifiantes</h1>
+    <img id="bandeauForma" src={{ asset('assets/images/background/desk-bandeau-formations.jpg')}}
+        alt="bandeau formations" class="img-fluid">
+    <h1 class="text-center pt-5 pb-0 py-lg-5 py-0">Nos formations certifiantes</h1>
     <div class="formation mb-5">
         <div class="container">
             {% for formation in formations %}
             <img src={{ asset('assets/icons/desk-cercle-chapeau-noir.svg') }} alt="icon card" class="iconCard">
             <div class="card">
-                <h2 class="card-title text-uppercase col-11 pt-3 px-5">{{ formation.title }}</h2>
+                <h2 class="card-title text-uppercase col-lg-11 col-12 pt-3 px-5">{{ formation.title }}</h2>
                 <p class="px-5">Chacun des deux blocs de ce titre peut être vendu individuellement.</p>
-                <div class="card-body px-5 cardFormation">
+                <div class="card-body px-5">
 
                     <img src={{asset('assets/icons/desk-picto-cube.svg')}} alt="icone block">
                     <ul class="list-unstyled">
@@ -35,16 +36,18 @@
                     <img src={{asset('assets/icons/desk-cart-arrow-down.svg')}} alt="icone prix">
                     <p>Le prix : de {{ formation.priceMin }} à {{ formation.priceMax }} &euro;</p>
 
-                    
+
                 </div>
-                <p class="px-5 pt-3">Ces formations peuvent être financée par le biais du financement de la formation professionnelle
-                        continue : CPF / Pôle Emploi / OPCO /
-                        Compte formation entreprises / Transition professionnelle.
-                        Pour plus d’information et d’aide au financement, nous contacter. </p>
+                <p class="px-5 pt-3">Ces formations peuvent être financée par le biais du financement de la formation
+                    professionnelle
+                    continue : CPF / Pôle Emploi / OPCO /
+                    Compte formation entreprises / Transition professionnelle. <br>
+                <span class="highlight-mob">Pour plus d’information et d’aide au financement, nous contacter.</span>
+                </p>
             </div>
-            <div class="d-flex flex-row justify-content-around py-5">
-                <a class="btnGrey" href={{ path('quotation')}}>Demande de devis</a>
-                <a class="btnYellow" href="#">
+            <div class="d-flex flex-md-row flex-column col-md-12 offset-md-0 col-10 offset-1 justify-content-md-around py-3">
+                <a class="btnGrey text-center" href={{ path('quotation')}}>Demande de devis</a>
+                <a class="btnYellow text-center mt-md-0 mt-3" href="#">
                     <img src={{ asset('assets/icons/telecharger.svg')}} alt="télécharger">
                     Plaquette en pdf
                 </a>
@@ -53,17 +56,29 @@
         </div>
     </div>
 
-    <div class="quote d-flex flex-row">
-        <img src={{ asset('assets/images/background/desk-quote-left.svg')}} alt="quote left">
-        <div class="container">
-            <p class="text-center col-10 offset-1 textBig quoteText">Nous passons 15
-                ans à l’école et pas
+    <div class="quote my-2">
+        <div class="container py-3">
+            <p class="text-center col-10 offset-1 textBig quoteText">
+                Nous passons 15 ans à l’école et pas
                 une fois on nous apprend la confiance en soi, la passion et l’amour qui sont les fondements de la
                 vie.
             </p>
             <p class="text-center textBig">Albert Einstein</p>
         </div>
-        <img src={{ asset('assets/images/background/desk-quote-right.svg')}} alt="quote right">
+    </div>
+    {# Comment financer sa formation ? #}
+    <div class="container financerForma">
+        <h2 class="text-center">Comment financer sa formation ?</h2>
+        <div class="d-flex flex-row justify-content-around align-items-center">
+            <img id="cpf" src={{ asset('assets/images/logo/desk-logo-CPF.png') }} alt="logo Mon Compte Formation"
+                class="img-fluid">
+            <img id="pe" src={{ asset('assets/images/logo/desk-logo-pe.png') }} alt="logo Pôle emploi"
+                class="img-fluid">
+            <img id="opco" src={{ asset('assets/images/logo/desk-logo-opco.png') }} alt="logo OPCO" class="img-fluid">
+        </div>
+        <div class="text-center my-5">
+            <a class="btnGrey" href={{ path('contact')}}>Plus d'informations</a>
+        </div>
     </div>
 </main>
 

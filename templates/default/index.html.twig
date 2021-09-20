@@ -14,7 +14,7 @@
 				continue
 				(distanciel).
 			</h2>
-			<div class="pt-lg-5">
+			<div class="pt-lg-5 pt-2">
 				<a class="btnYellow col-3" href={{ path('formation')}}>Plus d'informations</a>
 			</div>
 		</div>
@@ -66,32 +66,34 @@
 
 			{# Boucle for sur formations #}
 			{% for formation in formations %}
-{% if formation.isPublished %}
-			<div class="card card-item"><a href="{{ path('formation')}}">
-				<img src={{asset('assets/images/imgFormation/')}}{{ formation.image }} alt="{{ formation.title }}"
-					class="card-img-top">
-				<div class="card-body cardFormation px-3 py-5">
-					<img src={{asset('assets/icons/desk-chapeau-gris.svg')}} alt="icone chapeau gris">
-					<h6 class="card-title">{{ formation.title }}</h6>
+			{% if formation.isPublished %}
+			<div class="card card-item">
+				<a href="{{ path('formation')}}" class="lien-card">
+					<img src={{asset('assets/images/imgFormation/')}}{{ formation.image }} alt="{{ formation.title }}"
+						class="card-img-top">
+					<div class="card-body px-lg-3 py-lg-5 py-3">
+						<img src={{asset('assets/icons/desk-chapeau-gris.svg')}} alt="icone chapeau gris">
+						<h6 class="card-title">{{ formation.title }}</h6>
 
-					<img src={{asset('assets/icons/desk-picto-television.svg')}} alt="icone formation à distance" >
-					<p class="card-text">{{ formation.type }}</p>
+						<img src={{asset('assets/icons/desk-picto-television.svg')}} alt="icone formation à distance">
+						<p class="card-text">{{ formation.type }}</p>
 
-					<img src={{asset('assets/icons/desk-picto-cube.svg')}} alt="icone block" >
-					<p class="card-text">{{ formation.nbBlocs }} vendus séparement</p>
+						<img src={{asset('assets/icons/desk-picto-cube.svg')}} alt="icone block">
+						<p class="card-text">{{ formation.nbBlocs }} vendus séparement</p>
 
-					<img src={{asset('assets/icons/desk-cart-arrow-down.svg')}} alt="icone prix">
-					<p class="card-text">De {{ formation.priceMin }} a {{formation.priceMax }} &euro;</p>
-				</div>
+						<img src={{asset('assets/icons/desk-cart-arrow-down.svg')}} alt="icone prix">
+						<p class="card-text">De {{ formation.priceMin }} a {{formation.priceMax }} &euro;</p>
+					</div>
 				</a>
 			</div>
-{% endif %}
+			{% endif %}
 			{% endfor %}
+			
 			<div class="card card-item card-conseil">
-					<a href={{path('conseil')}} class="lien-card">
+				<a href={{path('conseil')}} class="lien-card">
 					<img src={{asset('assets/images/imgFormation/conseil.jpg')}} alt="conseils pour professionnels"
 						class="card-img-top">
-					<div class="card-body p-3">
+					<div class="card-body px-lg-3 py-lg-5 py-3">
 						<img src={{asset('assets/icons/desk-chapeau-gris.svg')}} alt="icone chapeau diplome">
 						<h6 class="card-title">Prestations de conseil pour les professionnels de la formation</h6>
 
@@ -104,8 +106,8 @@
 						<img src={{asset('assets/icons/desk-cart-arrow-down.svg')}} alt="icone prix">
 						<p class="card-text">Nous contacter</p>
 					</div>
-					</a>
-				</div>
+				</a>
+			</div>
 		</div>
 		<div class="container">
 			<p class="text-note">A NOTER : Les deux formations certifiantes sont également accessibles par la VAE
@@ -155,7 +157,7 @@
 	</div>
 
 	{# Comment financer sa formation ? Version mobile #}
-	<div class="container financer-mob">
+	<div class="financer-mob">
 		<h2 class="text-center col-6 offset-3">Comment financer sa formation ?</h2>
 		<div class="d-flex flex-row justify-content-around align-items-center">
 			<img src={{ asset('assets/images/logo/mobile/mobile-logo-CPF.png') }} alt="logo Mon Compte Formation"

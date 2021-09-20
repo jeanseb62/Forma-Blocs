@@ -145,7 +145,12 @@ video {
 .quote {
     background-color: #FEFAE5;
     font-weight: 600;
-    padding: 0 15%;
+}
+
+.quote>div {
+    background: url('../assets/images/background/desk-quote-left.svg'), url('../assets/images/background/desk-quote-right.svg');
+    background-repeat: no-repeat;
+    background-position: center left, center right;
 }
 
 .quoteText {
@@ -221,6 +226,7 @@ video {
     padding: 0;
     border-radius: 23px;
 }
+
 
 .prestation .card-text,
 .prestation .card-title {
@@ -412,12 +418,20 @@ footer .icone_sociaux {
     width: 25px;
     padding-right: 5px;
 }
-.FooterMobile{display:none;}
-.FooterDesktop{display:block;}
+
+.FooterMobile {
+    display: none;
+}
+
+.FooterDesktop {
+    display: block;
+}
+
 /* Login */
 .login {
     background: url('../assets/images/background/desk-2silhouettes.png') bottom right no-repeat;
 }
+
 .login div p {
     margin-bottom: 0;
 }
@@ -425,6 +439,7 @@ footer .icone_sociaux {
 .login div:last-child {
     padding-bottom: 200px;
 }
+
 .form-signin {
     width: 100%;
     height: 100%;
@@ -433,7 +448,7 @@ footer .icone_sociaux {
     margin: auto;
     background-color: #f5f6f8;
     border-radius: 20px;
-    font-weight:bold;
+    font-weight: bold;
     filter: drop-shadow(10px 10px 4px #dedede);
 }
 
@@ -442,40 +457,49 @@ footer .icone_sociaux {
 }
 
 .form-outline {
-    color:#000;
+    color: #000;
     background-color: #FFF;
 
 }
 
 .form-outline {
     border-radius: 40px;
-    color:#000;
+    color: #000;
     background-color: #FFF;
     filter: drop-shadow(5px 5px 4px #dedede);
 }
 
 .form-signin input[type="email"] {
-  margin-bottom: 40px;
+    margin-bottom: 40px;
 }
-  
+
 .form-signin input[type="password"] {
- margin-bottom: 40px;
+    margin-bottom: 40px;
 }
 
-.form-signin .btn-primary{ border-radius: 0px!important;
- padding: 10px 50px 10px 50px;font-size:1em; 
+.form-signin .btn-primary {
+    border-radius: 0px !important;
+    padding: 10px 50px 10px 50px;
+    font-size: 1em;
 }
 
-.form-signin h1{
-font-weight: bold;
+.form-signin h1 {
+    font-weight: bold;
 }
-.MotDePasseOublie{
-    color:#000;
-    margin:10px auto 50px auto;
+
+.MotDePasseOublie {
+    color: #000;
+    margin: 10px auto 50px auto;
     max-width: 450px;
 }
-.MotDePasseOublie a{color:#000;}
-.MotDePasseOublie a:hover{color:#000;}
+
+.MotDePasseOublie a {
+    color: #000;
+}
+
+.MotDePasseOublie a:hover {
+    color: #000;
+}
 
 /* Contact */
 .contact {
@@ -488,8 +512,8 @@ font-weight: bold;
 }
 
 
-.form-contact{
-    font-size:10px;
+.form-contact {
+    font-size: 10px;
     width: 100%;
     height: 100%;
     max-width: 700px;
@@ -497,22 +521,31 @@ font-weight: bold;
     margin: auto;
     background-color: #f5f6f8;
     border-radius: 20px;
-    font-weight:bold;
+    font-weight: bold;
     filter: drop-shadow(10px 10px 4px #dedede);
 }
 
-.form-contact span{padding-right:50px;
+.form-contact span {
+    padding-right: 50px;
     color: #454548;
 }
-.yellow{color:#fed812;}
 
-.form-contact .btn-yellow{ border-radius: 20px;
-    background-color:#fed812;
-    padding: 10px 50px 10px 50px;font-size:1em; 
-   }
+.yellow {
+    color: #fed812;
+}
+
+.form-contact .btn-yellow {
+    border-radius: 20px;
+    background-color: #fed812;
+    padding: 10px 50px 10px 50px;
+    font-size: 1em;
+}
 
 /* Isentifiant oublié */
-.resetPassword p{font-weight: normal;}
+.resetPassword p {
+    font-weight: normal;
+}
+
 .resetPassword {
     background: url('../assets/images/background/desk-2silhouettes.png') bottom right no-repeat;
 }
@@ -529,47 +562,70 @@ font-weight: bold;
 
 /* Tableau de bord */
 
-  .text-success{
-    color:#1cc88a !important;
-  }
+.text-success {
+    color: #1cc88a !important;
+}
 
-  .text-warning{
-    color:#f6c23e !important;
-  }
+.text-warning {
+    color: #f6c23e !important;
+}
 
-  .text-success{
-    color:#4e73df !important;
-  }
+.text-success {
+    color: #4e73df !important;
+}
 
 @media screen and (max-width: 1024px) {
     .prestation .card-container {
         padding: 0 35px;
         gap: 20px;
     }
-    .FooterMobile{display:none;}
-    .FooterDesktop{display:block;}
+
+    .FooterMobile {
+        display: none;
+    }
+
+    .FooterDesktop {
+        display: block;
+    }
 
 }
 
 @media screen and (max-width: 768px) {
+    .prestation .card-container {
+        grid-template-columns: auto auto;
+    }
+}
+
+@media screen and (max-width: 426px) {
 
     h1,
     h2,
     h6,
-    p {
+    p,
+    li {
         color: #000;
+    }
+    p,
+    li {
+        font-size: .9em;
+    }
+    h1 {
+        font-size: 1.7em !important;
     }
 
     h2 {
-        font-size: 1.25em !important;
-        font-weight: 700;
+        font-size: 1.2em !important;
+        font-weight: bolder;
     }
 
+    /* Homepage */
+
     h2.description {
+        font-size: 1.25em;
         font-weight: 500;
         padding-bottom: 20px;
     }
- 
+
     .banner {
         background: url('../assets/images/background/mobile/mobile-bandeau-home-haut.jpg') top right / contain no-repeat;
         background-color: #F5F6F8;
@@ -643,6 +699,7 @@ font-weight: bold;
 
     .prestation .card-item {
         margin-bottom: 20px;
+        border-radius: 10px;
     }
 
     .prestation .card-body {
@@ -683,7 +740,7 @@ font-weight: bold;
     }
 
     .financer-mob div {
-        padding-top: 20px;
+        padding: 20px 0;
         background-color: #F5F6F8;
     }
 
@@ -699,11 +756,96 @@ font-weight: bold;
         padding-top: 15px !important;
         padding-left: 15px !important;
         margin: 20px 0;
-        
+
     }
-    .FooterMobile{display:block;}
-    .FooterDesktop{display:none;}
-    .alignementFooter div a{color: #FFF;font-size:0.7em;}
-    .alignementFooter div{display:inline-block;}
-    .alignementFooter hr{height:5px; width:50%;color:#FED812;}
+
+
+
+    /* Formation */
+
+    .quote {
+        display: none;
+    }
+
+    .financerForma a {
+        display: none;
+    }
+
+    #bandeauForma {
+        content: url('../assets/images/background/mobile/mobile-bandeau-formations.jpg');
+        width: 100%;
+    }
+
+    #cpf {
+        content: url('../assets/images/logo/mobile/mobile-logo-CPF.png');
+    }
+
+    #pe {
+        content: url('../assets/images/logo/mobile/mobile-logo-pe.png');
+    }
+
+    #opco {
+        content: url('../assets/images/logo/mobile/mobile-logo-opco.png');
+    }
+
+    .formation .container {
+        background: #FFF;
+        padding: 0;
+    }
+
+
+    .formation .card {
+        background-color: #CDD1DB;
+    }
+
+    .formation .container > img {
+        content: url('../assets/icons/mobile/mobile-picto-jaune-chapeau-noir.svg');
+        right: 0px;
+    }
+
+    .formation .card-title,
+    .formation .card-body {
+        font-weight: bold;
+    }
+
+    .highlight-mob {
+        color: #F2CB02;
+    }
+
+    /* conseil */
+
+    #bandeauConseil {
+        content: url('../assets/images/background/mobile/mobile-bandeau-conseils.jpg');
+        width: 100%;
+    }
+
+    .conseil .container {
+        padding: 0;
+    }
+
+    /* Footer */
+
+
+    .FooterMobile {
+        display: block;
+    }
+
+    .FooterDesktop {
+        display: none;
+    }
+
+    .alignementFooter div a {
+        color: #FFF;
+        font-size: 0.7em;
+    }
+
+    .alignementFooter div {
+        display: inline-block;
+    }
+
+    .alignementFooter hr {
+        height: 5px;
+        width: 50%;
+        color: #FED812;
+    }
 }

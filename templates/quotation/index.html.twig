@@ -77,27 +77,14 @@ Merci de remplir le formulaire ci-dessous.
                     <label class="form-label" for="Telephone">Téléphone</label>
                     </div>
                 </div>
-<div class="row mb-3">
- <div class="form-outline col me-3 d-flex align-items-center"><span class="me-1">Vous êtes ?</span>
- <div class="form-check form-check-inline d-flex align-items-center">
-  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-  <label class="form-check-label" for="inlineCheckbox1">Entreprise</label>
-</div>
-<div class="form-check form-check-inline d-flex align-items-center">
-  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-  <label class="form-check-label" for="inlineCheckbox2">Salarié</label>
-</div>
-<div class="form-check form-check-inline d-flex align-items-center">
-  <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
-  <label class="form-check-label" for="inlineCheckbox3">Demandeur d'emploi</label>
-</div>
-<div class="form-check form-check-inline d-flex align-items-center">
-  <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option4">
-  <label class="form-check-label" for="inlineCheckbox4">Autre</label>
-</div>
-      </div>
-</div>
+                
+<div class="form-outline row mb-3 align-items-center">
+ <div class="col-md-4">Vous êtes ?</div>
+ <div class="col-md-8 d-flex align-items-center">
+  {{ form_widget(form.status) }}
+   </div>
 
+</div>
 <div class="row mb-3">
  <div class="form-outline col me-3 d-flex align-items-center"><span class="me-1">Prestations</span>
  <div class="form-check form-check-inline d-flex align-items-center">

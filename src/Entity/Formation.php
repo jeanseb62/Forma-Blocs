@@ -60,10 +60,19 @@ class Formation
     private $isPublished;
 
     /**
-     * @ORM\ManyToOne(targetEntity=Block::class, cascade={"persist", "remove"})
+     * @ORM\ManyToMany(targetEntity=Block::class, cascade={"persist"})
      */
     private $blocks;
 
+    public function __toString()
+    {
+        return (string) $this->getTitle();
+    }
+
+    public function __construct()
+    {
+        $this->blocks = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -166,16 +175,36 @@ class Formation
         return $this;
     }
 
-    public function getBlocks(): ?Block
+    
+    /**
+     * @return Collection|Block[]
+     */
+    public function getBlocks(): Collection
     {
         return $this->blocks;
     }
 
-    public function setBlocks(?Block $block): self
+    public function addBlock(Block $block): self
     {
-        $this->blocks = $block;
+        if (!$this->blocks->contains($block)) {
+            $this->blocks[] = $block;
+            $block->setFormation($this);
+        }
 
         return $this;
     }
+
+    public function removeBlock(Block $block): self
+    {
+        if ($this->blocks->removeElement($block)) {
+            // set the owning side to null (unless already changed)
+            if ($block->getFormation() === $this) {
+                $block->setFormation(null);
+            }
+        }
+
+        return $this;
+    }
+      
      
 }

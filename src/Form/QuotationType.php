@@ -13,9 +13,15 @@ use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 
 class QuotationType extends AbstractType
 {
+    const statut1 = 'Entreprise';
+    const statut2 = 'Salarié';
+    const statut3 = 'Demandeur d\'emploi';
+    const statut4 = 'Autre';
+
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
@@ -74,18 +80,29 @@ class QuotationType extends AbstractType
                     'class' => 'form-control'
                 ]
             ])
-            ->add('status', TelType::class, [
-                'label' => 'Statut',
-                'attr' => [
-                    'class' => 'form-control'
-                ]
+            ->add('status', ChoiceType::class, [
+                'label_attr' => array('class' => 'checkbox-inline'),
+                'choices'  => [
+                    'Entreprise' => self::statut1,
+                    'Salarié' => self::statut2,
+                    'Demandeur d\'emploi' => self::statut3,
+                    'Autre' => self::statut4,
+                    ],
+                'expanded'  => true,
+                'multiple'  => true,
             ])
-            ->add('benefit', TelType::class, [
-                'label' => 'Prestation',
-                'attr' => [
-                    'class' => 'form-control'
+            ->add('benefit', ChoiceType::class, [
+                'multiple'=>true,
+                'choices' => [
+                    'option1' => 'Titre de formateur professionnel pour adultes',
+                    'option2' => 'Titre de conseiller en insertion professionnelle',
+                    'option3' => 'Bloc individuel de formation',
+                    'option4' => 'Conseils pour les professionnels de la formation',
+                    'option5' => 'Validation des acquis d\'expérience (VAE)',
                 ]
-            ])
+                ])
+         
+           
             ->add('message', TextareaType::class, [
                 'label' => 'Message',
                 'attr' => [
@@ -93,12 +110,7 @@ class QuotationType extends AbstractType
                     'rows' => 6
                     ]
             ])
-            ->add('CVjoint', FileType::class, [
-                'label' => 'Joindre votre CV',
-                'attr' => [
-                    'class' => 'form-control-file'
-                ]
-            ])
+       
             ->add('Envoyer', SubmitType::class)
             ;
     }

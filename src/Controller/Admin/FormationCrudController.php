@@ -60,7 +60,7 @@ class FormationCrudController extends AbstractCrudController
             ->setSortable(false)
             ->setUploadedFileNamePattern('[randomhash].[extension]')
             ->setFormTypeOption('required' ,false),
-            AssociationField::new('blocks'),
+            AssociationField::new('blocks')->hideOnIndex(),
             BooleanField::new('isPublished', 'Publié'),
          
 

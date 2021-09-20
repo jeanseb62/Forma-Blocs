@@ -77,3 +77,18 @@
         color:#000;
         z-index: 999!important; 
        }      
+
+       @media screen and (max-width: 768px) {
+        .cnt223{
+    
+            width: 50%;
+            margin: 10px 10px 10px 10px;
+            background: #a0a1a7;
+            position: relative;
+            z-index: 103;
+            padding: 5px 5px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px #000;
+            }
+        .FooterPopup .close{margin-left:auto;margin-right:auto;margin-bottom: 10px;}
+       }

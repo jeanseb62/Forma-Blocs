@@ -418,6 +418,13 @@ footer .icone_sociaux {
 .login {
     background: url('../assets/images/background/desk-2silhouettes.png') bottom right no-repeat;
 }
+.login div p {
+    margin-bottom: 0;
+}
+
+.login div:last-child {
+    padding-bottom: 200px;
+}
 .form-signin {
     width: 100%;
     height: 100%;
@@ -474,6 +481,13 @@ font-weight: bold;
 .contact {
     background: url('../assets/images/background/desk-2silhouettes.png') bottom right no-repeat;
 }
+
+.contact {
+    margin-bottom: 0;
+    padding-bottom: 400px;
+}
+
+
 .form-contact{
     font-size:10px;
     width: 100%;
@@ -506,6 +520,11 @@ font-weight: bold;
 /* devis */
 .devis {
     background: url('../assets/images/background/desk-2silhouettes.png') bottom right no-repeat;
+}
+
+.devis {
+    margin-bottom: 0;
+    padding-bottom: 400px;
 }
 
 /* Tableau de bord */

@@ -11,24 +11,24 @@
      <p class="text-center">Pour accéder à votre compte, merci de renseigner votre identifiant et votre mot de passe</p>
    
 <div class="container">
-<form method="post" class="form-signin">
+<form method="post" action="{{ path('app_login') }}" class="form-signin">
     {% if error %}
         <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
     {% endif %}
 
     {% if app.user %}
         <div class="mb-3">
-            You are logged in as {{ app.user.username }}, <a href="{{ path('app_logout') }}">Logout</a>
+            You are logged in as {{ app.user.login }}, <a href="{{ path('app_logout') }}">Logout</a>
         </div>
     {% endif %}
 
 <h2 class="h3 mb-3 font-weight-bold text-center">Accédez à votre compte</h2>
  
  <div class="form-outline">
-  <input type="email" id="inputEmail" class="form-control" placeholder="email@email.com" requied/>
+  <input type="login" id="inputEmail" class="form-control" requied/>
   <label class="form-label" for="email">IDENTIFIANT</label>
 </div>
- <div class="form-outline">
+ <div class="form-outline mt-3">
   <input type="password" id="inputPassword" name="password" class="form-control" requied/>
   <label class="form-label" for="password">MOT DE PASSE</label>
 </div>

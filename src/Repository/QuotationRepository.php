@@ -7,10 +7,10 @@ use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
- * @method Quotation|null find($id, $lockMode = null, $lockVersion = null)
- * @method Quotation|null findOneBy(array $criteria, array $orderBy = null)
- * @method Quotation[]    findAll()
- * @method Quotation[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
+ * @method Contact|null find($id, $lockMode = null, $lockVersion = null)
+ * @method Contact|null findOneBy(array $criteria, array $orderBy = null)
+ * @method Contact[]    findAll()
+ * @method Contact[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
 class QuotationRepository extends ServiceEntityRepository
 {
@@ -19,32 +19,23 @@ class QuotationRepository extends ServiceEntityRepository
         parent::__construct($registry, Quotation::class);
     }
 
-    // /**
-    //  * @return Quotation[] Returns an array of Quotation objects
-    //  */
-    /*
-    public function findByExampleField($value)
+    public function findContactsByEmailPerDay($email)
     {
-        return $this->createQueryBuilder('q')
-            ->andWhere('q.exampleField = :val')
-            ->setParameter('val', $value)
-            ->orderBy('q.id', 'ASC')
-            ->setMaxResults(10)
+        $now = new \DateTime();
+        $from = new \DateTime($now->format("Y-m-d")." 00:00:00");
+        $to   = new \DateTime($now->format("Y-m-d")." 23:59:59");
+
+        return $this->createQueryBuilder('c')
+            // ->andWhere('c.created_at = NOW() ')
+            ->andWhere('c.created_at BETWEEN :from AND :to ')
+            ->andWhere('c.email = :email')
+            ->setParameter('from', $from)
+            ->setParameter('to', $to)
+            ->setParameter('email', $email)
             ->getQuery()
             ->getResult()
-        ;
+            ;
     }
-    */
 
-    /*
-    public function findOneBySomeField($value): ?Quotation
-    {
-        return $this->createQueryBuilder('q')
-            ->andWhere('q.exampleField = :val')
-            ->setParameter('val', $value)
-            ->getQuery()
-            ->getOneOrNullResult()
-        ;
-    }
-    */
+    
 }

@@ -468,13 +468,10 @@ footer .icone_sociaux {
     font-weight: 400;
 }
 
-.form-outline {
+.form-control {
     color: #000;
-    background-color: #FFF;
-
-}
-
-.form-outline {
+    font-size: 1.1em;
+    background-color: #FFF!important;
     border-radius: 40px;
     color: #000;
     background-color: #FFF;
@@ -537,10 +534,6 @@ footer .icone_sociaux {
     filter: drop-shadow(10px 10px 4px #dedede);
 }
 
-.form-contact span {
-    padding-right: 50px;
-    color: #454548;
-}
 
 .yellow {
     color: #fed812;

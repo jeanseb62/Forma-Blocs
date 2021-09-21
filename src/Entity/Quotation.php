@@ -10,6 +10,9 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Quotation
 {
+    const SUCCES_REGISTRY = "Votre demande de devis a été bien envoyé !";
+    const ERROR_REGISTRY = "Désolé, votre demande de devis n'a pas pu être envoyé !";
+
     /**
      * @ORM\Id
      * @ORM\GeneratedValue
@@ -52,40 +55,48 @@ class Quotation
      */
     private $country;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $Email;
+    
 
     /**
      * @ORM\Column(type="integer")
      */
     private $phone;
 
-    /**
-     * @ORM\Column(type="string", length=50)
-     */
-    private $status;
-
-    /**
-     * @ORM\Column(type="string", length=50)
-     */
-    private $benefit;
 
     /**
      * @ORM\Column(type="text")
      */
     private $message;
 
+
+    
+
+    /**
+     * @ORM\Column(type="array")
+     */
+    private $status = [];
+
+    /**
+     * @ORM\Column(type="array")
+     */
+    private $benefit = [];
+
+    /**
+     * @ORM\Column(type="array", nullable=true)
+     */
+    private $SendByEmail = [];
+
+    /**
+     * @ORM\Column(type="datetime", options={"default"="CURRENT_TIMESTAMP"})
+     */
+    private $created_at;
+
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $CVjoint;
+    private $email;
 
-    /**
-     * @ORM\Column(type="datetime")
-     */
-    private $createdAt;
+    
 
     public function getId(): ?int
     {
@@ -164,17 +175,6 @@ class Quotation
         return $this;
     }
 
-    public function getEmail(): ?string
-    {
-        return $this->Email;
-    }
-
-    public function setEmail(string $Email): self
-    {
-        $this->Email = $Email;
-
-        return $this;
-    }
 
     public function getPhone(): ?int
     {
@@ -187,31 +187,7 @@ class Quotation
 
         return $this;
     }
-
-    public function getStatus(): ?string
-    {
-        return $this->status;
-    }
-
-    public function setStatus(string $status): self
-    {
-        $this->status = $status;
-
-        return $this;
-    }
-
-    public function getBenefit(): ?string
-    {
-        return $this->benefit;
-    }
-
-    public function setBenefit(string $benefit): self
-    {
-        $this->benefit = $benefit;
-
-        return $this;
-    }
-
+ 
     public function getMessage(): ?string
     {
         return $this->message;
@@ -224,29 +200,7 @@ class Quotation
         return $this;
     }
 
-    public function getCVjoint(): ?string
-    {
-        return $this->CVjoint;
-    }
-
-    public function setCVjoint(string $CVjoint): self
-    {
-        $this->CVjoint = $CVjoint;
-
-        return $this;
-    }
-
-    public function getCreatedAt(): ?\DateTimeInterface
-    {
-        return $this->createdAt;
-    }
-
-    public function setCreatedAt(\DateTimeInterface $createdAt): self
-    {
-        $this->createdAt = $createdAt;
-
-        return $this;
-    }
+    
 
     public function getCity(): ?string
     {
@@ -259,4 +213,66 @@ class Quotation
 
         return $this;
     }
+
+    public function getStatus(): ?array
+    {
+        return $this->status;
+    }
+
+    public function setStatus(array $status): self
+    {
+        $this->status = $status;
+
+        return $this;
+    }
+
+    public function getBenefit(): ?array
+    {
+        return $this->benefit;
+    }
+
+    public function setBenefit(array $benefit): self
+    {
+        $this->benefit = $benefit;
+
+        return $this;
+    }
+
+    public function getSendByEmail(): ?array
+    {
+        return $this->SendByEmail;
+    }
+
+    public function setSendByEmail(?array $SendByEmail): self
+    {
+        $this->SendByEmail = $SendByEmail;
+
+        return $this;
+    }
+
+    public function getCreatedAt(): ?\DateTimeInterface
+    {
+        return $this->created_at;
+    }
+
+    public function setCreatedAt(?\DateTimeInterface $created_at): self
+    {
+        $this->created_at = $created_at;
+
+        return $this;
+    }
+
+    public function getEmail(): ?string
+    {
+        return $this->email;
+    }
+
+    public function setEmail(string $email): self
+    {
+        $this->email = $email;
+
+        return $this;
+    }
+
+
 }

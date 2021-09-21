@@ -14,6 +14,7 @@ use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Component\Form\Extension\Core\Type\IntegerType;
 
 class QuotationType extends AbstractType
 {
@@ -21,11 +22,15 @@ class QuotationType extends AbstractType
     const statut2 = 'Salarié';
     const statut3 = 'Demandeur d\'emploi';
     const statut4 = 'Autre';
+
     const option1 = 'Titre de formateur professionnel pour adultes';
     const option2 = 'Titre de conseiller en insertion professionnelle';
     const option3 = 'Bloc individuel de formation';
     const option4 = 'Conseils pour les professionnels de la formation';
     const option5 = 'Validation des acquis d\'expérience (VAE)';
+
+    const reception1 = 'Par email (PDF)';
+    const reception2 = 'Par courrier';
 
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
@@ -33,59 +38,69 @@ class QuotationType extends AbstractType
             ->add('lastName', TextType::class, [
                 'label' => 'Nom',
                 'attr' => [
-                    'class' => 'form-control'
+                    'class' => 'form-control',
+                    'placeholder' => 'Nom'
                 ]
             ])
             ->add('firstName', TextType::class, [
                 'label' => 'Prénom',
                 'attr' => [
-                    'class' => 'form-control'
+                    'class' => 'form-control',
+                    'placeholder' => 'Prénom'
                 ]
             ])
-            ->add('numberStreet', TextType::class, [
-                'label' => 'N° rue',
+            ->add('numberStreet', IntegerType::class, [
+                'label' => 'N°',
                 'attr' => [
-                    'class' => 'form-control'
+                    'class' => 'form-control',
+                    'placeholder' => 'N°'
                 ]
             ])
             ->add('street', TextType::class, [
                 'label' => 'Rue',
                 'attr' => [
-                    'class' => 'form-control'
+                    'class' => 'form-control',
+                    'placeholder' => 'Rue'
                 ]
             ])
             ->add('city', TextType::class, [
                 'label' => 'Ville',
                 'attr' => [
-                    'class' => 'form-control'
+                    'class' => 'form-control',
+                    'placeholder' => 'Ville'
                 ]
             ])
             ->add('zip', TextType::class, [
                 'label' => 'Code postal',
                 'attr' => [
-                    'class' => 'form-control'
+                    'class' => 'form-control',
+                    'placeholder' => 'Code Postal'
                 ]
             ])
            
             ->add('country', TextType::class, [
-                'label' => 'Ville',
+                'label' => 'Pays',
                 'attr' => [
-                    'class' => 'form-control'
+                    'class' => 'form-control',
+                    'placeholder' => 'Pays'
                 ]
             ])
-            ->add('Email', EmailType::class, [
+            ->add('email', EmailType::class, [
                 'label' => 'Email',
                 'attr' => [
-                    'class' => 'form-control'
+                    'class' => 'form-control',
+                    'placeholder' => 'Email'
                 ]
             ])
             ->add('phone', TelType::class, [
                 'label' => 'Téléphone',
                 'attr' => [
-                    'class' => 'form-control'
+                    'class' => 'form-control',
+                    'placeholder' => 'Téléphone'
                 ]
             ])
             ->add('status', ChoiceType::class, [
+                'label' => 'Vous êtes ?',
                 'label_attr' => array('class' => 'checkbox-inline'),
                 'choices'  => [
                     'Entreprise' => self::statut1,
@@ -97,11 +112,12 @@ class QuotationType extends AbstractType
                 'multiple'  => true,
             ])
             ->add('benefit', ChoiceType::class, [
+                'label' => 'Prestations',
                 'label_attr' => array('class' => 'checkbox-inline'),
                 'choices'  => [
-                    'Titre de formateur professionnel pour adultes' => self::option1,
+                    'Titre de formateur professionnel pour adultes'=> self::option1,
                     'Titre de conseiller en insertion professionnelle' => self::option2,
-                    'Bloc individuel de formation' => self::option3,
+                    'Bloc individuel de formation*' => self::option3,
                     'Conseils pour les professionnels de la formation' => self::option4,
                     'Validation des acquis d\'expérience (VAE)' => self::option5,
                     ],
@@ -113,13 +129,24 @@ class QuotationType extends AbstractType
             ->add('message', TextareaType::class, [
                 'label' => 'Message',
                 'attr' => [
-                    'class' => 'form-control',
+                    'placeholder' => 'Message',
                     'rows' => 6
                     ]
             ])
-       
-            ->add('Envoyer', SubmitType::class)
-            ;
+
+            ->add('SendByEmail', ChoiceType::class, [
+                'label' => 'Réception du devis',
+                'label_attr' => array('class' => 'checkbox-inline'),
+                'choices'  => [
+                    'Par email (PDF)' => self::reception1,
+                    'Par courrier' => self::reception2
+                    ],
+                'expanded'  => true,
+                'multiple'  => true,
+            ])
+            
+            
+            ;            
     }
 
     public function configureOptions(OptionsResolver $resolver)

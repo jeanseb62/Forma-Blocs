@@ -17,125 +17,95 @@
 Merci de remplir le formulaire ci-dessous.
 </p>
 
- {#<div class="row">
-       <div class="col-lg-2"></div>
-        <div class="col-lg-8">
-            {{ form(form) }}
-                    
+ <div class="row h-100 justify-content-center align-items-center">
+            {% for message in app.flashes('success') %}
+                <div class="alert alert-success" role="alert">
+                    {{ message }}
+                </div>
+            {% endfor %}
+            {% for message in app.flashes('error') %}
+                <div class="alert alert-danger" role="alert">
+                    {{ message }}
+                </div>
+            {% endfor %}
         </div>
-        <div class="col-lg-2"></div>
-    </div>#}
-
-    <div class="row h-100 justify-content-center align-items-center p-5">
+{{ form_start(quotation) }} 
+    <div class="form-contact h-100 justify-content-center align-items-center p-5 mb-3">
             
-                
-               {# {{ form(formulaire) }} #}
- <form class="form-contact">
+  
                 <div class="row mb-3">
-                    <div class="form-outline col me-3">
-                      <input type="text" class="form-control" placeholder="Nom">
-                      <label class="form-label" for="Nom">Nom</label>
+                    <div class="col">
+                      {{ form_widget(quotation.lastName) }}
+                     
                     </div>
-                    <div class="form-outline col me-3">
-                      <input type="text" class="form-control" placeholder="Prénom">
-                     <label class="form-label" for="Prenom">Prénom</label>
+                    <div class="col">
+                   
+                      {{ form_widget(quotation.firstName) }}
                     </div>
                 </div>
                 <div class="row mb-3">
-                    <div class="form-outline col-md-4 me-3">
-                      <input type="text" class="form-control" placeholder="N°">
-                      <label class="form-label" for="Numero">N°</label>
+                    <div class="col-3">
+                      {{ form_widget(quotation.numberStreet) }}
                     </div>
-                    <div class="form-outline col-md-6 me-3">
-                      <input type="text" class="form-control" placeholder="Rue">
-                     <label class="form-label" for="Rue">Rue</label>
+                    <div class="col-9">
+                      {{ form_widget(quotation.street) }}
                     </div>
                 </div>
                 <div class="row mb-3">
-                    <div class="form-outline col-md-4 me-3">
-                      <input type="text" class="form-control" placeholder="CP">
-                      <label class="form-label" for="CP">CP</label>
+                    <div class="col-3">
+                      {{ form_widget(quotation.zip) }}
                     </div>
-                    <div class="form-outline col-md-6 me-3">
-                      <input type="text" class="form-control" placeholder="Ville">
-                     <label class="form-label" for="Ville">Ville</label>
+                    <div class="col-9">
+                      {{ form_widget(quotation.city) }}
                     </div>
                 </div>
                 <div class="row mb-3">
-                    <div class="form-outline col me-3">
-                      <input type="text" class="form-control" placeholder="Pays">
-                      <label class="form-label" for="Pays">Pays</label>
+                    <div class="col-md-3">
+                      {{ form_widget(quotation.country) }}
                     </div>
                 </div>
                 <div class="row mb-3">
-                    <div class="form-outline col me-3">
-                      <input type="text" class="form-control" placeholder="Email">
-                    <label class="form-label" for="Email">Email</label>
+                    <div class="col">
+                      {{ form_widget(quotation.email) }}
                     </div>
-                    <div class="form-outline col me-3">
-                      <input type="text" class="form-control" placeholder="Téléphone">
-                    <label class="form-label" for="Telephone">Téléphone</label>
+                    <div class="col">
+                      {{ form_widget(quotation.phone) }}
                     </div>
                 </div>
                 
-<div class="form-outline row mb-3 align-items-center">
- <div class="col-md-4">Vous êtes ?</div>
- <div class="col-md-8 d-flex align-items-center">
-  {{ form_widget(form.status) }}
+<div class="row mb-3 form-control">
+ <div class="col-3">{{ form_label(quotation.status) }}</div>
+ <div class="col-9 d-flex">
+  {{ form_widget(quotation.status) }}
+  </div>
+</div>
+
+
+<div class="row mb-3 form-control">
+ <div class="col-3">{{ form_label(quotation.benefit) }}</div>
+ <div class="col-9 d-flex">
+  {{ form_widget(quotation.benefit) }}
    </div>
-
-</div>
-<div class="row mb-3">
- <div class="form-outline col me-3 d-flex align-items-center"><span class="me-1">Prestations</span>
- <div class="form-check form-check-inline d-flex align-items-center">
-  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-  <label class="form-check-label" for="inlineCheckbox1">Titre de formateur professionnel pour adultes</label>
-</div>
-<div class="form-check form-check-inline d-flex align-items-center">
-  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-  <label class="form-check-label" for="inlineCheckbox2">Titre de conseiller en insertion professionnelle</label>
-</div>
-<div class="form-check form-check-inline d-flex align-items-center">
-  <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
-  <label class="form-check-label" for="inlineCheckbox3">Bloc individuel de formation</label>
-</div>
-<div class="form-check form-check-inline d-flex align-items-center">
-  <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option4">
-  <label class="form-check-label" for="inlineCheckbox4">Conseils pour les professionnels de la formation</label>
-</div>
-<div class="form-check form-check-inline d-flex align-items-center">
-  <input class="form-check-input" type="checkbox" id="inlineCheckbox5" value="option4">
-  <label class="form-check-label" for="inlineCheckbox5">Validation des acquis d'expérience (VAE)</label>
-</div>
-      </div>
 </div>
 
 <div class="row mb-3">
-    <div class="form-outline col me-3">
-        <textarea type="text" class="form-control" placeholder="Message" rows="10" cols="100"></textarea>
-        <label class="form-label" for="Message">Message</label>
-    </div>
+    
+        {{ form_widget(quotation.message) }}
+ 
 </div>
 
-<div class="row mb-3">
- <div class="form-outline col me-3 d-flex align-items-center"><span class="me-1">Réception du devis</span>
- <div class="form-check form-check-inline d-flex align-items-center">
-  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-  <label class="form-check-label" for="inlineCheckbox1">Par email (PDF)</label>
-</div>
-<div class="form-check form-check-inline d-flex align-items-center">
-  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-  <label class="form-check-label" for="inlineCheckbox2">Par courrier</label>
-</div>
-
-</div>
-
+<div class="row mb-3 align-items-center form-control">
+ <div class="col-3">{{ form_label(quotation.SendByEmail) }}</div>
+ <div class="col-9 d-flex align-items-center">
+  {{ form_widget(quotation.SendByEmail) }}
+  </div>
 </div>
                 
             <button class="btn-yellow mt-3" type="submit">
         ENVOYER
     </button>
-            </form>
+  
+           
             
             </div>
                 <div class="form-group ms-5">
@@ -143,7 +113,7 @@ Merci de remplir le formulaire ci-dessous.
                        <input class="form-check-input" type="checkbox" value="" id="cgu" required>
                       <label class="form-check-label" for="cgu">Conformément à notre politique de confidentialité, nous nous engageons à respecter vos données personnelles.</label>
                      </div>
-                 </div>
+                 </div> {{ form_end(quotation) }}
                  <p class="text-center">L’équipe de <span class="yellow">FormaBLOCS</span> reprendra contact avec vous dans les 24/48h.</p>
 
 <p class="text-center">*Pour les blocs individuels de formation, notez dans le message le bloc que vous souhaitez valider. </p>

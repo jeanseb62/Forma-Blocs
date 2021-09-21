@@ -1,7 +1,7 @@
 <header>
   <div class="header">
     <!-- Information NavBar -->
-    <nav class="">
+    <nav class="d-none d-md-block">
 
       <div class="container" id="navbarCenteredExample">
         <!-- Right Side Of Navbar -->
@@ -35,25 +35,23 @@
           src="{{ asset('assets/images/logo/Logo-formablocs.png')}}" height="50" alt="Logo"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
         aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+        <span class="navbar-toggler-icon">
+          <img src={{ asset('assets/icons/mobile/mobile-burger.svg')}} alt="icon menu">
+        </span>
       </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse" style="text-align:right;">
-        <ul class="navbar-nav mb-2 mb-lg-0">
+      <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
+        <ul class="navbar-nav mb-2 mb-lg-0 text-center">
 
           <li class="nav-item">
-            <a class="nav-link" href="/">Accueil</a>
+            <a class="nav-link" href="{{ path('default')}}">Accueil</a>
           </li>
-
-          {# <li class="nav-item">
-            <a class="nav-link" href="#">Nos prestations</a>
-          </li> #}
 
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPrestation" role="button"
               data-bs-toggle="dropdown" aria-expanded="false">
               Nos prestations
             </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdownPrestation">
+            <ul class="dropdown-menu dropdown-menu-light text-center position-static" aria-labelledby="navbarDropdownPrestation">
               <li><a class="dropdown-item" href="{{ path('formation') }}">Nos formations</a></li>
               <li><a class="dropdown-item" href="{{ path('conseil') }}">Nos conseils en formation</a></li>
             </ul>
@@ -63,25 +61,21 @@
             <a class="nav-link" href="{{ path('qui-sommes-nous') }}">Qui suis-je ?</a>
           </li>
 
-          {# <li class="nav-item">
-            <a class="nav-link" href="{{ path('contact')}}">Contact</a>
-          </li> #}
-
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownContact" role="button"
+            <a class="nav-link dropdown-toggle " href="#" id="navbarDropdownContact" role="button"
               data-bs-toggle="dropdown" aria-expanded="false">
               Contact
             </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdownContact">
+            <ul class="dropdown-menu dropdown-menu-light text-center position-static" aria-labelledby="navbarDropdownContact">
               <li><a class="dropdown-item" href="{{ path('contact')}}">Contactez FormaBLOCS</a></li>
               <li><a class="dropdown-item" href="{{ path('quotation')}}">Demande de devis</a></li>
             </ul>
           </li>
 
 
-          <li class="nav-item">
-            <div class="d-flex align-items-center">
-              <a class="btn-orange" class="nav-link" href="{{ path('app_login')}}">Mon compte</a>
+          <li class="nav-item order-lg-last order-first">
+            <div class="d-lg-flex justify-content-around align-items-center mt-2 mt-lg-0">
+              <a class="btn-orange nav-link text-white" href="{{ path('app_login')}}">Mon compte</a>
             </div>
           </li>
         </ul>

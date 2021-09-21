@@ -21,6 +21,11 @@ class QuotationType extends AbstractType
     const statut2 = 'Salarié';
     const statut3 = 'Demandeur d\'emploi';
     const statut4 = 'Autre';
+    const option1 = 'Titre de formateur professionnel pour adultes';
+    const option2 = 'Titre de conseiller en insertion professionnelle';
+    const option3 = 'Bloc individuel de formation';
+    const option4 = 'Conseils pour les professionnels de la formation';
+    const option5 = 'Validation des acquis d\'expérience (VAE)';
 
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
@@ -92,16 +97,18 @@ class QuotationType extends AbstractType
                 'multiple'  => true,
             ])
             ->add('benefit', ChoiceType::class, [
-                'multiple'=>true,
-                'choices' => [
-                    'option1' => 'Titre de formateur professionnel pour adultes',
-                    'option2' => 'Titre de conseiller en insertion professionnelle',
-                    'option3' => 'Bloc individuel de formation',
-                    'option4' => 'Conseils pour les professionnels de la formation',
-                    'option5' => 'Validation des acquis d\'expérience (VAE)',
-                ]
-                ])
-         
+                'label_attr' => array('class' => 'checkbox-inline'),
+                'choices'  => [
+                    'Titre de formateur professionnel pour adultes' => self::option1,
+                    'Titre de conseiller en insertion professionnelle' => self::option2,
+                    'Bloc individuel de formation' => self::option3,
+                    'Conseils pour les professionnels de la formation' => self::option4,
+                    'Validation des acquis d\'expérience (VAE)' => self::option5,
+                    ],
+                'expanded'  => true,
+                'multiple'  => true,
+            ])
+
            
             ->add('message', TextareaType::class, [
                 'label' => 'Message',

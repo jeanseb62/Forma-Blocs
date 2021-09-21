@@ -19,6 +19,24 @@ class ContactRepository extends ServiceEntityRepository
         parent::__construct($registry, Contact::class);
     }
 
+    public function findContactsByEmailPerDay($email)
+    {
+        $now = new \DateTime();
+        $from = new \DateTime($now->format("Y-m-d")." 00:00:00");
+        $to   = new \DateTime($now->format("Y-m-d")." 23:59:59");
+
+        return $this->createQueryBuilder('c')
+            // ->andWhere('c.created_at = NOW() ')
+            ->andWhere('c.createdAt BETWEEN :from AND :to ')
+            ->andWhere('c.email = :email')
+            ->setParameter('from', $from)
+            ->setParameter('to', $to)
+            ->setParameter('email', $email)
+            ->getQuery()
+            ->getResult()
+            ;
+    }
+
     // /**
     //  * @return Contact[] Returns an array of Contact objects
     //  */

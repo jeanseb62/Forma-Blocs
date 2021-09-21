@@ -10,6 +10,9 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Contact
 {
+
+    const SUCCES_REGISTRY = "Votre message a été bien envoyé !";
+    const ERROR_REGISTRY = "Désolé, votre message n'a pas pu être envoyé !";
     /**
      * @ORM\Id
      * @ORM\GeneratedValue
@@ -30,7 +33,7 @@ class Contact
     /**
      * @ORM\Column(type="string", length=45)
      */
-    private $Email;
+    private $email;
 
     /**
      * @ORM\Column(type="string", length=16)
@@ -41,6 +44,21 @@ class Contact
      * @ORM\Column(type="text")
      */
     private $message;
+
+     /**
+     * @ORM\Column(type="datetime", options={"default"="CURRENT_TIMESTAMP"})
+     */
+    private $createdAt;
+
+    /**
+     * @ORM\Column(type="array", nullable=true)
+     */
+    private $public = [];
+
+
+    public function __construct(){
+        $this->createdAt = new \DateTime();
+    }
 
     public function getId(): ?int
     {
@@ -73,12 +91,12 @@ class Contact
 
     public function getEmail(): ?string
     {
-        return $this->Email;
+        return $this->email;
     }
 
-    public function setEmail(string $Email): self
+    public function setEmail(string $email): self
     {
-        $this->Email = $Email;
+        $this->email = $email;
 
         return $this;
     }
@@ -106,4 +124,34 @@ class Contact
 
         return $this;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getCreatedAt()
+    {
+        return $this->createdAt;
+    }
+
+    /**
+     * @param mixed $created_at
+     */
+    public function setCreatedAt($created_at): void
+    {
+        $this->createdAt = $created_at;
+    }
+
+    public function getPublic(): ?array
+    {
+        return $this->public;
+    }
+
+    public function setPublic(?array $public): self
+    {
+        $this->public = $public;
+
+        return $this;
+    }
+
+    
 }

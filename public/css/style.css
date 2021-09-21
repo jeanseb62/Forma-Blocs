@@ -116,7 +116,7 @@ li {
     padding-top: 20px;
 }
 
-video {
+iframe {
     background: url('../assets/images/background/desk-1-petale-jaune.png') no-repeat;
     margin-top: 80px;
     padding-top: 35px;
@@ -592,11 +592,23 @@ footer .icone_sociaux {
         display: block;
     }
 
+    iframe
+    {
+        width: 680px;
+        height: 400px;
+    }
+
 }
 
 @media screen and (max-width: 768px) {
     .prestation .card-container {
         grid-template-columns: auto auto;
+    }
+
+    iframe
+    {
+        width: 510px;
+        height: 300px;
     }
 }
 
@@ -755,12 +767,13 @@ footer .icone_sociaux {
         height: auto;
     }
 
-    video {
+    iframe {
         background: url('../assets/images/background/mobile/mobile-petale-jaune.png') left top no-repeat !important;
         padding-top: 15px !important;
         padding-left: 15px !important;
         margin: 20px 0;
-
+        width: 340px;
+        height: 200px;
     }
 
 

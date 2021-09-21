@@ -4,29 +4,51 @@
 
 {% block body %}
 <main class="quisommes">
-    <img src={{ asset('assets/images/background/desk-bandeau-qui.jpg') }} alt="bandeau qui sommes nous" class="img-fluid">
+    <img src={{ asset('assets/images/background/desk-bandeau-qui.jpg') }} alt="bandeau qui sommes nous"
+        class="img-fluid">
 
+    <h1 class="text-center mb-0 py-lg-5 py-3">Qui suis-je ? Et pourquoi <span class="text-highlight">FormaBLOCS</span> ?
+    </h1>
     <div class="container">
-        <h1 class="text-center py-5">Qui suis-je ? Et pourquoi <span class="text-highlight">FormaBLOCS</span> ?</h1>
-        <p class="pt-5">Je suis <span class="nom">Héloîse ZITOUNI</span>, diplômée d’un Master en Ingénierie de formation avec une expérience professionnelle
-            de 7 ans dans le domaine de la formation. J’attache une grande importance à mon métier.</p><br>
-        <p>La formation professionnelle est une belle opportunité pour permettre à chacun de redonner ou de trouver un
-            sens à sa vie professionnelle, mais aussi personnelle.</p><br>
-        <p>C’est pour tous ces éléments que j’ai décidé de créer <span class="text-highlight">FormaBLOCS</span>, qui est un organisme de formation en
-            distanciel et de conseil qui est spécialisé dans le domaine de la formation continue. </p><br>
-        <p>Les formations et les prestations de conseil bénéficient d’un accompagnement pédagogique complet de manière
-            synchrone (conférences) ou asynchrone (outils de messagerie, forum, email).</p><br>
-        <p>Chez <span class="text-highlight">FormaBLOCS</span> nous vous proposons des formations certifiantes ainsi que des conseils pour les
+        <p class="pt-0">Je suis <span class="nom">Héloîse ZITOUNI</span>, diplômée d’un Master en Ingénierie de
+            formation avec une expérience professionnelle
+            de 7 ans dans le domaine de la formation. J’attache une grande importance à mon métier.</p>
+        <p>La formation professionnelle est une belle opportunité pour permettre à chacun de redonner ou de trouver
+            un
+            sens à sa vie professionnelle, mais aussi personnelle.</p>
+        <p>C’est pour tous ces éléments que j’ai décidé de créer <span class="text-highlight">FormaBLOCS</span>, qui
+            est un organisme de formation en
+            distanciel et de conseil qui est spécialisé dans le domaine de la formation continue. </p>
+        <p>Les formations et les prestations de conseil bénéficient d’un accompagnement pédagogique complet de
+            manière
+            synchrone (conférences) ou asynchrone (outils de messagerie, forum, email).</p>
+        <p>Chez <span class="text-highlight">FormaBLOCS</span> nous vous proposons des formations certifiantes ainsi
+            que des conseils pour les
             professionnels de la formation. Les heures d’accompagnement dépendront de chaque individu, de leur
-            expérience et de leur parcours professionnel (de 8h à 35h).</p><br>
-        <p>Les apprenants de <span class="text-highlight">FormaBLOCS</span> auront accès au cours de leurs formations via une interface, appelée MOODLE. Des
-            Rendez-vous en distanciel seront planifiés avec le formateur afin d’assurer le suivi pédagogique.</p><br>
-        <p class="pb-5">
+            expérience et de leur parcours professionnel (de 8h à 35h).</p>
+        <p>Les apprenants de <span class="text-highlight">FormaBLOCS</span> auront accès au cours de leurs
+            formations via une interface, appelée MOODLE. Des
+            Rendez-vous en distanciel seront planifiés avec le formateur afin d’assurer le suivi pédagogique.</p>
+        <p>
             Avec <span class="text-highlight">FormaBLOCS</span>, vous serez accompagné à chaque étape.
             Pour plus d’information, n’hésitez pas à me contacter.</p>
-        <p class="pt-5"><span class="text-highlight">Mes valeurs</span> : Entraide, Humanité, Respect, Professionnalisme et Expertise.</p>
-        <div class="text-center">
-            <a class="btnGrey" href={{ path('contact')}}>Contact</a>
+        <p class="py-5 offset-3 offset-md-0"><span class="text-highlight">Mes valeurs</span> : Entraide, Humanité,
+            Respect,
+            Professionnalisme et Expertise.</p>
+    </div>
+    <div class="text-center blockBtn">
+        <a class="btnGrey" href={{ path('contact')}}>Contact</a>
+    </div>
+    
+    {# Organismes de financement #}
+    <div class="financerForma d-block d-md-none">
+        <h2 class="text-center">Organismes de financement</h2>
+        <div class="d-flex flex-row justify-content-around align-items-center py-3 mb-3">
+            <img src={{ asset('assets/images/logo/mobile/mobile-logo-CPF.png') }} alt="logo Mon Compte Formation"
+                class="img-fluid">
+            <img src={{ asset('assets/images/logo/mobile/mobile-logo-pe.png') }} alt="logo Pôle emploi"
+                class="img-fluid">
+            <img src={{ asset('assets/images/logo/mobile/mobile-logo-opco.png') }} alt="logo OPCO" class="img-fluid">
         </div>
     </div>
 </main>

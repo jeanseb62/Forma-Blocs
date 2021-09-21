@@ -177,14 +177,19 @@ video {
     color: #E5C210;
 }
 
-/* Qui sommes nous */
-.quisommes {
-    background: url('../assets/images/background/desk-2silhouettes.png') bottom right no-repeat;
+.accompagnement {
+    padding-bottom: 100px;
 }
 
-.quisommes>div>div {
-    padding-top: 100px;
-    padding-bottom: 350px;
+
+/* Qui sommes nous */
+.accompagnement, .quisommes {
+    background: url('../assets/images/background/desk-2silhouettes.png') bottom right no-repeat;
+    background-size: 20%;
+}
+
+.quisommes .blockBtn {
+    padding-bottom: 200px;
 }
 
 .quisommes .nom {
@@ -771,6 +776,10 @@ footer .icone_sociaux {
         display: none;
     }
 
+    .financerForma > div{
+        background-color: #F5F6F8;
+    }
+
     #bandeauForma {
         content: url('../assets/images/background/mobile/mobile-bandeau-formations.jpg');
         width: 100%;
@@ -788,20 +797,26 @@ footer .icone_sociaux {
         content: url('../assets/images/logo/mobile/mobile-logo-opco.png');
     }
 
-    .formation .container {
+    .formation .container,  .conseil .container , .accompagnement .container {
         background: #FFF;
         padding: 0;
     }
 
-
-    .formation .card {
+    .card {
+        box-shadow: none;
+    }
+    .formation .card, .conseil .card, .accompagnement .card{
         background-color: #F5F6F8;
         position: relative;
         top: -77px;
     }
 
-    .formation .container > img {
+    .formation .iconCard {
         content: url('../assets/icons/mobile/mobile-picto-jaune-chapeau-noir.svg');
+    }
+
+
+    .formation .iconCard, .conseil .iconCard, .accompagnement .iconCard {
         top: 0px;
         right: 0px;
     }
@@ -822,10 +837,55 @@ footer .icone_sociaux {
         width: 100%;
     }
 
-    .conseil .container {
-        padding: 0;
+    .conseil .iconCard {
+        content: url('../assets/icons/mobile/mobile-picto-jaune-chapeau-noir.svg');
     }
 
+    .accompagnement {
+        background-image: none;
+        padding-bottom: 0;
+    }
+
+    .accompagnement .iconCard {
+        content: url('../assets/icons/mobile/mobile-picto-jaune-chapeau-noir.svg');
+    }
+
+    .conseil .btnGrey, .accompagnement .btnGrey {
+        position: relative;
+        top: -30px;
+        background-color: #FED812;
+    }
+
+    /* Qui sommes nous */
+    .quisommes {
+        background-image: none;
+    }
+
+    .quisommes .container {
+        background: url('../assets/images/background/mobile/mobile-picto-2shapes-left.png') left bottom no-repeat;
+        background-color: #F5F6F8;
+    }
+
+    .quisommes .btnGrey {
+        background-color: #FED812;
+        padding: 0 40px;
+    }
+    
+    .quisommes .blockBtn {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    /* Login */
+
+    .login {
+        background: url('../assets/images/background/mobile/mobile-picto-2shapes-right.png') right bottom no-repeat;
+    }
+
+    .login div:last-child
+    {
+        padding-bottom: 40px;
+    }
     /* Footer */
 
 

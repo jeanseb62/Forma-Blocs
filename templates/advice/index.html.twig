@@ -4,17 +4,21 @@
 
 {% block body %}
 <main>
-    <img id="bandeauConseil" src={{ asset('assets/images/background/desk-bandeau-conseils.jpg') }} alt="bandeau conseils" width="100%">
+    <img id="bandeauConseil" src={{ asset('assets/images/background/desk-bandeau-conseils.jpg') }}
+        alt="bandeau conseils" width="100%">
 
     <div class="container">
-        <h1 class="text-center py-5">Prestations de conseil / d’accompagnement pour les professionnels de la formation</h1>
+        <h1 class="text-center py-5">Prestations de conseil / d’accompagnement pour les professionnels de la formation
+        </h1>
     </div>
     <div class="conseil px-lg-3 px-0">
         <div class="container">
             <img class="iconCard" src={{ asset('assets/icons/desk-cercle-chapeau-noir.svg') }} alt="icon conseils">
             <div class="card px-lg-5 ps-4">
-                <h2 class="text-lg-center px-lg-3 ps-5 pt-lg-0 pt-3 card-title text-uppercase">Conseils pour les professionnels de la formation</h2>
-                <p class="px-lg-3 ps-5"><span class="text-highlight">FormaBLOCS</span> vous propose de vous accompagner en
+                <h2 class="text-lg-center px-lg-3 ps-5 pt-lg-0 pt-3 card-title text-uppercase">Conseils pour les
+                    professionnels de la formation</h2>
+                <p class="px-lg-3 ps-5"><span class="text-highlight">FormaBLOCS</span> vous propose de vous accompagner
+                    en
                     distanciel : </p>
                 <ul class="list-unstyled">
                     {% for advice in advices %}
@@ -24,24 +28,24 @@
                     </li>
                     {% endfor %}
                 </ul>
-                <p class="px-3">Liste non exhaustive. Nhésitez pas à contacter <span
+                <p class="px-lg-3 pe-3 ">Liste non exhaustive. Nhésitez pas à contacter <span
                         class="text-highlight">FormaBLOCS</span> pour avoir des formations sur-mesures. </p>
-                <div class="d-flex flex-row align-items-center px-5">
-                    <img src={{ asset('assets/icons/desk-picto-television.svg')}} alt="icone formation à distance">
-                    <p class="px-4 mb-0">Cette formation sera en distanciel avec un accompagnement pédagogique complet
+                <div class="d-flex flex-row align-items-center pb-3">
+                    <img  class="px-lg-3 pe-2" src={{ asset('assets/icons/desk-picto-television.svg')}} alt="icone formation à distance">
+                    <p class="mb-0">Cette formation sera en distanciel avec un accompagnement pédagogique complet
                         de manière synchrone (Conférences) ou asynchrone (outils de messagerie, forum, email)</p>
                 </div>
 
-                <div class="d-flex flex-row align-items-center px-5 pt-lg-5 pb-lg-5">
-                    <img src={{ asset('assets/icons/desk-cart-arrow-down.svg')}} alt="icone prix">
-                    <p class="px-4 mb-0">Nous contacter</p>
+                <div class="d-flex flex-row align-items-center pb-3">
+                    <img class="px-lg-3 pe-2" src={{ asset('assets/icons/desk-cart-arrow-down.svg')}} alt="icone prix">
+                    <p class="mb-0">Nous contacter</p>
                 </div>
 
 
 
             </div>
 
-            <div class="text-center py-5">
+            <div class="text-center py-md-5 pt-0 pb-3">
                 <a class="btnGrey" href={{ path('quotation')}}>Demande de devis</a>
             </div>
 
@@ -51,11 +55,12 @@
     <div class="accompagnement mt-5">
 
         <div class="container">
-            <h2 class="text-center pt-3">Accompagnement V.A.E <br>
+            <h2 class="text-center pt-3 d-none d-md-block">Accompagnement V.A.E <br>
                 (Validation d’acquis d’expérience)</h2>
             <img class="iconCard" src={{ asset('assets/icons/desk-cercle-puzzle.svg') }} alt="icon conseils">
 
-            <div class="card">
+            <div class="card px-lg-5 ps-4">
+                <h2 class="d-block d-md-none text-lg-center px-lg-3 ps-5 pt-lg-0 pt-3 card-title text-uppercase">Accompagnement V.A.E (Validation d’acquis d’expérience)</h2>
                 <div class="col-10 offset-1 mt-5">
                     <h3>Objectifs de la formation</h3>
                     <p>La Validation des acquis de l'expérience (VAE) est une nouvelle voie d'accès aux diplômes. Elle
@@ -65,15 +70,21 @@
                 </div>
                 <div class="col-10 offset-1  mt-5">
                     <h3>Objectifs de sortie</h3>
-                    <p>L’accompagnement à la Validation des acquis de l'expérience (VAE) vise à développer la capacité à formaliser par écrit et à présenter à l’oral les compétences acquises au
+                    <p>L’accompagnement à la Validation des acquis de l'expérience (VAE) vise à développer la capacité à
+                        formaliser par écrit et à présenter à l’oral les compétences acquises au
                         travers de son expérience professionnelle et/ou personnelle par rapport au
                         référentiel d’un titre, d’un diplôme professionnel ou d’un certificat de qualification
                         enregistré préalablement au RNCP
-                        </p>
+                    </p>
                 </div>
                 <div class="col-10 offset-1  mt-5">
                     <h3>Contenu</h3>
-                    <p>L’accompagnement à la Validation des acquis de l'expérience (VAE) est réalisé par un consultant en évolution professionnelle. Il est individualisé. Les séances se déroulent sous la forme d’entretiens. Durant ces entretiens, le consultant apporte son expertise technique, sa capacité à formaliser et à analyser. Concernant la préparation de la présentation orale devant le jury d’examen, le consultant peut être amené à proposer un training pour familiariser le candidat à cet exercice de communication.</p>
+                    <p>L’accompagnement à la Validation des acquis de l'expérience (VAE) est réalisé par un consultant
+                        en évolution professionnelle. Il est individualisé. Les séances se déroulent sous la forme
+                        d’entretiens. Durant ces entretiens, le consultant apporte son expertise technique, sa capacité
+                        à formaliser et à analyser. Concernant la préparation de la présentation orale devant le jury
+                        d’examen, le consultant peut être amené à proposer un training pour familiariser le candidat à
+                        cet exercice de communication.</p>
                 </div>
                 <div class="col-10 offset-1  mt-5">
                     <h3>Les méthodes utilisées peuvent être :</h3>
@@ -100,14 +111,25 @@
                         <p>En distanciel du 01/01/2021 au 31/07/2022</p>
                     </div>
                 </div>
-                
+
             </div>
-            <div class="text-center py-5">
+            <div class="text-center py-md-5 pt-0 pb-5">
                 <a class="btnGrey mb-5" href={{ path('quotation')}}>Demande de devis</a>
             </div>
         </div>
     </div>
 
+    {# Organismes de financement #}
+    <div class="financerForma d-block d-md-none">
+        <h2 class="text-center">Organismes de financement</h2>
+        <div class="d-flex flex-row justify-content-around align-items-center py-3 mb-3">
+            <img src={{ asset('assets/images/logo/mobile/mobile-logo-CPF.png') }} alt="logo Mon Compte Formation"
+                class="img-fluid">
+            <img src={{ asset('assets/images/logo/mobile/mobile-logo-pe.png') }} alt="logo Pôle emploi"
+                class="img-fluid">
+            <img src={{ asset('assets/images/logo/mobile/mobile-logo-opco.png') }} alt="logo OPCO" class="img-fluid">
+        </div>
+    </div>
 </main>
 
 {% endblock %}

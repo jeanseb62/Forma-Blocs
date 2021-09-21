@@ -42,7 +42,7 @@ li {
 }
 
 .banner {
-    background: url('../assets/images/background/banner-homepage.jpg') center no-repeat;
+    background: url('../assets/images/background/banner-homepage.jpg') center / cover no-repeat;
     height: 530px;
     background-color: #F5F6F8;
     margin-bottom: 60px;
@@ -833,20 +833,15 @@ footer .icone_sociaux {
 
     #bandeauConseil {
         content: url('../assets/images/background/mobile/mobile-bandeau-conseils.jpg');
-        width: 100%;
     }
 
-    .conseil .iconCard {
-        content: url('../assets/icons/mobile/mobile-picto-jaune-chapeau-noir.svg');
+    .conseil .iconCard, .accompagnement .iconCard {
+        content: url('../assets/icons/mobile/mobile-picto-jaune-puzzle.svg');
     }
 
     .accompagnement {
         background-image: none;
         padding-bottom: 0;
-    }
-
-    .accompagnement .iconCard {
-        content: url('../assets/icons/mobile/mobile-picto-jaune-chapeau-noir.svg');
     }
 
     .conseil .btnGrey, .accompagnement .btnGrey {

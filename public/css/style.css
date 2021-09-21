@@ -795,11 +795,14 @@ footer .icone_sociaux {
 
 
     .formation .card {
-        background-color: #CDD1DB;
+        background-color: #F5F6F8;
+        position: relative;
+        top: -77px;
     }
 
     .formation .container > img {
         content: url('../assets/icons/mobile/mobile-picto-jaune-chapeau-noir.svg');
+        top: 0px;
         right: 0px;
     }
 

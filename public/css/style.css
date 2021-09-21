@@ -431,6 +431,14 @@ footer .icone_sociaux {
     display: block;
 }
 
+.buttonTop img{
+    border-radius: 50%;
+    height: 70px;
+    width: 70px;
+    padding: 5px;
+    background-color: #F2CB02;
+}
+
 /* Login */
 .login {
     background: url('../assets/images/background/desk-2silhouettes.png') bottom right no-repeat;

@@ -17,6 +17,7 @@ security:
             security: false
         main:
             anonymous: lazy
+
     
             provider: in_database
             form_login: 
@@ -25,7 +26,7 @@ security:
 
             logout:
                 path: app_logout
-                target: accueil
+                target: admin
 
    
 
@@ -40,6 +41,3 @@ security:
     access_control:
          - { path: ^/admin, roles: ROLE_ADMIN }
         # - { path: ^/profile, roles: ROLE_USER }
-    role_hierarchy:
-         ROLE_EDITOR: ROLE_USER
-         ROLE_ADMIN: ROLE_EDITOR

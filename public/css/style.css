@@ -453,7 +453,7 @@ footer .icone_sociaux {
     color: #000;
     font-size: 1.1em;
     background-color: #FFF!important;
-    border-radius: 40px;
+    border-radius: 20px;
     color: #000;
     background-color: #FFF;
     filter: drop-shadow(5px 5px 4px #dedede);
@@ -475,20 +475,6 @@ footer .icone_sociaux {
 
 .form-signin h1 {
     font-weight: bold;
-}
-
-.MotDePasseOublie {
-    color: #000;
-    margin: 10px auto 50px auto;
-    max-width: 450px;
-}
-
-.MotDePasseOublie a {
-    color: #000;
-}
-
-.MotDePasseOublie a:hover {
-    color: #000;
 }
 
 /* Contact */
@@ -870,6 +856,8 @@ footer .icone_sociaux {
     {
         padding-bottom: 40px;
     }
+
+
     /* Footer */
 
 

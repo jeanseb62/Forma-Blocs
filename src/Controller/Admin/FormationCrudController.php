@@ -60,11 +60,41 @@ class FormationCrudController extends AbstractCrudController
             ->setSortable(false)
             ->setUploadedFileNamePattern('[randomhash].[extension]')
             ->setFormTypeOption('required' ,false),
-            AssociationField::new('blocks')->hideOnIndex(),
+            AssociationField::new('blocks'),
             BooleanField::new('isPublished', 'Publié'),
          
 
         ];
     }
     
+    public function persistEntity( EntityManagerInterface $entityManager, $entityInstance ): void {
+
+	    $blockRepository = $entityManager->getRepository(Block::class);
+	    foreach ($entityInstance->getBlocks() as $block) {
+		    $tempBlock = $blockRepository->findOneBy( [ "name" => $block->getName() ] );
+		    if ( $tempBlock ) {
+			    $entityInstance->removeBlock( $block );
+			    $entityInstance->addBlock( $tempBlock );
+		    }
+	    }
+
+		   
+	    parent::persistEntity( $entityManager, $entityInstance );
+    }
+
+    public function updateEntity( EntityManagerInterface $entityManager, $entityInstance ): void {
+	    $blockRepository = $entityManager->getRepository(Block::class);
+	    foreach ($entityInstance->getBlocks() as $block) {
+		    $tempBlock = $blockRepository->findOneBy(["name" => $block->getName()]);
+		    if ($tempBlock) {
+		    	$entityInstance->removeBlock($block);
+		    	$entityInstance->addBlock($tempBlock);
+		    }
+
+	    }
+
+    	
+
+	    parent::updateEntity( $entityManager, $entityInstance );
+    }
 }

@@ -48,7 +48,7 @@ modal.addEventListener('shown.bs.modal', function () {
 
 	{# Qui suis-je ? #}
 	<div class="container presentation">
-		<h2>Qui suis-je ?</h2>
+		<h2 class="pb-3">Qui suis-je ?</h2>
 		<div class="row">
 			<div class="col-7">
 				<p class="textBig">Je suis Héloîse ZITOUNI, fondatrice de centre de formation <span
@@ -65,12 +65,13 @@ modal.addEventListener('shown.bs.modal', function () {
 				<p class="textSmall"><span class="text-highlight">Mes valeurs :</span> Entraide, Humanité, Respect,
 					Professionnalisme et
 					Expertise. </p>
-			</div>
+					<div class="pt-3">
+						<a class="btnGrey col-3" id="btnContact" href={{ path('qui-sommes-nous')}}>Nous contacter</a>
+					</div>
+				</div>
 			<img src={{asset('assets/images/photo-heloise-zitouni.png')}} alt="Photo Héloîse ZITOUNI"
 				class="img-fluid align-self-start col-5">
-			<div>
-				<a class="btnGrey col-3" id="btnContact" href={{ path('qui-sommes-nous')}}>Nous contacter</a>
-			</div>
+			
 		</div>
 	</div>
 

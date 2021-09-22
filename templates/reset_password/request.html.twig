@@ -10,7 +10,7 @@
 
 <img src={{ asset('assets/images/background/desk-badeau-espace.jpg') }} alt="bandeau espace" width="100%">
 
-<h1 class="mb-3 font-weight-bold text-center">Identifiants oubliés</h1>
+<h1 class="mt-5 mb-3 font-weight-bold text-center">Identifiants oubliés</h1>
 
      <p class="text-center">Vous avez oublié vos identifiants de connexion ?</p>
      <p class="text-center">ça arrive à tout le monde !</p>
@@ -18,20 +18,8 @@
    
 <div class="container">
 <form method="post" class="form-signin mb-8">
-
-    <h2 class="h3 mb-3 font-weight-bold text-center">Identifiants oubliés</h2>
- {{ form_start(requestForm) }}
-
-<p class="form-outline">
- {{ form_row(requestForm.email, { 'attr': {'placeholder':'VOTRE ADRESSE EMAIL' } }) }}
-
- 
-</p>
-
-    <button class="btn btn-primary" type="submit">
-        Envoyer
-    </button>
-    {{ form_end(requestForm) }}
+<h2 class="h3 mb-3 font-weight-bold text-center">Identifiants oubliés</h2>
+ {{ form(requestForm) }}
 </form>
 
 </div>

@@ -111,6 +111,7 @@ class QuotationType extends AbstractType
                 'expanded'  => true,
                 'multiple'  => true,
             ])
+    
             ->add('benefit', ChoiceType::class, [
                 'label' => 'Prestations',
                 'label_attr' => array('class' => 'checkbox-inline'),

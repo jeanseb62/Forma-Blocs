@@ -1,21 +1,18 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Register{% endblock %}
+{% block title %}Inscription{% endblock %}
 
 {% block body %}
-    {% for flashError in app.flashes('verify_email_error') %}
-        <div class="alert alert-danger" role="alert">{{ flashError }}</div>
-    {% endfor %}
+<main class="h-100">
 
-    <h1>Register</h1>
+<img src={{ asset('assets/images/background/desk-badeau-espace.jpg') }} alt="bandeau espace" width="100%">
+<div class="container form-signin mt-5 mb-5">
+<h2 class="h3 mb-3 font-weight-bold text-center">Inscription</h2>
+{{ form(form) }}
+ 
+ </div>
+ </main>
+ 
 
-    {{ form_start(registrationForm) }}
-        {{ form_row(registrationForm.email) }}
-        {{ form_row(registrationForm.plainPassword, {
-            label: 'Password'
-        }) }}
-        {{ form_row(registrationForm.agreeTerms) }}
 
-        <button type="submit" class="btn">Register</button>
-    {{ form_end(registrationForm) }}
 {% endblock %}

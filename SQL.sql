@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : mar. 21 sep. 2021 à 23:18
+-- Généré le : mer. 22 sep. 2021 à 10:54
 -- Version du serveur :  5.7.31
 -- Version de PHP : 7.4.23
 
@@ -74,7 +74,7 @@ CREATE TABLE IF NOT EXISTS `contact` (
   `created_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `public` longtext COLLATE utf8mb4_unicode_ci COMMENT '(DC2Type:array)',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -182,7 +182,7 @@ CREATE TABLE IF NOT EXISTS `reset_password_request` (
   `expires_at` datetime NOT NULL COMMENT '(DC2Type:datetime_immutable)',
   PRIMARY KEY (`id`),
   KEY `IDX_7CE748AA76ED395` (`user_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -202,7 +202,14 @@ CREATE TABLE IF NOT EXISTS `user` (
   `login` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `UNIQ_8D93D649E7927C74` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Déchargement des données de la table `user`
+--
+
+INSERT INTO `user` (`id`, `email`, `roles`, `password`, `is_verified`, `last_name`, `first_name`, `login`) VALUES
+(5, 'admin@admin.com', '[\"ROLE_ADMIN\"]', '$2y$13$0NLHdLBn0xBwHvXjrK/mt.P9zWjDn.0Wz7.Z/zTiCBddZdohvWj0G', 0, 'ZITOUNI', 'Heloise', 'admin');
 
 --
 -- Contraintes pour les tables déchargées

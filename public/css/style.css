@@ -18,19 +18,19 @@ h6 {
     color: #454548;
 }
 
-h1 {
+/* h1 {
     font-size: 3.125em;
 }
 
 h2 {
     font-size: 2.25em;
 }
-
+*/
 p,
 li {
-    font-size: 1.125em;
+    /* font-size: 1.125em; */
     font-weight: 600;
-}
+} 
 
 
 
@@ -38,7 +38,7 @@ li {
 
 .description {
     font-weight: 500;
-    font-size: 2.25em;
+    /* font-size: 2.25em; */
 }
 
 .banner {
@@ -59,12 +59,12 @@ li {
 }
 
 .textBig {
-    font-size: 1.5em;
+    /* font-size: 1.5em; */
     text-align: justify;
 }
 
 .textSmall {
-    font-size: 1.125em;
+    font-size: .8em;
     font-weight: 600;
 }
 
@@ -130,7 +130,7 @@ iframe {
 }
 
 .formation .card-title {
-    font-size: 2.25em;
+    /* font-size: 2.25em; */
 }
 
 .formation p,
@@ -169,7 +169,7 @@ iframe {
 
 .accompagnement h3,
 .accompagnement h4 {
-    font-size: 1.5625em;
+    /* font-size: 1.5625em; */
     font-weight: bold;
 }
 
@@ -193,7 +193,7 @@ iframe {
 }
 
 .quisommes .nom {
-    font-size: 2.25em;
+    /* font-size: 2.25em; */
     font-weight: 600;
 }
 
@@ -279,7 +279,6 @@ iframe {
     padding: 12px 30px;
     text-transform: uppercase;
     font-weight: bold;
-    font-size: 1.5em;
     color: #000;
 }
 
@@ -332,7 +331,6 @@ iframe {
 .header a {
     text-decoration: none;
     color: #FFF;
-    font-size: 1em;
     font-weight: bold;
     justify-content: space-between;
 }
@@ -351,7 +349,6 @@ nav {
 .header li {
     text-decoration: none;
     color: #FFF;
-    font-size: 1em;
     font-weight: bold;
     justify-content: space-between;
 }
@@ -489,7 +486,6 @@ footer .icone_sociaux {
 .form-signin .btn-primary {
     border-radius: 0px !important;
     padding: 10px 50px 10px 50px;
-    font-size: 1em;
     color:#FFF;
 }
 
@@ -544,7 +540,6 @@ footer .icone_sociaux {
     border-radius: 20px;
     background-color: #fed812;
     padding: 10px 50px 10px 50px;
-    font-size: 1em;
 }
 
 /* Isentifiant oublié */
@@ -618,7 +613,7 @@ footer .icone_sociaux {
 
     h1,
     h2,
-    h6,
+    h4,
     p,
     li {
         color: #000;
@@ -628,18 +623,15 @@ footer .icone_sociaux {
         font-size: .9em;
     }
     h1 {
-        font-size: 1.7em !important;
     }
 
-    h2 {
-        font-size: 1.2em !important;
+    h2, h4 {
         font-weight: bolder;
     }
 
     /* Homepage */
 
     h2.description {
-        font-size: 1.25em;
         font-weight: 500;
         padding-bottom: 20px;
     }
@@ -654,7 +646,6 @@ footer .icone_sociaux {
 
     .banner h1 {
         padding-top: 10px;
-        font-size: 1.875em;
     }
 
     .banner a {

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : mer. 22 sep. 2021 à 10:54
+-- Généré le : mer. 22 sep. 2021 à 21:42
 -- Version du serveur :  5.7.31
 -- Version de PHP : 7.4.23
 
@@ -32,7 +32,22 @@ CREATE TABLE IF NOT EXISTS `advice` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Déchargement des données de la table `advice`
+--
+
+INSERT INTO `advice` (`id`, `name`) VALUES
+(1, 'Stratégie de digitalisation des formations'),
+(2, 'Déposer un titre au RNCP'),
+(3, 'Accompagnement à l’obtention de Qualiopi'),
+(4, 'L’ingénierie financière en formation'),
+(5, 'Remplir son bilan pédagogique annuel'),
+(6, 'L’ingénierie pédagogique (la création de référentiel de formation)'),
+(7, 'Comment accompagner les personnes en situation de handicap'),
+(8, 'Les offres de formation pour les alternants'),
+(9, 'La reconversion professionnelle');
 
 -- --------------------------------------------------------
 
@@ -47,15 +62,18 @@ CREATE TABLE IF NOT EXISTS `block` (
   `formation_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `IDX_831B97225200282E` (`formation_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Déchargement des données de la table `block`
 --
 
 INSERT INTO `block` (`id`, `name`, `formation_id`) VALUES
-(1, 'Formation', NULL),
-(2, 'Conseils', NULL);
+(1, 'Préparer et animer des actions de formation collectives en intégrant des environnements numériques', 1),
+(2, 'Construire des parcours individualisés et accompagner les apprenants', 1),
+(3, 'Accueillir pour analyser la demande des personnes et poser les bases d\'un diagnostic partagé', 2),
+(4, 'Accompagner les personnes dans leur parcours d\'insertion sociale et professionnelle', 2),
+(5, 'Mettre en oeuvre une offre de services auprès des employeurs pour favoriser l\'insertion professionnelle', 2);
 
 -- --------------------------------------------------------
 
@@ -132,13 +150,6 @@ CREATE TABLE IF NOT EXISTS `formation_block` (
   KEY `IDX_F59009575200282E` (`formation_id`),
   KEY `IDX_F5900957E9ED820C` (`block_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Déchargement des données de la table `formation_block`
---
-
-INSERT INTO `formation_block` (`formation_id`, `block_id`) VALUES
-(1, 1);
 
 -- --------------------------------------------------------
 

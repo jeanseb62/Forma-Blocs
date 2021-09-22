@@ -18,17 +18,8 @@ h6 {
     color: #454548;
 }
 
-/* h1 {
-    font-size: 3.125em;
-}
-
-h2 {
-    font-size: 2.25em;
-}
-*/
 p,
 li {
-    /* font-size: 1.125em; */
     font-weight: 600;
 } 
 
@@ -38,7 +29,6 @@ li {
 
 .description {
     font-weight: 500;
-    /* font-size: 2.25em; */
 }
 
 .banner {
@@ -59,7 +49,6 @@ li {
 }
 
 .textBig {
-    /* font-size: 1.5em; */
     text-align: justify;
 }
 
@@ -129,10 +118,6 @@ iframe {
     background-color: #E5E5E5;
 }
 
-.formation .card-title {
-    /* font-size: 2.25em; */
-}
-
 .formation p,
 .formation li {
     font-weight: 600;
@@ -169,7 +154,6 @@ iframe {
 
 .accompagnement h3,
 .accompagnement h4 {
-    /* font-size: 1.5625em; */
     font-weight: bold;
 }
 
@@ -193,7 +177,7 @@ iframe {
 }
 
 .quisommes .nom {
-    /* font-size: 2.25em; */
+    font-size: 1.25em;
     font-weight: 600;
 }
 

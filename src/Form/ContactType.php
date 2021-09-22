@@ -56,7 +56,7 @@ class ContactType extends AbstractType
                 ]
             ])
             ->add('public', ChoiceType::class, [
-                'label' => 'Public',
+                'label' => 'Vous êtes ?',
                 'label_attr' => array('class' => 'checkbox-inline'),
                 'choices'  => [
                     'Entreprise' => self::public1,
@@ -72,7 +72,7 @@ class ContactType extends AbstractType
                 'attr' => [
                     'class' => 'form-control',
                     'placeholder' => 'Message',
-                    'rows' => 6
+                    'rows' => 20
                 ]
             ])
             ->add('Envoyer', SubmitType::class, [

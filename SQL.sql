@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : mer. 22 sep. 2021 à 21:42
+-- Généré le : jeu. 23 sep. 2021 à 08:22
 -- Version du serveur :  5.7.31
 -- Version de PHP : 7.4.23
 
@@ -107,6 +107,13 @@ CREATE TABLE IF NOT EXISTS `doctrine_migration_versions` (
   `execution_time` int(11) DEFAULT NULL,
   PRIMARY KEY (`version`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Déchargement des données de la table `doctrine_migration_versions`
+--
+
+INSERT INTO `doctrine_migration_versions` (`version`, `executed_at`, `execution_time`) VALUES
+('DoctrineMigrations\\Version20210923081644', '2021-09-23 08:16:54', 567);
 
 -- --------------------------------------------------------
 

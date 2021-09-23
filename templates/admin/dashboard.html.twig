@@ -66,7 +66,7 @@
     <strong>Liste des formations :</strong>
         <ul class="list-group">
             {% for formation in formations %}
-            <li class="list-group-item"><a href="{{ path('formation')}}">{{ formation.title }}</a>
+            <li class="list-group-item"><a href="{{ path('formation')}}">{{ formation.title }}</a> : {{ formation.isPublished ? '<span class="btn-success p-1">Publié</span>' : '<span class="btn-danger p-1">Non publié</span>' }}
             <br>{% for blocks in formation.blocks %}
                         <span>Bloc {{ loop.index }} : </span> {{ blocks.name }}<br>
                         {% endfor %}

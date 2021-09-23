@@ -23,12 +23,16 @@ class DashboardController extends AbstractDashboardController
     {
         //return parent::index();
         $formations = $this->getDoctrine()->getRepository(formation::class)->findAll();
+        $advices = $this->getDoctrine()->getRepository(advice::class)->findAll();
+        $blocks = $this->getDoctrine()->getRepository(block::class)->findAll();
         $users = $this->getDoctrine()->getRepository(User::class)->count([]);
         $contacts = $this->getDoctrine()->getRepository(Contact::class)->count([]);
         $quotations = $this->getDoctrine()->getRepository(Quotation::class)->count([]);
 
     return $this->render('admin/dashboard.html.twig', [
         'formations' => $formations,
+        'advices' => $advices,
+        'blocks' => $blocks,
         'users' => $users,
         'contacts' => $contacts,
         'quotations' => $quotations,

@@ -63,11 +63,23 @@
 
 </div>
 
-    Liste des formations :
+    <strong>Liste des formations :</strong>
         <ul class="list-group">
             {% for formation in formations %}
-            <li class="list-group-item"><a href="{{ path('formation')}}">{{ formation.title }}</a></li>
+            <li class="list-group-item"><a href="{{ path('formation')}}">{{ formation.title }}</a>
+            <br>{% for blocks in formation.blocks %}
+                        <span>Bloc {{ loop.index }} : </span> {{ blocks.name }}<br>
+                        {% endfor %}
+            </li>
             {% endfor %}
         </ul>
+ 
+
+     <strong>Liste des conseils :</strong>
+        <ul class="list-group">
+            {% for advice in advices %}
+            <li class="list-group-item"><a href="{{ path('conseil')}}">{{ advice.name }}</a></li>
+            {% endfor %}
+        </ul>     
     </div>
 {% endblock %}

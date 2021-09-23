@@ -877,7 +877,13 @@ footer .icone_sociaux {
 
     /* Footer */
 
-
+    .FooterMobile {
+        background-image: url('../assets/images/background/mobile-fond-footer.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        font-size: 0.75em;
+        padding-top: 10px;
+    }
     .FooterMobile {
         display: block;
     }

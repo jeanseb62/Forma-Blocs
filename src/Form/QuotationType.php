@@ -131,7 +131,7 @@ class QuotationType extends AbstractType
                 'label' => 'Message',
                 'attr' => [
                     'placeholder' => 'Message',
-                    'rows' => 6
+                    'rows' => 12
                     ]
             ])
 

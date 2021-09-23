@@ -34,11 +34,11 @@ Merci de remplir le formulaire ci-dessous.
             
   
                 <div class="row mb-3">
-                    <div class="col">
+                    <div class="col me-3">
                       {{ form_widget(quotation.lastName) }}
                      
                     </div>
-                    <div class="col">
+                    <div class="col me-3">
                    
                       {{ form_widget(quotation.firstName) }}
                     </div>
@@ -47,15 +47,15 @@ Merci de remplir le formulaire ci-dessous.
                     <div class="col-3">
                       {{ form_widget(quotation.numberStreet) }}
                     </div>
-                    <div class="col-9">
+                    <div class="col-9 input-perso">
                       {{ form_widget(quotation.street) }}
                     </div>
                 </div>
                 <div class="row mb-3">
-                    <div class="col-3">
+                    <div class="col-md-3">
                       {{ form_widget(quotation.zip) }}
                     </div>
-                    <div class="col-9">
+                    <div class="col-md-9 input-perso">
                       {{ form_widget(quotation.city) }}
                     </div>
                 </div>
@@ -65,38 +65,40 @@ Merci de remplir le formulaire ci-dessous.
                     </div>
                 </div>
                 <div class="row mb-3">
-                    <div class="col">
+                    <div class="col me-3">
                       {{ form_widget(quotation.email) }}
                     </div>
-                    <div class="col">
+                    <div class="col me-3">
                       {{ form_widget(quotation.phone) }}
                     </div>
                 </div>
                 
-<div class="row mb-3 form-control">
+<div class="row mb-3 align-items-center form-background">
  <div class="col-3">{{ form_label(quotation.status) }}</div>
- <div class="col-9 d-flex">
+ <div class="col-9">
   {{ form_widget(quotation.status) }}
   </div>
 </div>
 
 
-<div class="row mb-3 form-control">
- <div class="col-3">{{ form_label(quotation.benefit) }}</div>
- <div class="col-9 d-flex">
+<div class="row mb-3 d-flex form-background">
+ <div class="col-2">{{ form_label(quotation.benefit) }}</div>
+ <div class="col-10 prestations">
+ <label>
   {{ form_widget(quotation.benefit) }}
-   </div>
+</label>   
+</div>
 </div>
 
 <div class="row mb-3">
-    
+    <div class="col me-3">
         {{ form_widget(quotation.message) }}
- 
+    </div>
 </div>
 
-<div class="row mb-3 align-items-center form-control">
+<div class="row mb-3 align-items-center form-background">
  <div class="col-3">{{ form_label(quotation.SendByEmail) }}</div>
- <div class="col-9 d-flex align-items-center">
+ <div class="col-9">
   {{ form_widget(quotation.SendByEmail) }}
   </div>
 </div>

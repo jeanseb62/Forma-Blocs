@@ -25,95 +25,106 @@ Merci de remplir le formulaire ci-dessous.
             {% endfor %}
         </div>
 {{ form_start(quotation) }} 
-    <div class="form-contact h-100 justify-content-center align-items-center p-5 mb-3">
+    <div class="form-devis h-100 justify-content-center align-items-center mb-3">
             
   
-                <div class="row mb-3">
-                    <div class="col me-3">
+                <div class="row">
+                    <div class="col-sm-12 col-md-6 mb-3">
                       {{ form_widget(quotation.lastName) }}
                      
                     </div>
-                    <div class="col me-3">
+                    <div class="col-sm-12 col-md-6 mb-3">
                    
                       {{ form_widget(quotation.firstName) }}
                     </div>
                 </div>
-                <div class="row mb-3">
-                    <div class="col-3">
+                <div class="row">
+                    <div class="col-sm-12 col-md-3 mb-3">
                       {{ form_widget(quotation.numberStreet) }}
                     </div>
-                    <div class="col-9 input-perso">
+                    <div class="col-sm-12 col-md-9 mb-3">
                       {{ form_widget(quotation.street) }}
                     </div>
                 </div>
-                <div class="row mb-3">
-                    <div class="col-md-3">
+                <div class="row">
+                    <div class="col-sm-12 col-md-3 mb-3">
                       {{ form_widget(quotation.zip) }}
                     </div>
-                    <div class="col-md-9 input-perso">
+                    <div class="col-sm-12 col-md-9 mb-3">
                       {{ form_widget(quotation.city) }}
                     </div>
                 </div>
-                <div class="row mb-3">
-                    <div class="col-md-3">
+                <div class="row">
+                    <div class="col-md-3 mb-3">
                       {{ form_widget(quotation.country) }}
                     </div>
                 </div>
                 <div class="row mb-3">
-                    <div class="col me-3">
+                    <div class="col-6 mb-3">
                       {{ form_widget(quotation.email) }}
                     </div>
-                    <div class="col me-3">
+                    <div class="col-6">
                       {{ form_widget(quotation.phone) }}
                     </div>
                 </div>
                 
-<div class="row mb-3 align-items-center form-background">
- <div class="col-3">{{ form_label(quotation.status) }}</div>
- <div class="col-9">
+<div class="row align-items-center form-background">
+ <div class="col-sm-12 col-md-2">{{ form_label(quotation.status) }}</div>
+ <div class="col-sm-12 col-md-10 status">
   {{ form_widget(quotation.status) }}
   </div>
 </div>
 
 
-<div class="row mb-3 d-flex form-background">
- <div class="col-2">{{ form_label(quotation.benefit) }}</div>
- <div class="col-10 prestations">
+<div class="rowd-flex form-background">
+ <div class="col-sm-12 col-md-2">{{ form_label(quotation.benefit) }}</div>
+ <div class="col-sm-12 col-md-10 prestations">
  <label>
   {{ form_widget(quotation.benefit) }}
 </label>   
 </div>
 </div>
 
+<div class="devisMobile"> 
+<p>*veuillez noter dans le message le bloc de formation souhaité.<br>
+Merci 
+</p>
+</div> 
+
 <div class="row mb-3">
-    <div class="col me-3">
+    <div class="col">
         {{ form_widget(quotation.message) }}
     </div>
 </div>
 
-<div class="row mb-3 align-items-center form-background">
- <div class="col-3">{{ form_label(quotation.SendByEmail) }}</div>
- <div class="col-9">
+<div class="row align-items-center form-background">
+ <div class="col-sm-12 col-md-3 mb-3">{{ form_label(quotation.SendByEmail) }}</div>
+ <div class="col-sm-12 col-md-9 mb-3">
   {{ form_widget(quotation.SendByEmail) }}
   </div>
 </div>
-                
+              <div class="devisDesktop">  
             <button class="btn-yellow mt-3" type="submit">
         ENVOYER
-    </button>
+    </button></div>
   
            
             
             </div>
-                <div class="form-group ms-5">
-                     <div class="form-check">
-                       <input class="form-check-input" type="checkbox" value="" id="cgu" required>
-                      <label class="form-check-label" for="cgu">Conformément à notre politique de confidentialité, nous nous engageons à respecter vos données personnelles.</label>
-                     </div>
-                 </div> {{ form_end(quotation) }}
-                 <p class="text-center">L’équipe de <span class="yellow">FormaBLOCS</span> reprendra contact avec vous dans les 24/48h.</p>
-
-<p class="text-center">*Pour les blocs individuels de formation, notez dans le message le bloc que vous souhaitez valider. </p>
+                <div class="devisTexte">
+                       <span><input class="form-check-input" type="checkbox" value="" required>
+                      <label>Conformément à notre <a href="{{ path('protection') }}"><span class="yellow">politique de confidentialité</span></a>, nous nous engageons à respecter vos données personnelles.</label></span>
+<div class="devisMobile">  
+            <button class="btn-yellow mt-3" type="submit">
+        ENVOYER
+    </button></div>
+                 <p class="mb-4">L’équipe de <span class="yellow">FormaBLOCS</span> reprendra contact avec vous dans les 24/48h.</p>
+<div class="devisDesktop"> 
+<p>*Pour les blocs individuels de formation, notez dans le message le bloc que vous souhaitez valider. </p>
+</div> 
+     </div> 
+     {{ form_end(quotation) }}
+    
     </div>
    
 </section>

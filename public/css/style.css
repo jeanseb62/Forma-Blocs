@@ -420,7 +420,7 @@ footer .icone_sociaux {
     background-color: #F2CB02;
 }
 
-/* Login */
+/* identifiant oublié */
 .resetPassword{
     background: url('../assets/images/background/desk-2silhouettes.png') bottom right no-repeat;
 }
@@ -431,6 +431,11 @@ footer .icone_sociaux {
 .resetPassword div:last-child {
     padding-bottom: 100px;
 }
+
+.resetPassword p {
+    font-weight: normal;
+}
+
 /* Login */
 .login {
     background: url('../assets/images/background/desk-2silhouettes.png') bottom right no-repeat;
@@ -497,6 +502,21 @@ footer .icone_sociaux {
     padding-bottom: 400px;
 }
 
+.contact h1{
+    font-weight:bold;
+}
+
+.contact h2{
+    font-weight:bold;
+    margin-top: 20px;
+}
+
+.contactbtnYellow{
+    border-radius: 20px;
+    background-color: #fed812;
+    padding: 10px 70px 10px 70px;
+}
+
 .MotDePasseOublie {
     color: #000;
     margin: 10px auto 50px auto;
@@ -524,7 +544,6 @@ footer .icone_sociaux {
     filter: drop-shadow(10px 10px 4px #dedede);
 }
 
-
 .yellow {
     color: #fed812;
 }
@@ -533,15 +552,6 @@ footer .icone_sociaux {
     border-radius: 20px;
     background-color: #fed812;
     padding: 10px 50px 10px 50px;
-}
-
-/* Isentifiant oublié */
-.resetPassword p {
-    font-weight: normal;
-}
-
-.resetPassword {
-    background: url('../assets/images/background/desk-2silhouettes.png') bottom right no-repeat;
 }
 
 /* devis */
@@ -554,19 +564,66 @@ footer .icone_sociaux {
     padding-bottom: 400px;
 }
 
-/* Tableau de bord */
-
-.text-success {
-    color: #1cc88a !important;
+.devis h1{
+   font-weight: bold;
+   width:80%;
 }
 
-.text-warning {
-    color: #f6c23e !important;
+.devis p{
+  font-size:1.5em;
+  font-weight: normal;
+  margin-left: 100px;
+  margin-top: 50px;
+  margin-bottom: 80px;
 }
 
-.text-success {
-    color: #4e73df !important;
+.devisTexte p{
+    font-size:1em;
+    font-weight: normal;
+    margin-left: 50px;
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
+
+.devisTexte{
+    margin-left: 80px;   
+}
+
+.devisTexte input{
+    margin-left: 130px;
+    margin-bottom: 50px;   
+}
+
+.devisTexte span label{
+    font-size:0.8em;
+    vertical-align: middle;
+    font-style: normal;
+    text-align: center;
+}
+
+.form-devis {
+    font-size: 10px;
+    width: 100%;
+    height: 100%;
+    max-width: 800px;
+    padding: 50px 50px 50px 50px;
+    margin: auto;
+    background-color: #f5f6f8;
+    border-radius: 20px;
+    font-weight: bold;
+    filter: drop-shadow(10px 10px 4px #dedede);
+}
+
+.form-devis .btn-yellow {
+    border-radius: 20px;
+    background-color: #fed812;
+    padding: 10px 70px 10px 70px;
+}
+
+.devisMobile{display: none;}
+    .devisDesktop{display: block;}
+
+/* Formulaires */
 .form-background{
     color: #5c5c5f;
     font-size: 1.1em;
@@ -576,8 +633,10 @@ footer .icone_sociaux {
     background-color: #FFF;
     filter: drop-shadow(5px 5px 4px #dedede);
     margin-left: 0px;
-    margin-right: 15px;
+    margin-right: 0px;
+    margin-bottom: 20px;
     border:#cecece solid 0.5px;
+    padding:10px;
 }
 
 .form-check-inline {
@@ -594,13 +653,54 @@ footer .icone_sociaux {
    width:73%;
 }
 
+.status .form-check{
+    margin-right: 30px;
+}
+
+#quotation_status_3{
+    margin-left: 13px;
+}
+
 .prestations label{
-    width:60%;
+    width:160px;
     flex-direction: column;
     flex-wrap: wrap;
-    display: flex;
+    display: inline-flex;
+    margin-right: -40px;
  }
 
+#quotation_benefit{
+     width:600px;
+    }
+
+.prestations label [for=quotation_benefit_2]{
+    width:100px;
+}  
+
+input[type='checkbox'] { 
+    width:13px;
+    height:13px;
+    border:0.6px #5c5c5f solid;
+}
+
+#quotation_benefit .form-check{
+    margin-left: 0px;
+    margin-right: 50px;
+}
+
+/* Tableau de bord */
+
+.text-success {
+    color: #1cc88a !important;
+}
+
+.text-warning {
+    color: #f6c23e !important;
+}
+
+.text-success {
+    color: #4e73df !important;
+}
 
 @media screen and (max-width: 1024px) {
     .prestation .card-container {
@@ -905,6 +1005,151 @@ footer .icone_sociaux {
     .quisommes .blockBtn {
         padding-top: 20px;
         padding-bottom: 20px;
+    }
+
+      /* Devis */
+
+    .devis{
+        background: url('../assets/images/background/mobile/mobile-picto-2shapes-right.png') right bottom no-repeat;
+    }
+
+    .devis div {
+        margin-bottom: 0;
+    }
+    
+    .devis div:last-child {
+        padding-bottom: 40px;
+    }
+
+    .devis {
+        margin-bottom: 0;
+        padding-bottom: 100px;
+    }
+    
+    .devis h1{
+       font-weight: bold;
+       width:90%;
+    }
+    
+    .devis p{
+      font-size:1.5em;
+      font-weight: normal;
+      margin-top: 50px;
+      margin-bottom: 80px;
+    }
+    
+    .devisTexte p{
+        font-size:1em;
+        font-weight: normal;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+    
+    .devisTexte{
+        margin-left: 0px;
+        margin-top: 20px;   
+    }
+    
+    .devisTexte input{
+        margin-left: 0px; 
+        margin-top: 20px;
+    }
+    
+    .devisTexte span label{
+        font-size:0.8em;
+        font-style: normal;
+        margin-top: -50px;
+    }
+    
+    .form-devis {
+        font-size: 10px;
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+        margin: auto;
+        background-color: #f5f6f8;
+        border-radius: 20px;
+        font-weight: bold;
+        filter: drop-shadow(10px 10px 4px #dedede);
+    }
+    .devisMobile{
+        display: block;
+    }
+    .devisMobile p{
+        font-size:1.2em;
+        margin-left: 0px;
+        margin-bottom: 5px;
+        margin-top: 5px;
+    }
+    .devisMobile .btn-yellow {
+        border-radius: 20px;
+        background-color: #fed812;
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .devisDesktop{
+        display: none;
+    }
+
+    /* Formulaires */
+    .form-devis .row{margin-bottom:-30px;}
+    .form-control{padding:10px;}
+    .form-background{
+    color: #5c5c5f;
+    font-size: 1.1em;
+    font-weight:400;
+    background-color: #FFF!important;
+    border-radius: 20px;
+    background-color: #FFF;
+    filter: drop-shadow(5px 5px 4px #dedede);
+    border:#cecece solid 0.5px;
+    margin-bottom:50px;
+    padding:10px;
+}
+.col-form-label{
+    color:#fed812;
+    font-weight:bold;
+}
+
+.form-check-inline {
+    margin-right: 1rem;
+    margin-top: 5px;
+}
+
+.form-check-inline label{  
+   vertical-align: middle;
+}
+
+.prestations label{
+    display: inline;
+    width:200px
+ }
+
+input[type='checkbox'] { 
+    width:20px;
+    height:20px;
+    border:0.6px #5c5c5f solid;
+}
+
+    /* Identifiant oublié */
+
+    .resetPassword{
+        background: url('../assets/images/background/mobile/mobile-picto-2shapes-right.png') right bottom no-repeat;
+    }
+
+    .resetPassword div {
+        margin-bottom: 0;
+    }
+    
+    .resetPassword div:last-child {
+        padding-bottom: 40px;
+    }
+
+    .resetPassword p {
+        font-weight: normal;
     }
 
     /* Login */

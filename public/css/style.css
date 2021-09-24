@@ -421,6 +421,17 @@ footer .icone_sociaux {
 }
 
 /* Login */
+.resetPassword{
+    background: url('../assets/images/background/desk-2silhouettes.png') bottom right no-repeat;
+}
+.resetPassword div {
+    margin-bottom: 0;
+}
+
+.resetPassword div:last-child {
+    padding-bottom: 100px;
+}
+/* Login */
 .login {
     background: url('../assets/images/background/desk-2silhouettes.png') bottom right no-repeat;
 }
@@ -567,7 +578,6 @@ footer .icone_sociaux {
     margin-left: 0px;
     margin-right: 15px;
     border:#cecece solid 0.5px;
-   
 }
 
 .form-check-inline {
@@ -586,10 +596,9 @@ footer .icone_sociaux {
 
 .prestations label{
     width:60%;
-    font-size:0.8em;
     flex-direction: column;
     flex-wrap: wrap;
-    display: inline;
+    display: flex;
  }
 
 

@@ -17,14 +17,9 @@
 Merci de remplir le formulaire ci-dessous.
 </p>
 
- <div class="row h-100 justify-content-center align-items-center">
-            {% for message in app.flashes('success') %}
+        <div class="row h-100 justify-content-center align-items-center">
+            {% for message in app.flashes('message') %}
                 <div class="alert alert-success" role="alert">
-                    {{ message }}
-                </div>
-            {% endfor %}
-            {% for message in app.flashes('error') %}
-                <div class="alert alert-danger" role="alert">
                     {{ message }}
                 </div>
             {% endfor %}
@@ -124,3 +119,4 @@ Merci de remplir le formulaire ci-dessous.
 </section>
 </main>
 {% endblock %}
+

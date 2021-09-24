@@ -30,10 +30,6 @@ class Quotation
      */
     private $firstName;
 
-    /**
-     * @ORM\Column(type="integer")
-     */
-    private $numberStreet;
 
     /**
      * @ORM\Column(type="string", length=45)
@@ -58,7 +54,7 @@ class Quotation
     
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="string", length=16)
      */
     private $phone;
 
@@ -86,15 +82,22 @@ class Quotation
      */
     private $SendByEmail = [];
 
-    /**
-     * @ORM\Column(type="datetime", options={"default"="CURRENT_TIMESTAMP"})
-     */
-    private $created_at;
+   
 
     /**
      * @ORM\Column(type="string", length=255)
      */
     private $email;
+
+    /**
+     * @ORM\Column(type="datetime", nullable=true)
+     */
+    private $created_at;
+
+    /**
+     * @ORM\Column(type="string", length=10)
+     */
+    private $numberStreet;
 
     
 
@@ -127,17 +130,6 @@ class Quotation
         return $this;
     }
 
-    public function getNumberStreet(): ?int
-    {
-        return $this->numberStreet;
-    }
-
-    public function setNumberStreet(int $numberStreet): self
-    {
-        $this->numberStreet = $numberStreet;
-
-        return $this;
-    }
 
     public function getStreet(): ?string
     {
@@ -250,17 +242,6 @@ class Quotation
         return $this;
     }
 
-    public function getCreatedAt(): ?\DateTimeInterface
-    {
-        return $this->created_at;
-    }
-
-    public function setCreatedAt(?\DateTimeInterface $created_at): self
-    {
-        $this->created_at = $created_at;
-
-        return $this;
-    }
 
     public function getEmail(): ?string
     {
@@ -270,6 +251,30 @@ class Quotation
     public function setEmail(string $email): self
     {
         $this->email = $email;
+
+        return $this;
+    }
+
+    public function getCreatedAt(): ?\DateTimeInterface
+    {
+        return $this->created_at;
+    }
+
+    public function setCreatedAt(\DateTimeInterface $created_at): self
+    {
+        $this->created_at = $created_at;
+
+        return $this;
+    }
+
+    public function getNumberStreet(): ?string
+    {
+        return $this->numberStreet;
+    }
+
+    public function setNumberStreet(string $numberStreet): self
+    {
+        $this->numberStreet = $numberStreet;
 
         return $this;
     }

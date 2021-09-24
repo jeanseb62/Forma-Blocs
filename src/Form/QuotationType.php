@@ -49,7 +49,7 @@ class QuotationType extends AbstractType
                     'placeholder' => 'Prénom'
                 ]
             ])
-            ->add('numberStreet', IntegerType::class, [
+            ->add('numberStreet', TextType::class, [
                 'label' => 'N°',
                 'attr' => [
                     'class' => 'form-control',
@@ -145,7 +145,6 @@ class QuotationType extends AbstractType
                 'expanded'  => true,
                 'multiple'  => true,
             ])
-            
             
             ;            
     }

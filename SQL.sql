@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : jeu. 23 sep. 2021 à 08:22
+-- Généré le : jeu. 23 sep. 2021 à 23:37
 -- Version du serveur :  5.7.31
 -- Version de PHP : 7.4.23
 
@@ -92,7 +92,7 @@ CREATE TABLE IF NOT EXISTS `contact` (
   `created_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `public` longtext COLLATE utf8mb4_unicode_ci COMMENT '(DC2Type:array)',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -113,7 +113,7 @@ CREATE TABLE IF NOT EXISTS `doctrine_migration_versions` (
 --
 
 INSERT INTO `doctrine_migration_versions` (`version`, `executed_at`, `execution_time`) VALUES
-('DoctrineMigrations\\Version20210923081644', '2021-09-23 08:16:54', 567);
+('DoctrineMigrations\\Version20210923230931', '2021-09-23 23:09:41', 399);
 
 -- --------------------------------------------------------
 
@@ -169,18 +169,18 @@ CREATE TABLE IF NOT EXISTS `quotation` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `last_name` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
   `first_name` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `number_street` int(11) NOT NULL,
   `street` varchar(45) COLLATE utf8mb4_unicode_ci NOT NULL,
   `zip` varchar(5) COLLATE utf8mb4_unicode_ci NOT NULL,
   `city` varchar(45) COLLATE utf8mb4_unicode_ci NOT NULL,
   `country` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `phone` int(11) NOT NULL,
+  `phone` varchar(16) COLLATE utf8mb4_unicode_ci NOT NULL,
   `message` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
   `status` longtext COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '(DC2Type:array)',
   `benefit` longtext COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '(DC2Type:array)',
   `send_by_email` longtext COLLATE utf8mb4_unicode_ci COMMENT '(DC2Type:array)',
-  `created_at` datetime DEFAULT NULL,
   `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `number_street` varchar(10) COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -200,7 +200,7 @@ CREATE TABLE IF NOT EXISTS `reset_password_request` (
   `expires_at` datetime NOT NULL COMMENT '(DC2Type:datetime_immutable)',
   PRIMARY KEY (`id`),
   KEY `IDX_7CE748AA76ED395` (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -220,14 +220,14 @@ CREATE TABLE IF NOT EXISTS `user` (
   `login` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `UNIQ_8D93D649E7927C74` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Déchargement des données de la table `user`
 --
 
 INSERT INTO `user` (`id`, `email`, `roles`, `password`, `is_verified`, `last_name`, `first_name`, `login`) VALUES
-(5, 'admin@admin.com', '[\"ROLE_ADMIN\"]', '$2y$13$0NLHdLBn0xBwHvXjrK/mt.P9zWjDn.0Wz7.Z/zTiCBddZdohvWj0G', 0, 'ZITOUNI', 'Heloise', 'admin');
+(1, 'admin@admin.com', '[\"ROLE_ADMIN\"]', '$2y$13$iP4F5Rw3Z5FXCV1pUGRRROkT3AJOZqAGXnC7XkgJ6GiXoDVolU63K', 0, 'ZITOUNI', 'Heloise', 'admin');
 
 --
 -- Contraintes pour les tables déchargées

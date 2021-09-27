@@ -511,6 +511,10 @@ footer .icone_sociaux {
     margin-top: 20px;
 }
 
+.MessageContact{
+    display:none;
+}
+
 .contactbtnYellow{
     border-radius: 20px;
     background-color: #fed812;
@@ -542,6 +546,21 @@ footer .icone_sociaux {
     border-radius: 20px;
     font-weight: bold;
     filter: drop-shadow(10px 10px 4px #dedede);
+}
+
+.form-contact .form-background{
+    color: #5c5c5f;
+    font-size: 1.1em;
+    font-weight:400;
+    background-color: #FFF!important;
+    border-radius: 20px;
+    background-color: #FFF;
+    filter: drop-shadow(5px 5px 4px #dedede);
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 20px;
+    border:#cecece solid 0.5px;
+     
 }
 
 .yellow {
@@ -624,7 +643,7 @@ footer .icone_sociaux {
     .devisDesktop{display: block;}
 
 /* Formulaires */
-.form-background{
+.form-devis .form-background{
     color: #5c5c5f;
     font-size: 1.1em;
     font-weight:400;
@@ -1007,6 +1026,105 @@ input[type='checkbox'] {
         padding-bottom: 20px;
     }
 
+    /* Contact */
+    .contact{
+        background: url('../assets/images/background/mobile/mobile-picto-2shapes-right.png') right bottom no-repeat;
+    }
+
+    .contact div {
+        margin-bottom: 0;
+    }
+    
+    .contact div:last-child {
+        padding-bottom: 40px;
+    }
+
+    .contact {
+        margin-bottom: 0;
+        padding-bottom: 40px;
+    }
+
+    .contact h1{
+        font-size:1.5em;
+    }
+
+    .form-contact {
+        font-size: 1.3em;
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+        margin: auto;
+        background-color: #f5f6f8;
+        border-radius: 20px;
+        font-weight: bold;
+        filter: drop-shadow(10px 10px 4px #dedede);
+    }
+    
+    .form-contact .form-background{
+        color: #5c5c5f;
+        font-size: 1.1em;
+        font-weight:400;
+        background-color: #FFF!important;
+        border-radius: 20px;
+        background-color: #FFF;
+        filter: drop-shadow(5px 5px 4px #dedede);
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-bottom: 20px;
+        border:#cecece solid 0.5px;
+         
+    }
+
+    .contactbtnYellow {
+        border-radius: 20px;
+        background-color: #fed812;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 1.3em;
+        
+    }
+
+    #contact_public{
+         width: 100%;
+    }
+
+#contact_public_0{
+    margin-bottom: 30px;
+}
+
+#contact_public_1{
+    margin-left: 10px;
+    margin-bottom: 30px;
+}
+
+#contact_public_3{
+    margin-left: 10px;
+
+}
+
+    .form-check-label[for='contact_public_2']{ 
+width: 110px;
+    }
+
+    .form-check-input[type='checkbox'] { 
+        width:30px;
+        height:30px;
+        border:0.6px #5c5c5f solid;
+    }
+
+    .form-contact .row{
+        margin-bottom:-30px;
+    }
+
+    .MessageContact{
+        display:block;
+    }
+
+    .MessageContact p{
+        font-weight: bold;
+    }
+
       /* Devis */
 
     .devis{
@@ -1029,13 +1147,15 @@ input[type='checkbox'] {
     .devis h1{
        font-weight: bold;
        width:90%;
+       font-size: 1.5em;
     }
     
     .devis p{
       font-size:1.5em;
       font-weight: normal;
       margin-top: 50px;
-      margin-bottom: 80px;
+      margin-left: 0px;
+      margin-bottom: 50px;
     }
     
     .devisTexte p{
@@ -1062,7 +1182,7 @@ input[type='checkbox'] {
     }
     
     .form-devis {
-        font-size: 10px;
+        font-size: 1.3em;
         width: 100%;
         height: 100%;
         padding: 10px;
@@ -1097,7 +1217,7 @@ input[type='checkbox'] {
     /* Formulaires */
     .form-devis .row{margin-bottom:-30px;}
     .form-control{padding:10px;}
-    .form-background{
+    .form-devis .form-background{
     color: #5c5c5f;
     font-size: 1.1em;
     font-weight:400;
@@ -1114,6 +1234,8 @@ input[type='checkbox'] {
     font-weight:bold;
 }
 
+.numberStreet{width:30%;}
+.street{width:70%;}
 .form-check-inline {
     margin-right: 1rem;
     margin-top: 5px;
@@ -1123,15 +1245,57 @@ input[type='checkbox'] {
    vertical-align: middle;
 }
 
-.prestations label{
+#quotation_status{
+    width: 400px;
     display: inline;
-    width:200px
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+#quotation_status_3{
+    margin-left: -35px;
+   }
+
+#quotation_benefit{
+    width:350px;
+   }
+
+.prestations{
+    width:350px;
+    display: block;
+    
  }
+
+.prestations label{
+    font-size:1em;
+    width:250px;
+    text-align: left;
+ }
+
+ .prestations label [for=quotation_benefit_2]{
+    width:250px;
+} 
 
 input[type='checkbox'] { 
     width:20px;
     height:20px;
     border:0.6px #5c5c5f solid;
+}
+
+.form-check-input[type='checkbox'] { 
+    width:20px;
+    height:20px;
+    border:0.6px #5c5c5f solid;
+}
+.politiqueContact input[type='checkbox']{
+    width:30px;
+    height:30px;
+    border:0.6px #5c5c5f solid;
+    margin-right:30px;
+}
+.politiqueContact label{
+    width:350px;
+    font-size: 0.8em;
 }
 
     /* Identifiant oublié */
@@ -1172,6 +1336,10 @@ input[type='checkbox'] {
         background-size: 100%;
         font-size: 0.75em;
         padding-top: 10px;
+    }
+
+    .FooterMobile section{
+        background-color: #a0a1a6;
     }
 
     .FooterMobileDroit {

@@ -1305,15 +1305,17 @@ input[type='checkbox'] {
     }
 
     .resetPassword div {
-        margin-bottom: 0;
+        margin-bottom: 0px;
     }
     
     .resetPassword div:last-child {
-        padding-bottom: 40px;
+        padding-bottom: 140px;
     }
 
     .resetPassword p {
         font-weight: normal;
+        padding-left: 10px;
+        padding-right: 10px;
     }
 
     /* Login */
@@ -1325,6 +1327,11 @@ input[type='checkbox'] {
     .login div:last-child
     {
         padding-bottom: 40px;
+    }
+
+    .login p
+    {
+        padding-left: 10px;padding-right: 10px;
     }
 
 
